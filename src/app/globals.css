@@ -1,0 +1,1178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 229 100% 59.4%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 229 19% 90%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+
+/*Start Css Here*/
+
+:root{
+  --blue-color:#3055ff;
+  --black-color:#000;
+  --greenish:#76c2af;
+  --white:#fff;
+  --gray-color:#f2f2f2;
+}
+
+/* Global  */
+ul{
+  list-style: none;
+}
+.container-fluid{
+  --bs-gutter-x:4.5rem !important;
+}
+body{
+  font-family: "Poppins", serif;
+}
+
+
+/* Header Section */
+
+.customnav {
+  background: transparent;
+  position: fixed !important;
+  width: 100%;
+  z-index: 1;
+}
+.logo{
+  width: 100px;
+}
+
+.customnav ul li a{
+  color:var(--white);
+  font-size:16px;
+}
+.customnav ul li a:hover{
+  color:var(--blue-color);
+}
+.customnav .dropdown-menu li a{
+  color:var(--black-color);
+  font-size:16px;
+}
+.navbar-nav .nav-link.show {
+  color: var(--blue-color) !important;
+}
+.customnav ul {
+  gap: 30px;
+}
+
+.btnstyle1{
+  background:var(--blue-color);
+  color: var(--white);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  text-decoration: none;
+}
+
+.btnstyle1:hover{
+  background: linear-gradient(137deg,#5d53ff 0%,#d711c1 52.6%,#f9a025 100%);
+  transition: .5s;
+}
+
+
+/* Banner section css start here  */
+
+.bannersection{
+  background: var(--black-color);
+  text-align: center;
+  padding: 150px 0px 50px;
+  position: relative;
+}
+
+.bannerheading {
+  margin: 0 auto;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content:center;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.bannerheading h1{
+  font-size:60px;
+  color: var(--white);
+  font-weight: 700;
+}
+.gradient-text {
+  background: linear-gradient(137deg,#5d53ff 0%,#d711c1 52.6%,#f9a025 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 400;
+}
+
+.bannerheading h5, .bannerheading h6{
+  color: var(--white);
+}
+
+.bannershape {
+  position: absolute;
+  right: 0;
+  z-index: 0;
+  width: 160px;
+  top: 0px;
+  height: 100%;
+}
+
+.checkicon{
+  width: 20px;
+}
+.bannerheading ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  gap: 5px;
+  color: var(--white);
+  font-size:14px;
+}
+
+
+/* Lumio AI section */
+
+.lumioAI {
+  background: var(--blue-color);
+  text-align: center;
+  padding: 50px 0px;
+}
+
+.SectionHeading{
+  font-size: 36px;
+}
+.paratext{
+  font-size: 16px;
+}
+
+.lumioAI p, .lumioAI h2{
+  color: var(--white);
+}
+
+
+/* Service section start here */
+
+.ServiceSection{
+  padding: 70px 0px
+}
+
+.ServiceSection img{
+  width: 50px;
+}
+
+.title{
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.ServiceSection .col-lg-6{
+  padding-left: 100px;
+}
+
+.ServiceSection .paratext {
+  width: 59%;
+}
+
+
+/* Steps section start here */
+
+.stepssec .outerbg{
+  background: var(--gray-color);
+  padding: 40px 70px 40px;
+  border-radius: 15px;
+}
+.topcard{
+  background: linear-gradient(137deg,#8c52ff 0%,#5ce1e6 100%);
+  border-radius: 10px;
+  padding:40px 0px;
+  position: relative;
+}
+.topcard iframe {
+  position: absolute;
+  left: -20px;
+  top: -40px;
+}
+.topcard .SectionHeading{
+  color: #fff;
+  font-weight: 700;
+}
+.stepsParent{
+  display: flex;
+  align-items: center;
+
+}
+.number {
+  width: 30px;
+  height: 30px;
+  background: var(--black-color);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.stepicon {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid;
+  border-radius: 10px 60px 60px 10px;
+  padding-right: 15px;
+  width: 180px;
+}
+.arrow {
+  width: 150px;
+  margin: 0px 50px;
+}
+
+.arrow {
+  width: 140px;
+  margin: 0px 33px;
+}
+
+.stepicon img{
+  width: 60px;
+}
+
+
+/* statistics section start here  */
+
+.statistics {
+  padding-top: 70px;
+}
+
+.statistics .container{
+  background: var(--gray-color);
+  padding:20px 50px;
+  border-radius:50px;
+}
+
+.states {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  align-items: center;
+}
+
+.states span{
+  width: 2px;
+  height: 50px;
+  background:var(--blue-color);
+  border-radius:1px;
+}
+
+.states li {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.states li img{
+  width: 40px
+}
+
+/* Hire & Manage section start here  */
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+}
+.content h2 {
+  width: 63%;
+}
+.content .paratext {
+  width: 70%;
+}
+.HireManage .hireImage {
+  padding: 80px;
+  text-align: center;
+}
+
+
+/* Meet team section start here  */
+
+.topHeading{
+  background: linear-gradient(137deg,#8c52ff 0%,#5ce1e6 100%);
+  padding: 20px 30px;
+  border-radius: 50px;
+}
+.topHeading h2 {
+  color: #fff;
+}
+
+/* Slider */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-pagination{
+  bottom: 0px !important;
+}
+
+.teamcard {
+  background: var(--gray-color);
+  text-align: left;
+}
+.certified {
+  width: 24px !important;
+}
+.teamcard h4{
+  color: var(--blue-color);
+  font-size: 18px;
+}
+.teamcard p{
+  color: var(--blue-color);
+}
+.expertise .skills {
+  display: inline-block;
+  padding: 5px 18px;
+  width: 48%;
+  text-align: center;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.greenish{
+  background: var(--greenish);
+}
+
+.black{
+  background: var(--black-color);
+}
+
+.viewprofile {
+  background: var(--blue-color);
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  padding: 15px;
+  color: var(--white) !important;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.viewprofile:hover {
+  background: var(--greenish);
+}
+.meetTeam {
+  position: relative;
+  z-index: 0;
+  padding-bottom: 70px;
+}
+
+.teamcard ul li {
+  font-size: 16px;
+}
+
+
+
+/* Map View css start here  */
+
+.mapview {
+  background:#f1f8fb;
+  padding: 70px 0px;
+}
+
+.mapbg{
+  width: 100%;
+}
+.mapview .gradient-text{
+  font-weight: 500;
+}
+
+.person{
+  width: 44px;
+}
+
+.person-locate1{
+  left: 46%;
+  top: 11%;
+  position: absolute;
+}
+
+.person-locate2 {
+  left: 42%;
+  top: 29%;
+  position: absolute;
+}
+.person-locate3 {
+  left: 58%;
+  top: 24%;
+  position: absolute;
+}
+
+.person-locate4 {
+  left: 70%;
+  top: 30%;
+  position: absolute;
+}
+
+.person-locate5 {
+  left: 82%;
+  top: 36%;
+  position: absolute;
+}
+
+.person-locate6 {
+  left: 21%;
+  top: 52%;
+  position: absolute;
+}
+
+.person-locate7 {
+  left: 27%;
+  top: 63%;
+  position: absolute;
+}
+
+.person-locate8 {
+  left: 52%;
+  top: 49%;
+  position: absolute;
+}
+
+.person-locate9 {
+  left: 78%;
+  top: 49%;
+  position: absolute;
+}
+
+
+
+/* Skills section start here  */
+
+.skills{
+  padding:0px 0px;
+}
+.skillList {
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; */
+  /* gap: 30px; */
+  /* margin: 0 auto; */
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  padding: 0px 0px;
+  border-color: #00000036;
+}
+.skillList img{
+  width: 40px;
+}
+.skillList img:hover {
+  filter: contrast(0.5);
+}
+
+/* Book a Demo   */
+
+.bookdemo{
+  padding-bottom: 70px;
+}
+
+
+/* Why Hire section start here  */
+
+.whyhire {
+  background: var(--black-color);
+  padding: 70px 0px;
+  border-bottom: 1px solid;
+  border-color: #2c2c2c;
+}
+
+.whitetext{
+  color: var(--white);
+}
+
+.whyhire .paratext{
+  font-size: 18px;
+}
+
+.whyhirecontent{
+  padding-right: 80px !important;
+}
+
+.network-section img{
+  width: 100%;
+}
+
+
+/* Network css here  */
+
+.network-section{
+  position: relative;
+}
+
+.network-section h2{
+  position: absolute;
+  top: 70px;
+}
+
+
+/* Lumio_AI Section */
+
+.lumio_AI{
+  position: relative;
+  overflow: hidden;
+}
+.lumio_AI .curveline1 {
+  position: absolute;
+  width: 371px;
+  left: -12%;
+  top: -20px;
+  opacity: .2;
+}
+.lumio_AI .curveline2 {
+  position: absolute;
+  width: 371px;
+  right: -10%;
+  top: 20px;
+  opacity: .2;
+}
+
+
+/* We Value section */
+.WeValue{
+  padding: 70px 0px;
+}
+
+.WeValue .paratext{
+  font-size: 18px;
+}
+
+
+/* What Expact Section */
+
+.whatExpacted{
+  padding-bottom: 70px;
+}
+
+.expact{
+  gap: 15px;
+  font-size: 18px;
+}
+
+.expact img{
+  width: 50px;
+  height: 50px;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.gap-10{
+  gap: 50px 120px;
+}
+
+.whatExpacted .SectionHeading {
+  display: inline-block;
+  padding: 20px 30px;
+  border-radius: 40px;
+  color: var(--white);
+  background: #5c908a;
+  position: relative;
+  z-index: 0;
+}
+
+.whatExpacted .SectionHeading::before {
+  background: var(--greenish);
+  content: "";
+  height: 120%;
+  width: 54%;
+  display: inline-block;
+  position: absolute;
+  z-index: -1;
+  top: -8px;
+  left: 0;
+  border-radius: 50px 0px 0px 50px;
+}
+
+
+
+/* Footer  */
+
+footer {
+  background: #000;
+  padding: 40px 0px 0px;
+  margin-top: 70px;
+}
+
+footer ul{
+  padding:0px;
+}
+
+footer h2{
+  color: var(--white);
+}
+
+footer h4 {
+  color: var(--white);
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+footer li{
+  line-height: 30px;
+}
+
+footer li a{
+  font-size: 14px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.socialmedia {
+  display: flex;
+  gap:15px;
+}
+
+.socialmedia a img {
+  width: 20px;
+}
+
+footer hr {
+  border-color: #fff;
+}
+
+
+
+
+/* How it work Inner Page css */
+.innerbanner {
+  background: url(/assets/img/innerbanner-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  padding:150px 0px 70px;
+}
+
+.innerbanner h1 {
+  font-size: 40px;
+}
+
+.btnstyle2 {
+  display: inline-block;
+  padding: 10px 18px;
+  text-align: center;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  width: 24%;
+}
+
+.getStart{
+  padding-top:70px
+}
+
+/* Step Section Start Here */
+
+.stepsection{
+  padding: 70px 0px;
+}
+.steps {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.steps span {
+  font-size: 34px;
+  color: #969297;
+}
+.steps .icon {
+  width: 60px;
+  height: 60px;
+  border: 1.5px solid;
+  border-color: #969297;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.steps .icon img {
+  width: 36px;
+}
+
+.steps .paratext {
+  width: 36%;
+}
+
+.dash {
+  width: 20px;
+  background: #969297;
+  height: 2px;
+}
+
+.icon::after {
+  content: "";
+  width: 2px;
+  height: 62px;
+  background: #969297;
+  position: absolute;
+  bottom: -56px;
+}
+
+
+.steps:last-child .icon::after {
+  display: none;
+}
+
+/* Globe sec  */
+
+.globesec .SectionHeading{
+  color:#969297;
+}
+
+.globesec {
+  background: #76c2af3b;
+  padding: 40px 0px;
+}
+
+
+/* ************************************** */
+.w-40{
+  width: 40%;
+}
+.w-50{
+  width: 50%;
+}
+.w-60{
+  width: 60%;
+}
+.w-70{
+  width: 70%;
+}
+.w-80{
+  width: 80%;
+}
+.w-90{
+  width: 90%;
+}
+.w-100{
+  width: 100%;
+}
+
+
+/* Top Tier Talent Page  */
+
+.process{
+  padding-top:70px;
+}
+.step-line {
+  height: 150px;
+}
+
+.processimg{
+  width: 100px;
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+  border: 1.5px solid;
+  border-color:#4e7896;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.processItems2{
+  margin-left: 20px;
+}
+
+.processItems3{
+  margin-left: 40px;
+}
+.processItems4{
+  margin-left: 60px;
+}
+.processItems5{
+  margin-left: 80px;
+}
+.bottomarea {
+  background: linear-gradient(45deg, #8c52ff63, #5ce1e68c);
+  width: 280px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+.bottomarea img {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+}
+
+
+/* Apply As Developer */
+
+.customform input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #999;
+}
+
+.customform label {
+  margin: 15px 0px 30px;
+}
+
+
+.formbtn {
+  background: #4e7896;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 18px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  margin: 0 auto;
+  font-weight: 500;
+}
+
+.customform{
+  padding-top:70px;
+}
+
+.customform input[type=submit] {
+  background: var(--blue-color);
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 18px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  margin: 0 auto;
+  border-radius: 0px;
+  border: none;
+  font-weight: 500;
+}
+
+
+/* About Us Meet Team inner page   */
+
+.meetteam{
+  padding: 70px 0px;
+}
+
+.meetteam .section-heading {
+  background: var(--black-color);
+  color: var(--white);
+  padding: 15px 200px 15px 40px;
+  border-radius: 40px;
+  font-size: 26px;
+  display: inline-block;
+}
+
+.teamimage {
+  text-align: center;
+}
+
+.teamimage img:hover{
+  filter: grayscale(1);
+  transition: .2s;
+}
+
+.contentsec {
+  padding-right: 150px !important;
+}
+
+
+.professional {
+  padding: 70px 0px 0px;
+  margin-top: 70px;
+  box-shadow: 0px -5px 11px 0px #0000000f;
+}
+.professional ul li{
+  line-height: 36px;
+}
+
+.professional ul li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #000;
+  display: inline-block;
+  position: relative;
+  left: -25px;
+}
+
+
+/* How it work for developer */
+
+.pb-110{
+  padding-bottom: 110px !important;
+}
+.developerSteps{
+  padding: 70px 0px
+}
+.developerSteps .devstep{
+  display: flex;
+  gap: 30px;
+  align-items: start;
+}
+.developerSteps .bgbox {
+  background: var(--blue-color);
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 20px;
+  color: #fff;
+  border-radius: 56px;
+  width: 288px;
+}
+.developerSteps .devstep span{
+  font-size: 36px;
+  font-weight: 700;
+  color: gray;
+}
+.developerSteps .devstep p{
+  width: 68%;
+  padding-left: 5px;
+}
+.devstepimg{
+  border-radius: 30px;
+  width: 100%;
+}
+.bgheading{
+  background: var(--blue-color);
+  display: inline-block;
+  padding: 20px 30px;
+  color: #fff;
+  border-radius: 56px;
+}
+.benefitslumio{
+  padding-bottom: 70px;
+}
+.benefitslumio img {
+  width: 200px;
+}
+.benefitslumio h3 {
+  position: relative;
+  padding-left: 150px;
+  top: -30px;
+}
+.heartofLumio {
+  text-align: center;
+  background: url(/assets/img/heartoflumioai-bg.jpg);
+  color: #fff;
+  padding: 70px 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.tips{
+  padding: 70px 0px 0px;
+}
+
+.tipscard {
+  background: black;
+  color: #fff;
+  padding: 20px;
+  border-radius: 40px;
+  width: 70%;
+}
+
+.tipscard ul li {
+  font-size: 22px;
+  list-style: initial;
+  margin-bottom: 20px;
+}
+
+
+/* FAQ Page Start Here  */
+
+.faq{
+  padding:70px 0px;
+}
+
+.accordion-item{
+  border: none !important;
+}
+.faq .accordion-button{
+  background:var(--greenish) !important;
+  padding: 25px 30px 25px;
+  font-size: 24px;
+  color: #000 !important;
+  border-radius: 40px !important;
+  margin-top: 20px;
+}
+
+.accordion-body{
+  text-align: start;
+  font-size: 20px;
+  padding-left: 30px !important;
+}
+
+
+
+/* Login Page css start here  */
+
+.signin{
+  padding:70px 0px;
+}
+
+.signin .row {
+  margin-top:100px;
+}
+
+.formsec {
+  background:#3055ff12;
+  padding: 30px;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.formsec form{
+  text-align:start;
+}
+
+.formsec input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid #8a8a8a;
+}
+
+.formsec label{
+  margin-bottom:5px;
+}
+
+.loginbtn{
+  font-size: 22px;
+  background:#3055ff80;
+  padding:8px 15px;
+  border-radius: 5px;
+  color: #000;
+  text-decoration: none;
+  border: 1px solid #555;
+}
+
+.formsec a {text-decoration: none;}
+
+
+.accordion-button:after {
+  display: none !important;
+}

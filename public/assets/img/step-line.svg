@@ -1,0 +1,30 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 411" width="64" height="411">
+	<title>tt2-svg</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m4 5h59v404h-59z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp2">
+			<path d="m39.15 3.38l63.65 396.73-63.65 10.21-63.65-396.73z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp3">
+			<path d="m39.15 3.38l63.65 396.73-63.65 10.21-63.65-396.73z"/>
+		</clipPath>
+	</defs>
+	<style>
+		.s0 { fill: #4e7896 } 
+	</style>
+	<g id="Clip-Path" clip-path="url(#cp1)">
+		<g id="Layer">
+			<g id="Clip-Path" clip-path="url(#cp2)">
+				<g id="Layer">
+					<g id="Clip-Path" clip-path="url(#cp3)">
+						<g id="Layer">
+							<path id="Layer" class="s0" d="m62.1 393.9c-1-6.2-6.4-10.7-12.5-10.7l-39.7-247.7 32.8-45.4-9.6-60.1c5.5-2.2 9-7.9 8-14-1.1-7-7.7-11.7-14.7-10.6-6.9 1.1-11.7 7.7-10.6 14.7 1.1 6.3 6.5 10.8 12.7 10.7l9.3 58.1-32.9 45.4 40.1 249.7c-5.6 2.1-9.1 7.9-8.1 14 1.1 6.9 7.7 11.7 14.6 10.6 7-1.2 11.8-7.7 10.6-14.7z"/>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,571 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 274 156" width="274" height="156">
+	<title>6-svg</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m4 38h29v31h-29z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp2">
+			<path d="m-20.04 64.87l92.58-73.65 76.27 95.88-92.57 73.65z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp3">
+			<path d="m-20.04 64.87l92.58-73.65 76.27 95.88-92.57 73.65z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp4">
+			<path d="m61 99h4v4h-4z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp5">
+			<path d="m-20.04 64.87l92.58-73.65 76.27 95.88-92.57 73.65z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp6">
+			<path d="m-20.04 64.87l92.58-73.65 76.27 95.88-92.57 73.65z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp7">
+			<path d="m50 147h15v12h-15z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp8">
+			<path d="m-20.04 64.87l92.58-73.65 76.27 95.88-92.57 73.65z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp9">
+			<path d="m-20.04 64.87l92.58-73.65 76.27 95.88-92.57 73.65z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp10">
+			<path d="m98 93h22v20h-22z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp11">
+			<path d="m-20.04 64.87l92.58-73.65 76.27 95.88-92.57 73.65z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp12">
+			<path d="m-20.04 64.87l92.58-73.65 76.27 95.88-92.57 73.65z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp13">
+			<path d="m56 106h12v5h-12z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp14">
+			<path d="m-20.04 64.87l92.58-73.65 76.27 95.88-92.57 73.65z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp15">
+			<path d="m-20.04 64.87l92.58-73.65 76.27 95.88-92.57 73.65z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp16">
+			<path d="m51 113h18v33h-18z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp17">
+			<path d="m-20.04 64.87l92.58-73.65 76.27 95.88-92.57 73.65z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp18">
+			<path d="m-20.04 64.87l92.58-73.65 76.27 95.88-92.57 73.65z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp19">
+			<path d="m60 53h20v19h-20z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp20">
+			<path d="m-20.04 64.87l92.58-73.65 76.27 95.88-92.57 73.65z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp21">
+			<path d="m-20.04 64.87l92.58-73.65 76.27 95.88-92.57 73.65z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp22">
+			<path d="m54 45h9v9h-9z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp23">
+			<path d="m-20.04 64.87l92.58-73.65 76.27 95.88-92.57 73.65z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp24">
+			<path d="m-20.04 64.87l92.58-73.65 76.27 95.88-92.57 73.65z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp25">
+			<path d="m4 17h128v133h-128z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp26">
+			<path d="m-20.04 64.87l92.58-73.65 76.27 95.88-92.57 73.65z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp27">
+			<path d="m-20.04 64.87l92.58-73.65 76.27 95.88-92.57 73.65z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp28">
+			<path d="m38 29h47v47h-47z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp29">
+			<path d="m-20.04 64.87l92.58-73.65 76.27 95.88-92.57 73.65z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp30">
+			<path d="m-20.04 64.87l92.58-73.65 76.27 95.88-92.57 73.65z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp31">
+			<path d="m27 2h113v89h-113z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp32">
+			<path d="m-20.04 64.87l92.58-73.65 76.27 95.88-92.57 73.65z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp33">
+			<path d="m-20.04 64.87l92.58-73.65 76.27 95.88-92.57 73.65z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp34">
+			<path d="m144 2h129v134h-129z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp35">
+			<path d="m160.89-3.14l124.38 18.1-18.1 124.38-124.38-18.1z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp36">
+			<path d="m160.89-3.14l124.38 18.1-18.1 124.38-124.38-18.1z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp37">
+			<path d="m160.89-3.14l124.38 18.1-18.1 124.38-124.38-18.1z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp38">
+			<path d="m161.18-5.15l124.38 18.1-18.39 126.39-124.38-18.1z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp39">
+			<path d="m270.12 118.78q-0.01 0.37-0.07 0.76c-0.46 3.15-3.09 5.51-6.26 5.62l-17.18 0.61-0.92 6.35c-0.32 2.2-2.39 3.75-4.6 3.42l-76.23-11.09c-1.95-0.28-3.38-1.92-3.46-3.83l-0.21 0.15c-2.27 1.7-5.07 2.41-7.89 2-5.79-0.84-9.82-6.25-8.98-12.05 0.41-2.8 1.89-5.28 4.16-6.99l17.16-12.79 10.97-75.4c0.32-2.22 2.39-3.75 4.59-3.43l8.03 1.16 0.58-4.01c0.65-4.43 4.77-7.5 9.19-6.85l4.02 0.58c4.32 0.63 7.33 4.59 6.87 8.9l56.76 0.41c3.47 0.02 6.3 2.99 6.19 6.45zm-13.26-91.57l-48.15-7-1.16 8.02-4.02-0.58 1.17-8.03-4.01-0.58-0.88 6.02c-0.48 3.32-3.57 5.63-6.89 5.14-3.32-0.48-5.63-3.57-5.14-6.89l0.87-6.02-8.02-1.17-10.39 71.39 10.25-7.64 19.73-3.54 44.45 6.47-0.58 4.02-42.69-6.22-8.2 16.3-27.29 20.36-0.46 3.18 76.23 11.09zm-98.09 90.32l2.42-1.8-7.86-10.54-2.42 1.8c-1.41 1.05-2.32 2.58-2.57 4.32-0.52 3.59 1.97 6.93 5.56 7.45 1.74 0.25 3.47-0.18 4.87-1.23zm-2.19-14.77l7.86 10.54 24.32-18.14-7.85-10.54zm28.32-19.57l6.36 8.53 1.57-3.11-4.5-6.03zm11.71-2.1l-3.82 0.68 2.07 2.78zm-4.82-57.21c-0.16 1.11 0.61 2.14 1.71 2.3 1.11 0.16 2.14-0.61 2.3-1.71l0.87-6.02-4.01-0.58zm1.46-10.03l4.01 0.58 0.59-4.01 4.01 0.58-0.58 4.01 4.01 0.59 0.58-4.01c0.32-2.21-1.22-4.28-3.43-4.6l-4.01-0.58c-2.21-0.33-4.27 1.22-4.6 3.42zm72.8 105.11q0.02-0.15 0.03-0.29l2.72-100.04c0.04-1.23-0.94-2.25-2.17-2.27l-57.29-0.43-0.04 0.26 48.15 7c2.21 0.32 3.75 2.39 3.43 4.6l-13.66 93.89 16.43-0.58c1.22-0.04 2.22-0.95 2.4-2.14zm-74.19-11.07l16.05 2.33-0.58 4.02-16.05-2.34zm-1.17 8.02l16.05 2.34-0.59 4.01-16.05-2.33zm21.82-9.12l28.08 4.09-2.33 16.05-28.09-4.09zm2.26 12.62l20.06 2.92 1.17-8.03-20.06-2.92zm-37.13-54.57l68.21 9.93-0.58 4.01-68.22-9.93zm24.66-0.51l-24.07-3.5 0.58-4.02 24.08 3.51zm1.17-8.03l-24.08-3.5 0.58-4.01 24.08 3.5zm1.17-8.02l-24.08-3.5 0.58-4.02 24.08 3.51zm1.16-8.03l-24.07-3.5 0.58-4.02 24.08 3.51zm0.5 24.66l5.84-40.13 40.13 5.84-5.84 40.12zm4.6-3.43l2.31 0.34 1.92-6.01c1-3.13 3.29-5.75 6.26-7.15q0.8-0.38 1.63-0.64c-0.99-1.57-1.47-3.46-1.18-5.43 0.64-4.43 4.76-7.5 9.19-6.86 4.43 0.65 7.5 4.77 6.86 9.2-0.29 1.96-1.29 3.64-2.68 4.86q0.73 0.49 1.38 1.08c2.45 2.19 3.9 5.35 3.96 8.64l0.13 6.31 2.32 0.34 4.67-32.1-32.1-4.67zm22.98-17.14c0.32-2.21-1.22-4.28-3.43-4.6-2.21-0.32-4.28 1.22-4.6 3.43-0.32 2.21 1.22 4.27 3.43 4.59 2.21 0.33 4.27-1.22 4.6-3.42zm-14.89 12.7l-1.72 5.37 19.34 2.81-0.11-5.63c-0.05-2.18-1-4.26-2.62-5.71-1.17-1.06-2.6-1.73-4.15-1.95l-2.07-0.3c-1.55-0.23-3.11 0.01-4.53 0.68-1.97 0.93-3.47 2.66-4.14 4.73z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp40">
+			<path d="m161.18-5.15l124.38 18.1-18.39 126.39-124.38-18.1z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp41">
+			<path d="m270.12 118.78q-0.01 0.37-0.07 0.76c-0.46 3.15-3.09 5.51-6.26 5.62l-17.18 0.61-0.92 6.35c-0.32 2.2-2.39 3.75-4.6 3.42l-76.23-11.09c-1.95-0.28-3.38-1.92-3.46-3.83l-0.21 0.15c-2.27 1.7-5.07 2.41-7.89 2-5.79-0.84-9.82-6.25-8.98-12.05 0.41-2.8 1.89-5.28 4.16-6.99l17.16-12.79 10.97-75.4c0.32-2.22 2.39-3.75 4.59-3.43l8.03 1.16 0.58-4.01c0.65-4.43 4.77-7.5 9.19-6.85l4.02 0.58c4.32 0.63 7.33 4.59 6.87 8.9l56.76 0.41c3.47 0.02 6.3 2.99 6.19 6.45zm-13.26-91.57l-48.15-7-1.16 8.02-4.02-0.58 1.17-8.03-4.01-0.58-0.88 6.02c-0.48 3.32-3.57 5.63-6.89 5.14-3.32-0.48-5.63-3.57-5.14-6.89l0.87-6.02-8.02-1.17-10.39 71.39 10.25-7.64 19.73-3.54 44.45 6.47-0.58 4.02-42.69-6.22-8.2 16.3-27.29 20.36-0.46 3.18 76.23 11.09zm-98.09 90.32l2.42-1.8-7.86-10.54-2.42 1.8c-1.41 1.05-2.32 2.58-2.57 4.32-0.52 3.59 1.97 6.93 5.56 7.45 1.74 0.25 3.47-0.18 4.87-1.23zm-2.19-14.77l7.86 10.54 24.32-18.14-7.85-10.54zm28.32-19.57l6.36 8.53 1.57-3.11-4.5-6.03zm11.71-2.1l-3.82 0.68 2.07 2.78zm-4.82-57.21c-0.16 1.11 0.61 2.14 1.71 2.3 1.11 0.16 2.14-0.61 2.3-1.71l0.87-6.02-4.01-0.58zm1.46-10.03l4.01 0.58 0.59-4.01 4.01 0.58-0.58 4.01 4.01 0.59 0.58-4.01c0.32-2.21-1.22-4.28-3.43-4.6l-4.01-0.58c-2.21-0.33-4.27 1.22-4.6 3.42zm72.8 105.11q0.02-0.15 0.03-0.29l2.72-100.04c0.04-1.23-0.94-2.25-2.17-2.27l-57.29-0.43-0.04 0.26 48.15 7c2.21 0.32 3.75 2.39 3.43 4.6l-13.66 93.89 16.43-0.58c1.22-0.04 2.22-0.95 2.4-2.14zm-74.19-11.07l16.05 2.33-0.58 4.02-16.05-2.34zm-1.17 8.02l16.05 2.34-0.59 4.01-16.05-2.33zm21.82-9.12l28.08 4.09-2.33 16.05-28.09-4.09zm2.26 12.62l20.06 2.92 1.17-8.03-20.06-2.92zm-37.13-54.57l68.21 9.93-0.58 4.01-68.22-9.93zm24.66-0.51l-24.07-3.5 0.58-4.02 24.08 3.51zm1.17-8.03l-24.08-3.5 0.58-4.01 24.08 3.5zm1.17-8.02l-24.08-3.5 0.58-4.02 24.08 3.51zm1.16-8.03l-24.07-3.5 0.58-4.02 24.08 3.51zm0.5 24.66l5.84-40.13 40.13 5.84-5.84 40.12zm4.6-3.43l2.31 0.34 1.92-6.01c1-3.13 3.29-5.75 6.26-7.15q0.8-0.38 1.63-0.64c-0.99-1.57-1.47-3.46-1.18-5.43 0.64-4.43 4.76-7.5 9.19-6.86 4.43 0.65 7.5 4.77 6.86 9.2-0.29 1.96-1.29 3.64-2.68 4.86q0.73 0.49 1.38 1.08c2.45 2.19 3.9 5.35 3.96 8.64l0.13 6.31 2.32 0.34 4.67-32.1-32.1-4.67zm22.98-17.14c0.32-2.21-1.22-4.28-3.43-4.6-2.21-0.32-4.28 1.22-4.6 3.43-0.32 2.21 1.22 4.27 3.43 4.59 2.21 0.33 4.27-1.22 4.6-3.42zm-14.89 12.7l-1.72 5.37 19.34 2.81-0.11-5.63c-0.05-2.18-1-4.26-2.62-5.71-1.17-1.06-2.6-1.73-4.15-1.95l-2.07-0.3c-1.55-0.23-3.11 0.01-4.53 0.68-1.97 0.93-3.47 2.66-4.14 4.73z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp42">
+			<path d="m160.89-3.14l124.38 18.1-18.1 124.38-124.38-18.1z"/>
+		</clipPath>
+		<linearGradient id="g1" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(21.794,-149.775,145.901,21.23,202.91,144.514)">
+			<stop offset="0" stop-color="#9f2fff"/>
+			<stop offset=".063" stop-color="#9f2fff"/>
+			<stop offset=".094" stop-color="#9f2fff"/>
+			<stop offset=".098" stop-color="#9f2fff"/>
+			<stop offset=".102" stop-color="#9e30ff"/>
+			<stop offset=".105" stop-color="#9d31fe"/>
+			<stop offset=".109" stop-color="#9d31fe"/>
+			<stop offset=".113" stop-color="#9c32fe"/>
+			<stop offset=".117" stop-color="#9b33fe"/>
+			<stop offset=".121" stop-color="#9a33fd"/>
+			<stop offset=".125" stop-color="#9a34fd"/>
+			<stop offset=".129" stop-color="#9935fd"/>
+			<stop offset=".133" stop-color="#9835fd"/>
+			<stop offset=".137" stop-color="#9836fd"/>
+			<stop offset=".141" stop-color="#9736fd"/>
+			<stop offset=".145" stop-color="#9637fc"/>
+			<stop offset=".148" stop-color="#9538fc"/>
+			<stop offset=".152" stop-color="#9538fc"/>
+			<stop offset=".156" stop-color="#9439fc"/>
+			<stop offset=".16" stop-color="#9339fb"/>
+			<stop offset=".164" stop-color="#933afb"/>
+			<stop offset=".168" stop-color="#923afb"/>
+			<stop offset=".172" stop-color="#913bfb"/>
+			<stop offset=".176" stop-color="#913bfb"/>
+			<stop offset=".18" stop-color="#903cfb"/>
+			<stop offset=".184" stop-color="#8f3dfa"/>
+			<stop offset=".188" stop-color="#8e3efa"/>
+			<stop offset=".191" stop-color="#8e3efa"/>
+			<stop offset=".195" stop-color="#8d3ffa"/>
+			<stop offset=".199" stop-color="#8c3ff9"/>
+			<stop offset=".203" stop-color="#8c40f9"/>
+			<stop offset=".207" stop-color="#8b41f9"/>
+			<stop offset=".211" stop-color="#8a41f9"/>
+			<stop offset=".215" stop-color="#8942f8"/>
+			<stop offset=".219" stop-color="#8942f8"/>
+			<stop offset=".223" stop-color="#8843f8"/>
+			<stop offset=".227" stop-color="#8744f8"/>
+			<stop offset=".23" stop-color="#8744f8"/>
+			<stop offset=".234" stop-color="#8645f8"/>
+			<stop offset=".238" stop-color="#8546f8"/>
+			<stop offset=".242" stop-color="#8546f7"/>
+			<stop offset=".246" stop-color="#8447f7"/>
+			<stop offset=".25" stop-color="#8347f7"/>
+			<stop offset=".254" stop-color="#8348f7"/>
+			<stop offset=".258" stop-color="#8248f6"/>
+			<stop offset=".262" stop-color="#8149f6"/>
+			<stop offset=".266" stop-color="#804af6"/>
+			<stop offset=".27" stop-color="#804af6"/>
+			<stop offset=".273" stop-color="#7f4bf6"/>
+			<stop offset=".277" stop-color="#7e4bf6"/>
+			<stop offset=".281" stop-color="#7e4cf5"/>
+			<stop offset=".285" stop-color="#7d4cf5"/>
+			<stop offset=".289" stop-color="#7c4df5"/>
+			<stop offset=".293" stop-color="#7b4ef5"/>
+			<stop offset=".297" stop-color="#7b4ef4"/>
+			<stop offset=".301" stop-color="#7a4ff4"/>
+			<stop offset=".305" stop-color="#7950f4"/>
+			<stop offset=".309" stop-color="#7950f4"/>
+			<stop offset=".313" stop-color="#7851f3"/>
+			<stop offset=".316" stop-color="#7852f3"/>
+			<stop offset=".32" stop-color="#7752f3"/>
+			<stop offset=".324" stop-color="#7653f3"/>
+			<stop offset=".328" stop-color="#7554f3"/>
+			<stop offset=".332" stop-color="#7554f3"/>
+			<stop offset=".336" stop-color="#7455f2"/>
+			<stop offset=".34" stop-color="#7355f2"/>
+			<stop offset=".344" stop-color="#7256f2"/>
+			<stop offset=".348" stop-color="#7256f1"/>
+			<stop offset=".352" stop-color="#7157f1"/>
+			<stop offset=".355" stop-color="#7058f1"/>
+			<stop offset=".359" stop-color="#7059f1"/>
+			<stop offset=".363" stop-color="#6f59f1"/>
+			<stop offset=".367" stop-color="#6e5af1"/>
+			<stop offset=".371" stop-color="#6d5af0"/>
+			<stop offset=".375" stop-color="#6d5bf0"/>
+			<stop offset=".379" stop-color="#6d5cf0"/>
+			<stop offset=".383" stop-color="#6c5cf0"/>
+			<stop offset=".387" stop-color="#6b5def"/>
+			<stop offset=".391" stop-color="#6a5def"/>
+			<stop offset=".395" stop-color="#6a5eef"/>
+			<stop offset=".398" stop-color="#695fef"/>
+			<stop offset=".402" stop-color="#695fee"/>
+			<stop offset=".406" stop-color="#6860ee"/>
+			<stop offset=".41" stop-color="#6760ee"/>
+			<stop offset=".414" stop-color="#6661ee"/>
+			<stop offset=".418" stop-color="#6561ee"/>
+			<stop offset=".422" stop-color="#6562ee"/>
+			<stop offset=".426" stop-color="#6463ed"/>
+			<stop offset=".43" stop-color="#6363ed"/>
+			<stop offset=".434" stop-color="#6264ed"/>
+			<stop offset=".438" stop-color="#6265ed"/>
+			<stop offset=".441" stop-color="#6165ec"/>
+			<stop offset=".445" stop-color="#6166ec"/>
+			<stop offset=".449" stop-color="#6066ec"/>
+			<stop offset=".453" stop-color="#5f67ec"/>
+			<stop offset=".457" stop-color="#5f68ec"/>
+			<stop offset=".461" stop-color="#5e68ec"/>
+			<stop offset=".465" stop-color="#5d69eb"/>
+			<stop offset=".469" stop-color="#5d69eb"/>
+			<stop offset=".473" stop-color="#5c6aeb"/>
+			<stop offset=".477" stop-color="#5b6beb"/>
+			<stop offset=".48" stop-color="#5b6beb"/>
+			<stop offset=".484" stop-color="#5a6cea"/>
+			<stop offset=".488" stop-color="#596cea"/>
+			<stop offset=".492" stop-color="#586dea"/>
+			<stop offset=".496" stop-color="#576dea"/>
+			<stop offset=".5" stop-color="#576eea"/>
+			<stop offset=".504" stop-color="#566fea"/>
+			<stop offset=".508" stop-color="#566fe9"/>
+			<stop offset=".512" stop-color="#5570e9"/>
+			<stop offset=".516" stop-color="#5471e9"/>
+			<stop offset=".52" stop-color="#5371e9"/>
+			<stop offset=".523" stop-color="#5372e8"/>
+			<stop offset=".527" stop-color="#5273e8"/>
+			<stop offset=".531" stop-color="#5274e8"/>
+			<stop offset=".535" stop-color="#5174e8"/>
+			<stop offset=".539" stop-color="#5075e7"/>
+			<stop offset=".543" stop-color="#4f76e7"/>
+			<stop offset=".547" stop-color="#4f76e7"/>
+			<stop offset=".551" stop-color="#4e77e7"/>
+			<stop offset=".555" stop-color="#4d77e7"/>
+			<stop offset=".559" stop-color="#4c78e7"/>
+			<stop offset=".563" stop-color="#4c78e6"/>
+			<stop offset=".566" stop-color="#4b79e6"/>
+			<stop offset=".57" stop-color="#4a7ae6"/>
+			<stop offset=".574" stop-color="#4a7ae6"/>
+			<stop offset=".578" stop-color="#497be5"/>
+			<stop offset=".582" stop-color="#487be5"/>
+			<stop offset=".586" stop-color="#487ce5"/>
+			<stop offset=".59" stop-color="#477ce5"/>
+			<stop offset=".594" stop-color="#467de5"/>
+			<stop offset=".598" stop-color="#467ee4"/>
+			<stop offset=".602" stop-color="#457ee4"/>
+			<stop offset=".605" stop-color="#447fe4"/>
+			<stop offset=".609" stop-color="#4380e4"/>
+			<stop offset=".613" stop-color="#4380e3"/>
+			<stop offset=".617" stop-color="#4281e3"/>
+			<stop offset=".621" stop-color="#4182e3"/>
+			<stop offset=".625" stop-color="#4182e3"/>
+			<stop offset=".629" stop-color="#4083e3"/>
+			<stop offset=".633" stop-color="#3f83e2"/>
+			<stop offset=".637" stop-color="#3e84e2"/>
+			<stop offset=".641" stop-color="#3e84e2"/>
+			<stop offset=".645" stop-color="#3d85e2"/>
+			<stop offset=".648" stop-color="#3c86e2"/>
+			<stop offset=".652" stop-color="#3c86e1"/>
+			<stop offset=".656" stop-color="#3b87e1"/>
+			<stop offset=".66" stop-color="#3a87e1"/>
+			<stop offset=".664" stop-color="#3a88e1"/>
+			<stop offset=".668" stop-color="#3988e0"/>
+			<stop offset=".672" stop-color="#3889e0"/>
+			<stop offset=".676" stop-color="#378ae0"/>
+			<stop offset=".68" stop-color="#378ae0"/>
+			<stop offset=".684" stop-color="#368be0"/>
+			<stop offset=".688" stop-color="#358ce0"/>
+			<stop offset=".691" stop-color="#358ce0"/>
+			<stop offset=".695" stop-color="#348ddf"/>
+			<stop offset=".699" stop-color="#338edf"/>
+			<stop offset=".703" stop-color="#328edf"/>
+			<stop offset=".707" stop-color="#328fdf"/>
+			<stop offset=".711" stop-color="#318fde"/>
+			<stop offset=".715" stop-color="#3090de"/>
+			<stop offset=".719" stop-color="#3090de"/>
+			<stop offset=".723" stop-color="#2f91de"/>
+			<stop offset=".727" stop-color="#2e92dd"/>
+			<stop offset=".73" stop-color="#2e92dd"/>
+			<stop offset=".734" stop-color="#2d93dd"/>
+			<stop offset=".738" stop-color="#2c94dd"/>
+			<stop offset=".742" stop-color="#2c94dd"/>
+			<stop offset=".746" stop-color="#2b95dd"/>
+			<stop offset=".75" stop-color="#2a96dc"/>
+			<stop offset=".754" stop-color="#2996dc"/>
+			<stop offset=".758" stop-color="#2997dc"/>
+			<stop offset=".762" stop-color="#2897dc"/>
+			<stop offset=".766" stop-color="#2798db"/>
+			<stop offset=".77" stop-color="#2799db"/>
+			<stop offset=".773" stop-color="#2699db"/>
+			<stop offset=".777" stop-color="#259adb"/>
+			<stop offset=".781" stop-color="#249bdb"/>
+			<stop offset=".785" stop-color="#249bdb"/>
+			<stop offset=".789" stop-color="#239cda"/>
+			<stop offset=".793" stop-color="#229dda"/>
+			<stop offset=".797" stop-color="#229dda"/>
+			<stop offset=".801" stop-color="#219eda"/>
+			<stop offset=".805" stop-color="#209ed9"/>
+			<stop offset=".809" stop-color="#209fd9"/>
+			<stop offset=".813" stop-color="#1f9fd9"/>
+			<stop offset=".816" stop-color="#1fa0d9"/>
+			<stop offset=".82" stop-color="#1ea0d8"/>
+			<stop offset=".824" stop-color="#1da1d8"/>
+			<stop offset=".828" stop-color="#1ca2d8"/>
+			<stop offset=".832" stop-color="#1ca2d8"/>
+			<stop offset=".836" stop-color="#1ba3d8"/>
+			<stop offset=".84" stop-color="#1aa3d7"/>
+			<stop offset=".844" stop-color="#19a4d7"/>
+			<stop offset=".848" stop-color="#19a5d7"/>
+			<stop offset=".852" stop-color="#18a5d7"/>
+			<stop offset=".855" stop-color="#17a6d7"/>
+			<stop offset=".859" stop-color="#17a7d6"/>
+			<stop offset=".863" stop-color="#16a7d6"/>
+			<stop offset=".867" stop-color="#15a8d6"/>
+			<stop offset=".871" stop-color="#14a9d6"/>
+			<stop offset=".875" stop-color="#14a9d6"/>
+			<stop offset=".879" stop-color="#14aad5"/>
+			<stop offset=".883" stop-color="#13aad5"/>
+			<stop offset=".887" stop-color="#12abd5"/>
+			<stop offset=".891" stop-color="#11abd5"/>
+			<stop offset=".895" stop-color="#11acd5"/>
+			<stop offset=".898" stop-color="#10add4"/>
+			<stop offset=".902" stop-color="#0fadd4"/>
+			<stop offset=".906" stop-color="#0eaed4"/>
+			<stop offset=".91" stop-color="#0eaed4"/>
+			<stop offset=".914" stop-color="#0dafd4"/>
+			<stop offset=".918" stop-color="#0cafd3"/>
+			<stop offset=".922" stop-color="#0cb0d3"/>
+			<stop offset=".926" stop-color="#0bb0d3"/>
+			<stop offset=".93" stop-color="#0bb1d3"/>
+			<stop offset=".938" stop-color="#0bb1d3"/>
+			<stop offset="1" stop-color="#0bb1d3"/>
+		</linearGradient>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp43">
+			<path d="m51 11.01h143.46v143.65h-143.46z"/>
+		</clipPath>
+	</defs>
+	<style>
+		.s0 { fill: #969297 } 
+		.s1 { fill: url(#g1) } 
+		.s2 { fill: #ffeaa7 } 
+		.s3 { fill: #f0d0b4 } 
+		.s4 { fill: #ff826e } 
+		.s5 { fill: #aab2bd } 
+		.s6 { fill: #fcd770 } 
+		.s7 { fill: #e6e9ed } 
+		.s8 { fill: #5cd6b3 } 
+		.s9 { fill: #000000 } 
+	</style>
+	<g id="Clip-Path" clip-path="url(#cp1)">
+		<g id="Layer">
+			<g id="Clip-Path" clip-path="url(#cp2)">
+				<g id="Layer">
+					<g id="Clip-Path" clip-path="url(#cp3)">
+						<g id="Layer">
+							<path id="Layer" class="s0" d="m23.4 66.9c2.6-2.1 3.1-6 1-8.6l-8.9-11.2-3.2 2.5 8.9 11.2c0.7 0.9 0.5 2.2-0.4 2.9-0.9 0.7-2.1 0.5-2.8-0.4l-8.9-11.1c-1.4-1.8-1.2-4.4 0.6-5.8l3.2-2.5c1.8-1.4 4.3-1.1 5.7 0.6l10.2 12.8 3.2-2.5-10.2-12.8c-2.8-3.5-7.9-4.1-11.4-1.3l-3.2 2.5c-3.6 2.8-4.1 8-1.3 11.5l8.9 11.2c2.1 2.6 5.9 3.1 8.6 1z"/>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="Clip-Path" clip-path="url(#cp4)">
+		<g id="Layer">
+			<g id="Clip-Path" clip-path="url(#cp5)">
+				<g id="Layer">
+					<g id="Clip-Path" clip-path="url(#cp6)">
+						<g id="Layer">
+							<path id="Layer" class="s0" d="m63.3 99.3l-2.1 3.3 3.4 0.3z"/>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="Clip-Path" clip-path="url(#cp7)">
+		<g id="Layer">
+			<g id="Clip-Path" clip-path="url(#cp8)">
+				<g id="Layer">
+					<g id="Clip-Path" clip-path="url(#cp9)">
+						<g id="Layer">
+							<path id="Layer" class="s0" d="m50.8 150.7c-0.2 1.8 0.3 3.5 1.4 4.9 2.2 2.8 6.4 3.3 9.3 1 1.4-1.1 2.2-2.6 2.4-4.4l0.4-3-13.2-1.5z"/>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="Clip-Path" clip-path="url(#cp10)">
+		<g id="Layer">
+			<g id="Clip-Path" clip-path="url(#cp11)">
+				<g id="Layer">
+					<g id="Clip-Path" clip-path="url(#cp12)">
+						<g id="Layer">
+							<path id="Layer" class="s0" d="m114.9 93.3l-16 12.7 5.1 6.4 15.9-12.7z"/>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="Clip-Path" clip-path="url(#cp13)">
+		<g id="Layer">
+			<g id="Clip-Path" clip-path="url(#cp14)">
+				<g id="Layer">
+					<g id="Clip-Path" clip-path="url(#cp15)">
+						<g id="Layer">
+							<path id="Layer" class="s0" d="m56.8 109.3l10.6 1.2-1.2-3.3-7.5-0.8z"/>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="Clip-Path" clip-path="url(#cp16)">
+		<g id="Layer">
+			<g id="Clip-Path" clip-path="url(#cp17)">
+				<g id="Layer">
+					<g id="Clip-Path" clip-path="url(#cp18)">
+						<g id="Layer">
+							<path id="Layer" class="s0" d="m55 113.2l-3.4 30.4 13.1 1.5 3.5-30.4z"/>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="Clip-Path" clip-path="url(#cp19)">
+		<g id="Layer">
+			<g id="Clip-Path" clip-path="url(#cp20)">
+				<g id="Layer">
+					<g id="Clip-Path" clip-path="url(#cp21)">
+						<g id="Layer">
+							<path id="Layer" class="s0" d="m61.1 66.3l2.7 4.9 15.5-12.2-4.3-3.8c-1.6-1.5-3.8-2.3-6-2.1-1.5 0.2-3 0.8-4.3 1.7l-1.6 1.4c-1.2 0.9-2.1 2.2-2.6 3.8-0.7 2-0.5 4.3 0.6 6.3z"/>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="Clip-Path" clip-path="url(#cp22)">
+		<g id="Layer">
+			<g id="Clip-Path" clip-path="url(#cp23)">
+				<g id="Layer">
+					<g id="Clip-Path" clip-path="url(#cp24)">
+						<g id="Layer">
+							<path id="Layer" class="s0" d="m62 46.6c-1.4-1.8-4-2.1-5.7-0.7-1.8 1.4-2.1 4-0.7 5.7 1.4 1.8 4 2.1 5.8 0.7 1.7-1.4 2-4 0.6-5.7z"/>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="Clip-Path" clip-path="url(#cp25)">
+		<g id="Layer">
+			<g id="Clip-Path" clip-path="url(#cp26)">
+				<g id="Layer">
+					<g id="Clip-Path" clip-path="url(#cp27)">
+						<g id="Layer">
+							<path id="Layer" fill-rule="evenodd" class="s0" d="m30.1 45.8l35.2-27.9 66.1 83.1-60.7 48.3-2-2.5 3.8-34.1-6.3-17.3 34.1-27-2.6-3.2-35.4 28.1-11 17-1.5 12.8-45.2-56.9 3.2-2.6 3.8 4.8c3.5 4.4 9.9 5.2 14.3 1.7l-8 6.3 2.6 3.2 19.1-15.2-2.5-3.2-11.2 8.9c2.6-2.1 4-5.2 3.9-8.3l8-6.4 20.3 25.6 32-25.4-25.5-32-31.9 25.4zm-4.2 24.3q0 0 0 0zm0 0q0 0 0 0zm9.8 28.7l19.1-15.3-2.5-3.2-19.2 15.3zm-5.1-6.4l19.2-15.2-2.5-3.2-19.2 15.2zm-5.1-6.4l19.2-15.2-2.6-3.2-19.1 15.2zm89.9 1.6l-22.4 17.8 10.2 12.7 22.4-17.8zm-23 23.6l-12.8 10.2 2.5 3.2 12.8-10.2zm5.1 6.4l-12.8 10.1 2.5 3.2 12.8-10.1zm-4.9-58.7l-54.4 43.2 2.6 3.2 54.3-43.3z"/>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="Clip-Path" clip-path="url(#cp28)">
+		<g id="Layer">
+			<g id="Clip-Path" clip-path="url(#cp29)">
+				<g id="Layer">
+					<g id="Clip-Path" clip-path="url(#cp30)">
+						<g id="Layer">
+							<path id="Layer" class="s0" d="m82.5 56.4l1.8-1.5-20.3-25.6-25.6 20.4 20.4 25.6 1.8-1.5-3.1-5.6c-1.6-2.9-1.9-6.3-0.9-9.5q0.3-0.8 0.6-1.6c-1.8-0.4-3.5-1.3-4.8-2.9-2.8-3.5-2.2-8.7 1.3-11.5 3.6-2.8 8.7-2.2 11.5 1.3 1.3 1.6 1.8 3.5 1.8 5.3q0.8-0.2 1.7-0.2c3.3-0.3 6.6 0.8 9.1 3z"/>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="Clip-Path" clip-path="url(#cp31)">
+		<g id="Layer">
+			<g id="Clip-Path" clip-path="url(#cp32)">
+				<g id="Layer">
+					<g id="Clip-Path" clip-path="url(#cp33)">
+						<g id="Layer">
+							<path id="Layer" class="s0" d="m138.8 74.2l-71.6-71c-0.8-0.9-2.3-0.9-3.1 0l-37 38.8 0.5 0.6 35.1-27.9c1.8-1.4 4.4-1.1 5.8 0.6l59.5 74.8 10.9-12.4c0.8-1 0.9-2.3 0.1-3.3q-0.1-0.1-0.2-0.2z"/>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="Clip-Path" clip-path="url(#cp34)">
+		<g id="Layer">
+			<g id="Clip-Path" clip-path="url(#cp35)">
+				<g id="Layer">
+					<g id="Clip-Path" clip-path="url(#cp36)">
+						<g id="Layer">
+							<g id="Clip-Path" clip-path="url(#cp37)">
+								<g id="Layer">
+									<g id="Clip-Path" clip-path="url(#cp38)">
+										<g id="Layer">
+											<g id="Clip-Path" clip-path="url(#cp39)">
+												<g id="Layer">
+													<g id="Clip-Path" clip-path="url(#cp40)">
+														<g id="Layer">
+															<g id="Clip-Path" clip-path="url(#cp41)">
+																<g id="Layer">
+																	<g id="Clip-Path" clip-path="url(#cp42)">
+																		<g id="Layer">
+																			<path id="Layer" class="s1" d="m124.4 133.1l145.9 21.2 21.8-149.8-145.9-21.2z"/>
+																		</g>
+																	</g>
+																</g>
+															</g>
+														</g>
+													</g>
+												</g>
+											</g>
+										</g>
+									</g>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+	<path id="Layer" class="s2" d="m191.9 131.3c0 0.2 0 0.4 0 0.6 0 2.5-1.8 4.6-4.2 5l-21.2 3.9v-110.9c0-1.2-1-2.3-2.3-2.3h-57.7v-4.6l66.6-9.2c0.2 0 0.5 0 0.7 0 2.4 0 4.5 1.8 4.8 4.3z"/>
+	<path id="Layer" class="s3" d="m164.2 27.6h-87.8c-1.2 0-2.3 1.1-2.3 2.3v120.1c0 1.3 1.1 2.4 2.3 2.4h87.8c1.3 0 2.3-1.1 2.3-2.4v-120.1c0-1.2-1-2.3-2.3-2.3z"/>
+	<path id="Layer" class="s4" d="m157.3 129.3v13.8h-27.7v-13.8z"/>
+	<path id="Layer" class="s5" d="m74.1 145.4l-4 4.1c-1.8 1.8-4.3 2.9-7 2.9-2.7 0-5.1-1.2-6.9-2.9-1.7-1.8-2.8-4.2-2.8-6.9 0-2.7 1-5.1 2.8-7l4.1-4z"/>
+	<path id="Layer" class="s5" d="m104.7 109l-2.8 8.7-13.9-13.8 8.7-2.9z"/>
+	<path id="Layer" class="s5" d="m108.8 96.9l-4.1 12.1-8-8z"/>
+	<path id="Layer" class="s6" d="m101.9 117.7l-27.8 27.7-13.8-13.8 27.7-27.7z"/>
+	<path id="Layer" class="s7" d="m157.3 36.9v41.5h-6.9l-1.6-9c-0.5-3-2.2-5.8-4.8-7.5-1.9-1.3-4.1-1.9-6.3-1.9h-1.2c3.8 0 6.9-3.1 6.9-7 0-3.8-3.1-6.9-6.9-6.9-3.8 0-6.9 3.1-6.9 6.9 0 3.9 3.1 7 6.9 7h-1.2c-2.2 0-4.4 0.6-6.3 1.9-2.6 1.7-4.4 4.5-4.9 7.5l-1.5 9h-6.9v-41.5z"/>
+	<path id="Layer" class="s8" d="m148.8 69.4l1.6 9h-27.8l1.5-9c0.5-3 2.3-5.8 4.9-7.5 1.9-1.3 4.1-1.9 6.3-1.9h2.4c2.2 0 4.4 0.6 6.3 1.9 2.6 1.7 4.3 4.5 4.8 7.5z"/>
+	<path id="Layer" class="s3" d="m136.5 46.1c3.8 0 6.9 3.1 6.9 6.9 0 3.9-3.1 7-6.9 7-3.8 0-6.9-3.1-6.9-7 0-3.8 3.1-6.9 6.9-6.9z"/>
+	<path id="Layer" fill-rule="evenodd" class="s9" d="m113.4 80.8v-46.2h46.2v46.2zm4.6-4.7h2.7l1.2-7.1c0.6-3.7 2.7-7 5.8-9q0.9-0.6 1.8-1c-1.4-1.6-2.3-3.7-2.3-6 0-5.1 4.2-9.2 9.3-9.2 5.1 0 9.2 4.1 9.2 9.2 0 2.3-0.8 4.4-2.2 6q0.9 0.4 1.7 1c3.2 2 5.3 5.3 5.9 9l1.2 7.1h2.7v-36.9h-37zm23.1-23.1c0-2.5-2.1-4.6-4.6-4.6-2.6 0-4.6 2.1-4.6 4.6 0 2.5 2 4.6 4.6 4.6 2.5 0 4.6-2.1 4.6-4.6zm-14.7 16.8l-1 6.3h22.2l-1-6.3c-0.5-2.5-1.9-4.7-3.9-6.1-1.5-0.9-3.2-1.5-5-1.5h-2.4c-1.8 0-3.5 0.6-5 1.5-2.1 1.4-3.5 3.6-3.9 6.1z"/>
+	<path id="Layer" class="s9" d="m108.8 48.4h-27.7v4.6h27.7z"/>
+	<path id="Layer" class="s9" d="m108.8 57.7h-27.7v4.6h27.7z"/>
+	<path id="Layer" class="s9" d="m108.8 66.9h-27.7v4.6h27.7z"/>
+	<path id="Layer" class="s9" d="m108.8 76.1h-27.7v4.7h27.7z"/>
+	<path id="Layer" class="s9" d="m81.1 90h78.5v-4.6h-78.5z"/>
+	<path id="Layer" fill-rule="evenodd" class="s9" d="m127.3 126.9h32.3v18.5h-32.3zm4.6 13.9h23.1v-9.3h-23.1z"/>
+	<path id="Layer" class="s9" d="m104.2 145.4h18.4v-4.6h-18.4z"/>
+	<path id="Layer" class="s9" d="m104.2 136.2h18.4v-4.6h-18.4z"/>
+	<g id="Clip-Path" clip-path="url(#cp43)">
+		<g id="Layer">
+			<path id="Layer" fill-rule="evenodd" class="s9" d="m194.2 131.9c0 3.6-2.5 6.7-6.1 7.3l-19.3 3.5v7.3c0 2.6-2 4.7-4.6 4.7h-87.8c-2.2 0-4.1-1.7-4.5-3.8l-0.2 0.2c-2.3 2.3-5.3 3.6-8.5 3.6-6.7 0-12.2-5.5-12.2-12.1 0-3.3 1.3-6.3 3.6-8.6l17.2-17.2v-86.9c0-2.5 2.1-4.6 4.6-4.6h9.3v-4.6c0-5.1 4.1-9.2 9.2-9.2h4.6c5 0 9.1 3.9 9.2 8.9l64.1-8.9c3.9-0.5 7.6 2.4 8 6.3l13.4 113.2q0 0.4 0 0.9zm-30-102h-55.4v9.3h-4.6v-9.3h-4.7v7c0 3.8-3.1 6.9-6.9 6.9-3.8 0-6.9-3.1-6.9-6.9v-7h-9.3v82.2l10.4-10.3 21.6-7.2h51.2v4.6h-49.2l-6.5 19.8-27.5 27.4v3.6h87.8zm-95.8 117.9l2.5-2.4-10.6-10.6-2.4 2.4c-1.5 1.5-2.2 3.3-2.2 5.3 0 4.2 3.3 7.5 7.5 7.5 2 0 3.8-0.7 5.2-2.2zm-4.9-16.2l10.6 10.5 24.5-24.4-10.6-10.6zm28.7-26.7l8.6 8.6 1.2-3.8-6-6.1zm12.8-4.2l-4.2 1.4 2.8 2.8zm-14.8-63.7c0 1.2 1.1 2.3 2.3 2.3 1.3 0 2.3-1.1 2.3-2.3v-7h-4.6zm0-11.5h4.6v-4.6h4.7v4.6h4.6v-4.6c0-2.6-2.1-4.7-4.6-4.7h-4.7c-2.5 0-4.6 2.1-4.6 4.7zm99.3 106.5q0-0.2 0-0.3l-13.3-113.2c-0.2-1.4-1.5-2.4-2.8-2.2l-64.7 8.9v0.3h55.4c2.6 0 4.6 2 4.6 4.6v108.1l18.5-3.4c1.3-0.2 2.3-1.4 2.3-2.8z"/>
+		</g>
+	</g>
+</svg>
