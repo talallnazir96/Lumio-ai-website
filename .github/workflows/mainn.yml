@@ -30,8 +30,8 @@ jobs:
       - name: Build Next.js project
         run: npm run build
 
-      - name: Export static site
-        run: npm run export
+      # - name: Export static site
+      #   run: npm run export
 
       - name: Debug - List output directory contents
         run: ls -la out/
