@@ -1,0 +1,63 @@
+name: Build & Deploy to Netlify Lumio
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  CI: false
+  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}  # Pass auth token as environment variable
+  NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}  # Pass site ID as environment variable
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+
+      - name: Build project
+        run: npm run build
+
+      - name: Debug - List build directory contents
+        run: ls -la build/
+
+      - name: Upload production-ready build files
+        uses: actions/upload-artifact@v3
+        with:
+          name: production-files
+          path: build/ # Use build directory for CRA
+
+  deploy:
+    name: Deploy to Netlify
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: production-files
+          path: build/ # Use build directory for CRA
+
+      - name: Debug - Check secrets
+        run: echo "NETLIFY_AUTH_TOKEN=$NETLIFY_AUTH_TOKEN; NETLIFY_SITE_ID=$NETLIFY_SITE_ID" # Debugging (avoid exposing secrets in production)
+
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v3
+        with:
+          publish-dir: build/  # Use build directory for CRA
+          production-deploy: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}  # GitHub token for authentication
+          netlify-site-id: ${{ secrets.NETLIFY_SITE_ID }}  # Pass site ID here as environment variable
