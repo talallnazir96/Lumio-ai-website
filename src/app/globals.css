@@ -264,15 +264,11 @@ body{
 
 /* Steps section start here */
 
-.stepssec .outerbg{
-  background: var(--gray-color);
-  padding: 40px 70px 40px;
-  border-radius: 15px;
-}
+
 .topcard{
   background: linear-gradient(137deg,#8c52ff 0%,#5ce1e6 100%);
   border-radius: 10px;
-  padding:40px 0px;
+  padding: 40px 0px;
   position: relative;
 }
 .topcard iframe {
@@ -280,14 +276,19 @@ body{
   left: -20px;
   top: -40px;
 }
-.topcard .SectionHeading{
+.topcard {
   color: #fff;
   font-weight: 700;
 }
-.stepsParent{
+/* .stepsParent{
   display: flex;
   align-items: center;
-
+} */
+/*
+ .stepssec .outerbg{
+  background: var(--gray-color);
+  padding: 40px 70px 40px;
+  border-radius: 15px;
 }
 .number {
   width: 30px;
@@ -301,13 +302,15 @@ body{
   justify-content: center;
   margin-bottom: 10px;
 }
+
+
 .stepicon {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
   border: 1px solid;
   border-radius: 10px 60px 60px 10px;
-  padding-right: 15px;
+  padding-right: 5px;
   width: 180px;
 }
 .arrow {
@@ -322,7 +325,7 @@ body{
 
 .stepicon img{
   width: 60px;
-}
+}  */
 
 
 /* statistics section start here  */
@@ -382,11 +385,14 @@ body{
 
 /* Meet team section start here  */
 
-.topHeading{
-  background: linear-gradient(137deg,#8c52ff 0%,#5ce1e6 100%);
+/* MeetTeamCustom.css */
+
+.topHeading {
+  background: linear-gradient(137deg, #8c52ff 0%, #5ce1e6 100%);
   padding: 20px 30px;
   border-radius: 50px;
 }
+
 .topHeading h2 {
   color: #fff;
 }
@@ -396,6 +402,7 @@ body{
   width: 100%;
   height: 100%;
 }
+
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -403,32 +410,38 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 40px;
 }
+
 .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.swiper-pagination{
+
+.swiper-pagination {
   bottom: 0px !important;
 }
 
 .teamcard {
   background: var(--gray-color);
   text-align: left;
+  width: 250px;
 }
+
 .certified {
   width: 24px !important;
 }
-.teamcard h4{
+
+.teamcard h4 {
   color: var(--blue-color);
   font-size: 18px;
 }
-.teamcard p{
+
+.teamcard p {
   color: var(--blue-color);
 }
+
 .expertise .skills {
   display: inline-block;
   padding: 5px 18px;
@@ -440,11 +453,11 @@ body{
   font-size: 16px;
 }
 
-.greenish{
+.greenish {
   background: var(--greenish);
 }
 
-.black{
+.black {
   background: var(--black-color);
 }
 
@@ -462,6 +475,7 @@ body{
 .viewprofile:hover {
   background: var(--greenish);
 }
+
 .meetTeam {
   position: relative;
   z-index: 0;

@@ -117,7 +117,7 @@ const EducationForm: React.FC<EducationFormProps> = ({ formData, setFormData, on
                 value={formValues.country}
                 onChange={handleChange}
                 placeholder="Type here.."
-                className="w-full px-3 py-2 bg-gray-100 border-none rounded-md text-black"
+                className=" px-3 py-2 bg-gray-100 border-none rounded-md text-black w-1/2"
               />
               {errors.country && <p className="text-red-500 text-sm">{errors.country}</p>}
             </div>

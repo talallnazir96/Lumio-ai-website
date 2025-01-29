@@ -1,6 +1,74 @@
 "use client"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { motion } from "framer-motion"
+// import './MeetTeamCustom.css'
+
+const teamMembers = [
+  {
+    name: "Ruben Bartosz",
+    image: "/assets/img/team1.jpg",
+    certification: "LumioAI certified",
+    role: "AI/ML Engineer",
+    experience: "8+ years experience",
+    expertise: ["React.js", "Python", "SQL", "Java"]
+  },
+  {
+    name: "Ruben Bartosz",
+    image: "/assets/img/team1.jpg",
+    certification: "LumioAI certified",
+    role: "AI/ML Engineer",
+    experience: "8+ years experience",
+    expertise: ["React.js", "Python", "SQL", "Java"]
+  },
+  {
+    name: "Hector Vasileiou",
+    image: "/assets/img/team2.jpg",
+    certification: "LumioAI certified",
+    role: "AI/ML Engineer",
+    experience: "8+ years experience",
+    expertise: ["React.js", "Python", "SQL", "Java"]
+  },
+  {
+    name: "Hector Vasileiou",
+    image: "/assets/img/team2.jpg",
+    certification: "LumioAI certified",
+    role: "AI/ML Engineer",
+    experience: "8+ years experience",
+    expertise: ["React.js", "Python", "SQL", "Java"]
+  },
+  {
+    name: "Anup Malani",
+    image: "/assets/img/team3.jpg",
+    certification: "LumioAI certified",
+    role: "AI/ML Engineer",
+    experience: "8+ years experience",
+    expertise: ["React.js", "Python", "SQL", "Java"]
+  },
+  {
+    name: "Anup Malani",
+    image: "/assets/img/team3.jpg",
+    certification: "LumioAI certified",
+    role: "AI/ML Engineer",
+    experience: "8+ years experience",
+    expertise: ["React.js", "Python", "SQL", "Java"]
+  },
+  {
+    name: "Anup Malani",
+    image: "/assets/img/team3.jpg",
+    certification: "LumioAI certified",
+    role: "AI/ML Engineer",
+    experience: "8+ years experience",
+    expertise: ["React.js", "Python", "SQL", "Java"]
+  },
+  {
+    name: "Anup Malani",
+    image: "/assets/img/team3.jpg",
+    certification: "LumioAI certified",
+    role: "AI/ML Engineer",
+    experience: "8+ years experience",
+    expertise: ["React.js", "Python", "SQL", "Java"]
+  }
+]
 
 const MeetTeam = () => {
   return (
@@ -10,9 +78,9 @@ const MeetTeam = () => {
         style={{
           backgroundImage: `url('/assets/floor.png')`,
           backgroundSize: "contain",
-          backgroundPosition: "center bottom", 
+          backgroundPosition: "center bottom",
           backgroundRepeat: "no-repeat",
-          paddingBottom: "200px", 
+          paddingBottom: "200px",
         }}
       >
         <div className="container">
@@ -45,281 +113,146 @@ const MeetTeam = () => {
               <div className="swiper-wrapper">
                 <Carousel className="relative -mb-[5rem]">
                   <CarouselContent>
-                    <CarouselItem className="basis-1/5">
-                      <div className="swiper-slide">
-                        <div className="teamcard">
-                          <img src="/assets/img/team1.jpg" alt="team1" />
-                          <div className="px-2 py-2">
-                            <h5>Ruben Bartosz</h5>
-                            <div className="d-flex gap-2 align-items-center">
-                              <img src="/assets/img/certified.svg" className="certified" alt="certified" />
-                              <h4 className="mb-0">
-                                <strong>LumioAI</strong> certified
-                              </h4>
+                    {teamMembers.map((member, index) => (
+                      <CarouselItem key={index} className="basis-full sm:basis-1/2 lg:basis-1/4">
+                        <div className="swiper-slide">
+                          <div className="teamcard">
+                            <img src={member.image} alt={member.name} />
+                            <div className="px-2 py-2">
+                              <h5>{member.name}</h5>
+                              <div className="d-flex gap-2 align-items-center">
+                                <img src="/assets/img/certified.svg" className="certified" alt="certified" />
+                                <h4 className="mb-0">
+                                  <strong>{member.certification}</strong>
+                                </h4>
+                              </div>
+                              <ul className="mb-0 ps-0 mt-2">
+                                <li>{member.role}</li>
+                                <li>{member.experience}</li>
+                              </ul>
+                              <p className="mt-2">Expertise:</p>
+                              <div className="expertise">
+                                {member.expertise.map((skill, skillIndex) => (
+                                  <div key={skillIndex} className={`skills ${skillIndex % 2 === 0 ? 'greenish' : 'black'} mr-1`}>{skill}</div>
+                                ))}
+                              </div>
                             </div>
-                            <ul className="mb-0 ps-0 mt-2">
-                              <li>AI/ML Engineer</li>
-                              <li>8+ years experience</li>
-                            </ul>
-                            <p className="mt-2">Expertise:</p>
-                            <div className="expertise">
-                              <div className="skills greenish mr-1">React.js</div>
-                              <div className="skills greenish">Python</div>
-                              <div className="skills black mr-1">SQL</div>
-                              <div className="skills black">Java</div>
-                            </div>
+                            <a href="#" className="viewprofile">
+                              View full profile
+                            </a>
                           </div>
-                          <a href="#" className="viewprofile">
-                            View full profile
-                          </a>
                         </div>
-                      </div>
-                    </CarouselItem>
-                    <CarouselItem className="basis-1/5">
-                      <div className="swiper-slide">
-                        <div className="teamcard">
-                          <img src="/assets/img/team2.jpg" alt="team1" />
-                          <div className="px-2 py-2">
-                            <h5>Hector Vasileiou</h5>
-                            <div className="d-flex gap-2 align-items-center">
-                              <img src="/assets/img/certified.svg" className="certified" alt="certified" />
-                              <h4 className="mb-0">
-                                <strong>LumioAI</strong> certified
-                              </h4>
-                            </div>
-                            <ul className="mb-0 ps-0 mt-2">
-                              <li>AI/ML Engineer</li>
-                              <li>8+ years experience</li>
-                            </ul>
-                            <p className="mt-2">Expertise:</p>
-                            <div className="expertise">
-                              <div className="skills greenish mr-1">React.js</div>
-                              <div className="skills greenish">Python</div>
-                              <div className="skills black mr-1">SQL</div>
-                              <div className="skills black">Java</div>
-                            </div>
-                          </div>
-                          <a href="#" className="viewprofile">
-                            View full profile
-                          </a>
-                        </div>
-                      </div>
-                    </CarouselItem>
-                    <CarouselItem className="basis-1/5">
-                      <div className="swiper-slide">
-                        <div className="teamcard">
-                          <img src="/assets/img/team3.jpg" alt="team1" />
-                          <div className="px-2 py-2">
-                            <h5>Anup Malani</h5>
-                            <div className="d-flex gap-2 align-items-center">
-                              <img src="/assets/img/certified.svg" className="certified" alt="certified" />
-                              <h4 className="mb-0">
-                                <strong>LumioAI</strong> certified
-                              </h4>
-                            </div>
-                            <ul className="mb-0 ps-0 mt-2">
-                              <li>AI/ML Engineer</li>
-                              <li>8+ years experience</li>
-                            </ul>
-                            <p className="mt-2">Expertise:</p>
-                            <div className="expertise">
-                              <div className="skills greenish mr-1">React.js</div>
-                              <div className="skills greenish">Python</div>
-                              <div className="skills black mr-1">SQL</div>
-                              <div className="skills black">Java</div>
-                            </div>
-                          </div>
-                          <a href="#" className="viewprofile">
-                            View full profile
-                          </a>
-                        </div>
-                      </div>
-                    </CarouselItem>
-                    <CarouselItem className="basis-1/5">
-                      <div className="swiper-slide">
-                        <div className="teamcard">
-                          <img src="/assets/img/team1.jpg" alt="team1" />
-                          <div className="px-2 py-2">
-                            <h5>Ruben Bartosz</h5>
-                            <div className="d-flex gap-2 align-items-center">
-                              <img src="/assets/img/certified.svg" className="certified" alt="certified" />
-                              <h4 className="mb-0">
-                                <strong>LumioAI</strong> certified
-                              </h4>
-                            </div>
-                            <ul className="mb-0 ps-0 mt-2">
-                              <li>AI/ML Engineer</li>
-                              <li>8+ years experience</li>
-                            </ul>
-                            <p className="mt-2">Expertise:</p>
-                            <div className="expertise">
-                              <div className="skills greenish mr-1">React.js</div>
-                              <div className="skills greenish">Python</div>
-                              <div className="skills black mr-1">SQL</div>
-                              <div className="skills black">Java</div>
-                            </div>
-                          </div>
-                          <a href="#" className="viewprofile">
-                            View full profile
-                          </a>
-                        </div>
-                      </div>
-                    </CarouselItem>
-                    <CarouselItem className="basis-1/5">
-                      <div className="swiper-slide">
-                        <div className="teamcard">
-                          <img src="/assets/img/team2.jpg" alt="team1" />
-                          <div className="px-2 py-2">
-                            <h5>Ruben Bartosz</h5>
-                            <div className="d-flex gap-2 align-items-center">
-                              <img src="/assets/img/certified.svg" className="certified" alt="certified" />
-                              <h4 className="mb-0">
-                                <strong>LumioAI</strong> certified
-                              </h4>
-                            </div>
-                            <ul className="mb-0 ps-0 mt-2">
-                              <li>AI/ML Engineer</li>
-                              <li>8+ years experience</li>
-                            </ul>
-                            <p className="mt-2">Expertise:</p>
-                            <div className="expertise">
-                              <div className="skills greenish mr-1">React.js</div>
-                              <div className="skills greenish">Python</div>
-                              <div className="skills black mr-1">SQL</div>
-                              <div className="skills black">Java</div>
-                            </div>
-                          </div>
-                          <a href="#" className="viewprofile">
-                            View full profile
-                          </a>
-                        </div>
-                      </div>
-                    </CarouselItem>
-                    <CarouselItem className="basis-1/5">
-                      <div className="swiper-slide">
-                        <div className="teamcard">
-                          <img src="/assets/img/team3.jpg" alt="team1" />
-                          <div className="px-2 py-2">
-                            <h5>Anup Malani</h5>
-                            <div className="d-flex gap-2 align-items-center">
-                              <img src="/assets/img/certified.svg" className="certified" alt="certified" />
-                              <h4 className="mb-0">
-                                <strong>LumioAI</strong> certified
-                              </h4>
-                            </div>
-                            <ul className="mb-0 ps-0 mt-2">
-                              <li>AI/ML Engineer</li>
-                              <li>8+ years experience</li>
-                            </ul>
-                            <p className="mt-2">Expertise:</p>
-                            <div className="expertise">
-                              <div className="skills greenish mr-1">React.js</div>
-                              <div className="skills greenish">Python</div>
-                              <div className="skills black mr-1">SQL</div>
-                              <div className="skills black">Java</div>
-                            </div>
-                          </div>
-                          <a href="#" className="viewprofile">
-                            View full profile
-                          </a>
-                        </div>
-                      </div>
-                    </CarouselItem>
-                    <CarouselItem className="basis-1/5">
-                      <div className="swiper-slide">
-                        <div className="teamcard">
-                          <img src="/assets/img/team1.jpg" alt="team1" />
-                          <div className="px-2 py-2">
-                            <h5>Ruben Bartosz</h5>
-                            <div className="d-flex gap-2 align-items-center">
-                              <img src="/assets/img/certified.svg" className="certified" alt="certified" />
-                              <h4 className="mb-0">
-                                <strong>LumioAI</strong> certified
-                              </h4>
-                            </div>
-                            <ul className="mb-0 ps-0 mt-2">
-                              <li>AI/ML Engineer</li>
-                              <li>8+ years experience</li>
-                            </ul>
-                            <p className="mt-2">Expertise:</p>
-                            <div className="expertise">
-                              <div className="skills greenish mr-1">React.js</div>
-                              <div className="skills greenish">Python</div>
-                              <div className="skills black mr-1">SQL</div>
-                              <div className="skills black">Java</div>
-                            </div>
-                          </div>
-                          <a href="#" className="viewprofile">
-                            View full profile
-                          </a>
-                        </div>
-                      </div>
-                    </CarouselItem>
+                      </CarouselItem>
+                    ))}
                   </CarouselContent>
-                  <CarouselPrevious className="absolute -left-12 top-1/2 transform -translate-y-1/2" />
-                  <CarouselNext className="absolute -right-12 top-1/2 transform -translate-y-1/2" />
+                  <CarouselPrevious className="carousel-arrow left-0 bg-black text-white lg:-ml-10" />
+                  <CarouselNext className="carousel-arrow right-0 bg-black text-white lg:-mr-10" />
                 </Carousel>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <style jsx>{`
+        .topHeading {
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .topcard {
+            background: linear-gradient(90deg, #6a11cb, #8e9cf7); /* Default gradient */
+            color: white;
+            padding: 30px 20px;
+            border-radius: 20px;
+            transition: background 0.3s ease, transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .topcard:hover {
+            transform: scale(1.02); /* Subtle zoom effect on hover */
+        }
+
+        .mb-0 {
+            margin-bottom: 0;
+            font-size: 2rem;
+            font-weight: bold;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 768px) {
+            .mb-0 {
+                font-size: 1.5rem;
+            }
+        }
+
+        .meetTeam {
+          position: relative;
+          overflow: hidden;
+        }
+
+        .meetTeam::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 200px; /* Adjust based on your needs */
+          background-image: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 0.5)
+          );
+          pointer-events: none;
+        }
+
+        .teamcard {
+          background: white;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+          transition: transform 0.3s ease;
+        }
+
+        .teamcard:hover {
+          transform: translateY(-10px);
+        }
+
+        .teamcard img {
+          width: 100%;
+          height: auto;
+        }
+
+        .viewprofile {
+          display: block;
+          text-align: center;
+          padding: 10px 0;
+          color: #6a11cb;
+          font-weight: bold;
+          transition: color 0.3s ease;
+        }
+
+        .viewprofile:hover {
+          color: #8e9cf7;
+        }
+
+        .carousel-arrow {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 10;
+        }
+
+        .carousel-arrow.left-0 {
+          left: -12px;
+        }
+
+        .carousel-arrow.right-0 {
+          right: -12px;
+        }
+      `}</style>
     </>
   )
 }
-;<style jsx>{`
-    .topHeading {
-        padding: 20px;
-        margin: 20px 0;
-    }
-
-    .topcard {
-        background: linear-gradient(90deg, #6a11cb, #8e9cf7); /* Default gradient */
-        color: white;
-        padding: 30px 20px;
-        border-radius: 20px;
-        transition: background 0.3s ease, transform 0.3s ease;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .topcard:hover {
-        transform: scale(1.02); /* Subtle zoom effect on hover */
-    }
-
-    .mb-0 {
-        margin-bottom: 0;
-        font-size: 2rem;
-        font-weight: bold;
-        line-height: 1.4;
-    }
-
-    @media (max-width: 768px) {
-        .mb-0 {
-            font-size: 1.5rem;
-        }
-    }
-
-    .meetTeam {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .meetTeam::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 200px; /* Adjust based on your needs */
-      background-image: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0),
-        rgba(255, 255, 255, 0.5)
-      );
-      pointer-events: none;
-    }
-`}</style>
 
 export default MeetTeam
-

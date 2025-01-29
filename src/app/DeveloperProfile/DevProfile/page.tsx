@@ -188,10 +188,12 @@ const DevProfile: React.FC = () => {
 
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-6 h-6">
-                <span className="text-xl">🏛️</span>
+              <div className="flex gap-2">
+                <div className="w-6 h-6">
+                  <span className="text-2xl">🏛️</span>
+                </div>
+                <h3 className="font-semibold">Education</h3>
               </div>
-              <h3 className="font-semibold">Education</h3>
             </div>
             <div className="ml-8">
               <div className="flex items-center justify-between">

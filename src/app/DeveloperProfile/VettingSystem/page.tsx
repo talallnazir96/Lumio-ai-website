@@ -71,9 +71,8 @@ export default function VettingSystem() {
           <section className="mb-12">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-lg font-semibold text-black">Quizzes</h2>
-              <button className="text-blue-600 text-xs">+Add Skills</button>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
               {quizzes.map((quiz, index) => (
                 <div key={index} className="bg-white rounded-lg p-4 relative border border-gray-100">
                   {quiz.hasNotification && (
@@ -81,7 +80,7 @@ export default function VettingSystem() {
                   )}
                   <div className="flex flex-col items-center">
                     <img
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pageeee-T1B7mlFIgqDImLjPJgLNbtgxUrIN8i.png"
+                      src="/assets/java.png"
                       alt={quiz.name}
                       className="w-12 h-12 mb-3"
                     />
@@ -104,6 +103,7 @@ export default function VettingSystem() {
                   </div>
                 </div>
               ))}
+              <button className="text-blue-600 text-xs">+Add Skills</button>
             </div>
             <div className="h-px bg-gray-200 mt-8" />
           </section>

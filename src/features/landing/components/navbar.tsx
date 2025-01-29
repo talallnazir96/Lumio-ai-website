@@ -1,15 +1,28 @@
-'use client'
-import React, { useState } from 'react';
+'use client';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Button } from "@/components/ui/button";
 import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "@/components/ui/navigation-menu";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Dialog, DialogTrigger, DialogContent, DialogTitle } from '@radix-ui/react-dialog';
+import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 import { Menu, ChevronDown } from "lucide-react";
 import Image from 'next/image';
 
 const MainNav = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 0);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     const navItems = [
         { href: "/how-it-works", label: "How it works" },
@@ -39,7 +52,7 @@ const MainNav = () => {
     );
 
     return (
-        <nav className="sticky top-0 z-50 w-full bg-black px-4">
+        <nav className={`sticky top-0 z-50 w-full bg-black  px-4 transition-all duration-300 `}>
             <div className="flex h-16 items-center justify-between">
                 {/* Logo */}
                 <div className={"flex items-center gap-5"}>
@@ -60,7 +73,6 @@ const MainNav = () => {
                                         </NavLink>
                                     </NavigationMenuItem>
                                 ))}
-
                                 <DropdownMenu>
                                     <DropdownMenuTrigger className="text-white hover:text-gray-300 flex items-center">
                                         For Talent <ChevronDown className="ml-1" />
@@ -111,14 +123,17 @@ const MainNav = () => {
                 </div>
 
                 {/* Mobile Menu */}
-                <Sheet open={isOpen} onOpenChange={setIsOpen}>
-                    <SheetTrigger asChild className="md:hidden">
+                <Dialog open={isOpen} onOpenChange={setIsOpen}>
+                    <DialogTrigger asChild className="md:hidden">
                         <Button variant="ghost" size="icon" className="text-white">
                             <Menu />
                         </Button>
-                    </SheetTrigger>
-                    <SheetContent side="right" className="w-64 bg-black p-0">
-                        <div className="flex flex-col space-y-4 p-4">
+                    </DialogTrigger>
+                    <DialogContent className="fixed inset-0 flex items-end justify-end z-50 bg-black p-4">
+                        <VisuallyHidden>
+                            <DialogTitle>Mobile Navigation</DialogTitle>
+                        </VisuallyHidden>
+                        <div className="flex flex-col space-y-4">
                             {navItems.map((item) => (
                                 <NavLink
                                     key={item.href}
@@ -164,8 +179,8 @@ const MainNav = () => {
                                 </div>
                             </div>
                         </div>
-                    </SheetContent>
-                </Sheet>
+                    </DialogContent>
+                </Dialog>
             </div>
         </nav>
     );
