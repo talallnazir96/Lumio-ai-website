@@ -1,9 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", serif;
 }
 
 @layer base {
@@ -42,6 +43,7 @@ body {
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -82,6 +84,7 @@ body {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -90,22 +93,24 @@ body {
 
 /*Start Css Here*/
 
-:root{
-  --blue-color:#3055ff;
-  --black-color:#000;
-  --greenish:#76c2af;
-  --white:#fff;
-  --gray-color:#f2f2f2;
+:root {
+  --blue-color: #3055ff;
+  --black-color: #000;
+  --greenish: #76c2af;
+  --white: #fff;
+  --gray-color: #f2f2f2;
 }
 
 /* Global  */
-ul{
+ul {
   list-style: none;
 }
-.container-fluid{
-  --bs-gutter-x:4.5rem !important;
+
+.container-fluid {
+  --bs-gutter-x: 4.5rem !important;
 }
-body{
+
+body {
   font-family: "Poppins", serif;
 }
 
@@ -118,30 +123,35 @@ body{
   width: 100%;
   z-index: 1;
 }
-.logo{
+
+.logo {
   width: 100px;
 }
 
-.customnav ul li a{
-  color:var(--white);
-  font-size:16px;
+.customnav ul li a {
+  color: var(--white);
+  font-size: 16px;
 }
-.customnav ul li a:hover{
-  color:var(--blue-color);
+
+.customnav ul li a:hover {
+  color: var(--blue-color);
 }
-.customnav .dropdown-menu li a{
-  color:var(--black-color);
-  font-size:16px;
+
+.customnav .dropdown-menu li a {
+  color: var(--black-color);
+  font-size: 16px;
 }
+
 .navbar-nav .nav-link.show {
   color: var(--blue-color) !important;
 }
+
 .customnav ul {
   gap: 30px;
 }
 
-.btnstyle1{
-  background:var(--blue-color);
+.btnstyle1 {
+  background: var(--blue-color);
   color: var(--white);
   font-size: 16px;
   display: flex;
@@ -153,15 +163,15 @@ body{
   text-decoration: none;
 }
 
-.btnstyle1:hover{
-  background: linear-gradient(137deg,#5d53ff 0%,#d711c1 52.6%,#f9a025 100%);
+.btnstyle1:hover {
+  background: linear-gradient(137deg, #5d53ff 0%, #d711c1 52.6%, #f9a025 100%);
   transition: .5s;
 }
 
 
 /* Banner section css start here  */
 
-.bannersection{
+.bannersection {
   background: var(--black-color);
   text-align: center;
   padding: 150px 0px 50px;
@@ -172,26 +182,28 @@ body{
   margin: 0 auto;
   display: inline-flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content: center;
   gap: 40px;
   position: relative;
   z-index: 1;
 }
 
-.bannerheading h1{
-  font-size:60px;
+.bannerheading h1 {
+  font-size: 60px;
   color: var(--white);
   font-weight: 700;
 }
+
 .gradient-text {
-  background: linear-gradient(137deg,#5d53ff 0%,#d711c1 52.6%,#f9a025 100%);
+  background: linear-gradient(137deg, #5d53ff 0%, #d711c1 52.6%, #f9a025 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 400;
 }
 
-.bannerheading h5, .bannerheading h6{
+.bannerheading h5,
+.bannerheading h6 {
   color: var(--white);
 }
 
@@ -204,9 +216,10 @@ body{
   height: 100%;
 }
 
-.checkicon{
+.checkicon {
   width: 20px;
 }
+
 .bannerheading ul li {
   display: flex;
   align-items: center;
@@ -214,7 +227,7 @@ body{
   margin: 0;
   gap: 5px;
   color: var(--white);
-  font-size:14px;
+  font-size: 14px;
 }
 
 
@@ -226,34 +239,36 @@ body{
   padding: 50px 0px;
 }
 
-.SectionHeading{
+.SectionHeading {
   font-size: 36px;
 }
-.paratext{
+
+.paratext {
   font-size: 16px;
 }
 
-.lumioAI p, .lumioAI h2{
+.lumioAI p,
+.lumioAI h2 {
   color: var(--white);
 }
 
 
 /* Service section start here */
 
-.ServiceSection{
+.ServiceSection {
   padding: 70px 0px
 }
 
-.ServiceSection img{
+.ServiceSection img {
   width: 50px;
 }
 
-.title{
+.title {
   font-weight: 700;
   font-size: 18px;
 }
 
-.ServiceSection .col-lg-6{
+.ServiceSection .col-lg-6 {
   padding-left: 100px;
 }
 
@@ -265,21 +280,24 @@ body{
 /* Steps section start here */
 
 
-.topcard{
-  background: linear-gradient(137deg,#8c52ff 0%,#5ce1e6 100%);
+.topcard {
+  background: linear-gradient(137deg, #8c52ff 0%, #5ce1e6 100%);
   border-radius: 10px;
   padding: 40px 0px;
   position: relative;
 }
+
 .topcard iframe {
   position: absolute;
   left: -20px;
   top: -40px;
 }
+
 .topcard {
   color: #fff;
   font-weight: 700;
 }
+
 /* .stepsParent{
   display: flex;
   align-items: center;
@@ -334,10 +352,10 @@ body{
   padding-top: 70px;
 }
 
-.statistics .container{
+.statistics .container {
   background: var(--gray-color);
-  padding:20px 50px;
-  border-radius:50px;
+  padding: 20px 50px;
+  border-radius: 50px;
 }
 
 .states {
@@ -347,11 +365,11 @@ body{
   align-items: center;
 }
 
-.states span{
+.states span {
   width: 2px;
   height: 50px;
-  background:var(--blue-color);
-  border-radius:1px;
+  background: var(--blue-color);
+  border-radius: 1px;
 }
 
 .states li {
@@ -359,7 +377,7 @@ body{
   line-height: 22px;
 }
 
-.states li img{
+.states li img {
   width: 40px
 }
 
@@ -371,12 +389,15 @@ body{
   align-items: start;
   gap: 20px;
 }
+
 .content h2 {
   width: 63%;
 }
+
 .content .paratext {
   width: 70%;
 }
+
 .HireManage .hireImage {
   padding: 80px;
   text-align: center;
@@ -491,22 +512,23 @@ body{
 /* Map View css start here  */
 
 .mapview {
-  background:#f1f8fb;
+  background: #f1f8fb;
   padding: 70px 0px;
 }
 
-.mapbg{
+.mapbg {
   width: 100%;
 }
-.mapview .gradient-text{
+
+.mapview .gradient-text {
   font-weight: 500;
 }
 
-.person{
+.person {
   width: 44px;
 }
 
-.person-locate1{
+.person-locate1 {
   left: 46%;
   top: 11%;
   position: absolute;
@@ -517,6 +539,7 @@ body{
   top: 29%;
   position: absolute;
 }
+
 .person-locate3 {
   left: 58%;
   top: 24%;
@@ -563,9 +586,10 @@ body{
 
 /* Skills section start here  */
 
-.skills{
-  padding:0px 0px;
+.skills {
+  padding: 0px 0px;
 }
+
 .skillList {
   /* display: flex;
   align-items: center;
@@ -578,16 +602,18 @@ body{
   padding: 0px 0px;
   border-color: #00000036;
 }
-.skillList img{
+
+.skillList img {
   width: 40px;
 }
+
 .skillList img:hover {
   filter: contrast(0.5);
 }
 
 /* Book a Demo   */
 
-.bookdemo{
+.bookdemo {
   padding-bottom: 70px;
 }
 
@@ -601,30 +627,30 @@ body{
   border-color: #2c2c2c;
 }
 
-.whitetext{
+.whitetext {
   color: var(--white);
 }
 
-.whyhire .paratext{
+.whyhire .paratext {
   font-size: 18px;
 }
 
-.whyhirecontent{
+.whyhirecontent {
   padding-right: 80px !important;
 }
 
-.network-section img{
+.network-section img {
   width: 100%;
 }
 
 
 /* Network css here  */
 
-.network-section{
+.network-section {
   position: relative;
 }
 
-.network-section h2{
+.network-section h2 {
   position: absolute;
   top: 70px;
 }
@@ -632,10 +658,11 @@ body{
 
 /* Lumio_AI Section */
 
-.lumio_AI{
+.lumio_AI {
   position: relative;
   overflow: hidden;
 }
+
 .lumio_AI .curveline1 {
   position: absolute;
   width: 371px;
@@ -643,6 +670,7 @@ body{
   top: -20px;
   opacity: .2;
 }
+
 .lumio_AI .curveline2 {
   position: absolute;
   width: 371px;
@@ -653,27 +681,27 @@ body{
 
 
 /* We Value section */
-.WeValue{
+.WeValue {
   padding: 70px 0px;
 }
 
-.WeValue .paratext{
+.WeValue .paratext {
   font-size: 18px;
 }
 
 
 /* What Expact Section */
 
-.whatExpacted{
+.whatExpacted {
   padding-bottom: 70px;
 }
 
-.expact{
+.expact {
   gap: 15px;
   font-size: 18px;
 }
 
-.expact img{
+.expact img {
   width: 50px;
   height: 50px;
   background: #000;
@@ -684,7 +712,7 @@ body{
   padding: 10px;
 }
 
-.gap-10{
+.gap-10 {
   gap: 50px 120px;
 }
 
@@ -721,11 +749,11 @@ footer {
   margin-top: 70px;
 }
 
-footer ul{
-  padding:0px;
+footer ul {
+  padding: 0px;
 }
 
-footer h2{
+footer h2 {
   color: var(--white);
 }
 
@@ -735,11 +763,11 @@ footer h4 {
   margin-bottom: 15px;
 }
 
-footer li{
+footer li {
   line-height: 30px;
 }
 
-footer li a{
+footer li a {
   font-size: 14px;
   text-decoration: none;
   color: #fff;
@@ -747,7 +775,7 @@ footer li a{
 
 .socialmedia {
   display: flex;
-  gap:15px;
+  gap: 15px;
 }
 
 .socialmedia a img {
@@ -766,7 +794,7 @@ footer hr {
   background: url(/assets/img/innerbanner-bg.jpg);
   background-size: cover;
   background-position: center;
-  padding:150px 0px 70px;
+  padding: 150px 0px 70px;
 }
 
 .innerbanner h1 {
@@ -784,15 +812,16 @@ footer hr {
   width: 24%;
 }
 
-.getStart{
-  padding-top:70px
+.getStart {
+  padding-top: 70px
 }
 
 /* Step Section Start Here */
 
-.stepsection{
+.stepsection {
   padding: 70px 0px;
 }
+
 .steps {
   display: flex;
   align-items: center;
@@ -806,6 +835,7 @@ footer hr {
   font-size: 34px;
   color: #969297;
 }
+
 .steps .icon {
   width: 60px;
   height: 60px;
@@ -816,6 +846,7 @@ footer hr {
   justify-content: center;
   border-radius: 50%;
 }
+
 .steps .icon img {
   width: 36px;
 }
@@ -846,8 +877,8 @@ footer hr {
 
 /* Globe sec  */
 
-.globesec .SectionHeading{
-  color:#969297;
+.globesec .SectionHeading {
+  color: #969297;
 }
 
 .globesec {
@@ -857,39 +888,46 @@ footer hr {
 
 
 /* ************************************** */
-.w-40{
+.w-40 {
   width: 40%;
 }
-.w-50{
+
+.w-50 {
   width: 50%;
 }
-.w-60{
+
+.w-60 {
   width: 60%;
 }
-.w-70{
+
+.w-70 {
   width: 70%;
 }
-.w-80{
+
+.w-80 {
   width: 80%;
 }
-.w-90{
+
+.w-90 {
   width: 90%;
 }
-.w-100{
+
+.w-100 {
   width: 100%;
 }
 
 
 /* Top Tier Talent Page  */
 
-.process{
-  padding-top:70px;
+.process {
+  padding-top: 70px;
 }
+
 .step-line {
   height: 150px;
 }
 
-.processimg{
+.processimg {
   width: 100px;
 }
 
@@ -897,26 +935,29 @@ footer hr {
   width: 60px;
   height: 60px;
   border: 1.5px solid;
-  border-color:#4e7896;
+  border-color: #4e7896;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
 }
 
-.processItems2{
+.processItems2 {
   margin-left: 20px;
 }
 
-.processItems3{
+.processItems3 {
   margin-left: 40px;
 }
-.processItems4{
+
+.processItems4 {
   margin-left: 60px;
 }
-.processItems5{
+
+.processItems5 {
   margin-left: 80px;
 }
+
 .bottomarea {
   background: linear-gradient(45deg, #8c52ff63, #5ce1e68c);
   width: 280px;
@@ -925,6 +966,7 @@ footer hr {
   border-radius: 10px;
   position: relative;
 }
+
 .bottomarea img {
   position: absolute;
   top: -10px;
@@ -962,8 +1004,8 @@ footer hr {
   font-weight: 500;
 }
 
-.customform{
-  padding-top:70px;
+.customform {
+  padding-top: 70px;
 }
 
 .customform input[type=submit] {
@@ -985,7 +1027,7 @@ footer hr {
 
 /* About Us Meet Team inner page   */
 
-.meetteam{
+.meetteam {
   padding: 70px 0px;
 }
 
@@ -1002,7 +1044,7 @@ footer hr {
   text-align: center;
 }
 
-.teamimage img:hover{
+.teamimage img:hover {
   filter: grayscale(1);
   transition: .2s;
 }
@@ -1017,7 +1059,8 @@ footer hr {
   margin-top: 70px;
   box-shadow: 0px -5px 11px 0px #0000000f;
 }
-.professional ul li{
+
+.professional ul li {
   line-height: 36px;
 }
 
@@ -1035,17 +1078,20 @@ footer hr {
 
 /* How it work for developer */
 
-.pb-110{
+.pb-110 {
   padding-bottom: 110px !important;
 }
-.developerSteps{
+
+.developerSteps {
   padding: 70px 0px
 }
-.developerSteps .devstep{
+
+.developerSteps .devstep {
   display: flex;
   gap: 30px;
   align-items: start;
 }
+
 .developerSteps .bgbox {
   background: var(--blue-color);
   display: inline-block;
@@ -1055,37 +1101,45 @@ footer hr {
   border-radius: 56px;
   width: 288px;
 }
-.developerSteps .devstep span{
+
+.developerSteps .devstep span {
   font-size: 36px;
   font-weight: 700;
   color: gray;
 }
-.developerSteps .devstep p{
+
+.developerSteps .devstep p {
   width: 68%;
   padding-left: 5px;
 }
-.devstepimg{
+
+.devstepimg {
   border-radius: 30px;
   width: 100%;
 }
-.bgheading{
+
+.bgheading {
   background: var(--blue-color);
   display: inline-block;
   padding: 20px 30px;
   color: #fff;
   border-radius: 56px;
 }
-.benefitslumio{
+
+.benefitslumio {
   padding-bottom: 70px;
 }
+
 .benefitslumio img {
   width: 200px;
 }
+
 .benefitslumio h3 {
   position: relative;
   padding-left: 150px;
   top: -30px;
 }
+
 .heartofLumio {
   text-align: center;
   background: url(/assets/img/heartoflumioai-bg.jpg);
@@ -1095,7 +1149,7 @@ footer hr {
   background-repeat: no-repeat;
 }
 
-.tips{
+.tips {
   padding: 70px 0px 0px;
 }
 
@@ -1116,15 +1170,16 @@ footer hr {
 
 /* FAQ Page Start Here  */
 
-.faq{
-  padding:70px 0px;
+.faq {
+  padding: 70px 0px;
 }
 
-.accordion-item{
+.accordion-item {
   border: none !important;
 }
-.faq .accordion-button{
-  background:var(--greenish) !important;
+
+.faq .accordion-button {
+  background: var(--greenish) !important;
   padding: 25px 30px 25px;
   font-size: 24px;
   color: #000 !important;
@@ -1132,7 +1187,7 @@ footer hr {
   margin-top: 20px;
 }
 
-.accordion-body{
+.accordion-body {
   text-align: start;
   font-size: 20px;
   padding-left: 30px !important;
@@ -1142,24 +1197,24 @@ footer hr {
 
 /* Login Page css start here  */
 
-.signin{
-  padding:70px 0px;
+.signin {
+  padding: 70px 0px;
 }
 
 .signin .row {
-  margin-top:100px;
+  margin-top: 100px;
 }
 
 .formsec {
-  background:#3055ff12;
+  background: #3055ff12;
   padding: 30px;
   width: 80%;
   text-align: center;
   border-radius: 20px;
 }
 
-.formsec form{
-  text-align:start;
+.formsec form {
+  text-align: start;
 }
 
 .formsec input {
@@ -1170,21 +1225,23 @@ footer hr {
   border: 1px solid #8a8a8a;
 }
 
-.formsec label{
-  margin-bottom:5px;
+.formsec label {
+  margin-bottom: 5px;
 }
 
-.loginbtn{
+.loginbtn {
   font-size: 22px;
-  background:#3055ff80;
-  padding:8px 15px;
+  background: #3055ff80;
+  padding: 8px 15px;
   border-radius: 5px;
   color: #000;
   text-decoration: none;
   border: 1px solid #555;
 }
 
-.formsec a {text-decoration: none;}
+.formsec a {
+  text-decoration: none;
+}
 
 
 .accordion-button:after {
