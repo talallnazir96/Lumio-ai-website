@@ -30,17 +30,14 @@ jobs:
       - name: Build Next.js project
         run: npm run build
 
-      # - name: Export static site
-      #   run: npm run export
-
       - name: Debug - List output directory contents
-        run: ls -la out/
+        run: ls -la .next/
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
         with:
           name: production-files
-          path: out/ # Upload the correct output directory
+          path: .next/
 
   deploy:
     name: Deploy to Netlify
@@ -52,13 +49,13 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: production-files
-          path: out/ # Use the correct output directory
+          path: .next/
 
       - name: Install Netlify CLI
         run: npm install -g netlify-cli
 
       - name: Deploy to Netlify
-        run: netlify deploy --prod --dir=out
+        run: netlify deploy --prod --dir=.next
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
