@@ -73,7 +73,7 @@ const Footer = () => {
                         <h4>Company</h4>
                         <ul>
                             <li>
-                                <a href="#">About us</a>
+                                <Link href="/about-us">About us</Link>
                             </li>
                             <li>
                                 <a href="#">Blog</a>
@@ -90,7 +90,7 @@ const Footer = () => {
                         <h4>Connect</h4>
                         <ul>
                             <li>
-                                <a href="#">Contact</a>
+                                <Link href="/contact-us/contact">Contact</Link>
                             </li>
                             <li>
                                 <a href="#">Help center</a>
@@ -101,7 +101,7 @@ const Footer = () => {
                         </ul>
                     </div>
                 </div>
-                <hr/>
+                <hr />
                 <div className="row align-items-center pb-3">
                     <div className="col-lg-4">
                         <p className="paratext whitetext mb-0">© 2024 LumioAI</p>
@@ -126,10 +126,10 @@ const Footer = () => {
                         </ul>
                         <div className="socialmedia">
                             <a href="#">
-                                <img src="/assets/img/twitter-x.svg" alt="twitter-x"/>
+                                <img src="/assets/img/twitter-x.svg" alt="twitter-x" />
                             </a>
                             <a href="#">
-                                <img src="/assets/img/linkedin.svg" alt="Linkedin"/>
+                                <img src="/assets/img/linkedin.svg" alt="Linkedin" />
                             </a>
                         </div>
                     </div>

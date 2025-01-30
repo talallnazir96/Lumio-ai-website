@@ -4,22 +4,35 @@ import './style.css'
 
 const MapView = () => {
     useEffect(() => {
-        const handleScroll = () => {
-            const persons = document.querySelectorAll('.person');
-            persons.forEach(person => {
-                if (person.getBoundingClientRect().top < window.innerHeight && person.getBoundingClientRect().bottom > 0) {
-                    person.classList.add('pop-up-down');
-                } else {
-                    person.classList.remove('pop-up-down');
+        const persons = document.querySelectorAll('.person');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    persons.forEach((person, i) => {
+                        setTimeout(() => {
+                            person.classList.add('pop-up');
+                            setTimeout(() => {
+                                person.classList.remove('pop-up');
+                                person.classList.add('static');
+                            }, 500); // Duration of the pop-up animation
+                        }, i * 200); // Stagger the pop-up effect
+                    });
+                    observer.unobserve(entry.target); // Unobserve after animation
                 }
             });
-        };
+        }, {
+            threshold: 0.5, // Trigger when 50% of the element is visible
+        });
 
-        window.addEventListener('scroll', handleScroll);
+        persons.forEach(person => {
+            observer.observe(person);
+        });
 
-        // Clean up the event listener on component unmount
+        // Clean up the observer on component unmount
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            persons.forEach(person => {
+                observer.unobserve(person);
+            });
         };
     }, []);
 

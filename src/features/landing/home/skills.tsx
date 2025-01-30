@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from 'react';
+import React from 'react';
 
 const Skills = () => {
     return (
@@ -9,70 +9,75 @@ const Skills = () => {
                     <div className="row">
                         <div className="col-lg-12 text-center">
                             <h2 className="section-heading mb-5">More than <strong>100</strong> skills available</h2>
-                            <div className="skillList flex items-center justify-center flex-col">
-                                <div className="icon-container">
-                                    <div className='flex gap-20 m-20 mt-24'>
-                                        <img src="/assets/img/java.svg" className="img-fluid" alt="java" />
-                                        <img src="/assets/img/phthon.svg" className="img-fluid" alt="phthon" />
-                                        <img src="/assets/img/phthon.svg" className="img-fluid" alt="phthon" />
-                                        <img src="/assets/img/phthon.svg" className="img-fluid" alt="phthon" />
-                                        <img src="/assets/img/technology-html.svg" className="img-fluid" alt="HTML" />
-                                        <img src="/assets/img/technology-typescript.svg" className="img-fluid" alt="typescript" />
-                                        <img src="/assets/img/technology-react-native.svg" className="img-fluid" alt="Native" />
-                                        <img src="/assets/img/technology-react-native.svg" className="img-fluid" alt="Native" />
-                                        <img src="/assets/img/technology-react-native.svg" className="img-fluid" alt="Native" />
-                                        <img src="/assets/img/technology-react-native.svg" className="img-fluid" alt="Native" />
-                                        <img src="/assets/img/php.svg" className="img-fluid" alt="Php" />
-                                        <img src="/assets/img/technology-angular-js.svg" className="img-fluid" alt="Angular" />
-                                        <img src="/assets/img/technology-vuejs.svg" className="img-fluid" alt="VueJS" />
-                                        <img src="/assets/img/technology-vuejs.svg" className="img-fluid" alt="VueJS" />
-                                        <img src="/assets/img/technology-vuejs.svg" className="img-fluid" alt="VueJS" />
-                                        <img src="/assets/img/technology-vuejs.svg" className="img-fluid" alt="VueJS" />
-                                        <img src="/assets/img/technology-vuejs.svg" className="img-fluid" alt="VueJS" />
-                                        <img src="/assets/img/technology-vuejs.svg" className="img-fluid" alt="VueJS" />
-                                    </div>
-                                    <div className='flex gap-20 mb-10 m-20 mt-5'>
-                                        <img src="/assets/img/java.svg" className="img-fluid" alt="java" />
-                                        <img src="/assets/img/phthon.svg" className="img-fluid" alt="phthon" />
-                                        <img src="/assets/img/technology-html.svg" className="img-fluid" alt="HTML" />
-                                        <img src="/assets/img/technology-html.svg" className="img-fluid" alt="HTML" />
-                                        <img src="/assets/img/technology-html.svg" className="img-fluid" alt="HTML" />
-                                        <img src="/assets/img/technology-typescript.svg" className="img-fluid" alt="typescript" />
-                                        <img src="/assets/img/technology-react-native.svg" className="img-fluid" alt="Native" />
-                                        <img src="/assets/img/php.svg" className="img-fluid" alt="Php" />
-                                        <img src="/assets/img/technology-angular-js.svg" className="img-fluid" alt="Angular" />
-                                        <img src="/assets/img/technology-vuejs.svg" className="img-fluid" alt="VueJS" />
-                                        <img src="/assets/img/technology-vuejs.svg" className="img-fluid" alt="VueJS" />
-                                        <img src="/assets/img/technology-vuejs.svg" className="img-fluid" alt="VueJS" />
-                                        <img src="/assets/img/technology-vuejs.svg" className="img-fluid" alt="VueJS" />
-                                        <img src="/assets/img/technology-vuejs.svg" className="img-fluid" alt="VueJS" />
-                                        <img src="/assets/img/technology-vuejs.svg" className="img-fluid" alt="VueJS" />
-                                        <img src="/assets/img/technology-vuejs.svg" className="img-fluid" alt="VueJS" />
-                                        <img src="/assets/img/technology-vuejs.svg" className="img-fluid" alt="VueJS" />
-                                        <img src="/assets/img/technology-vuejs.svg" className="img-fluid" alt="VueJS" />
-                                    </div>
+                            <hr />
+                            <div className="flex items-center justify-center flex-col overflow-hidden">
+                                <div className="icon-container flex gap-10 animate-infinite-scroll">
+                                    <img src="/assets/img/java.svg" className="img-fluid" alt="java" />
+                                    <img src="/assets/img/phthon.svg" className="img-fluid" alt="python" />
+                                    <img src="/assets/img/technology-html.svg" className="img-fluid" alt="HTML" />
+                                    <img src="/assets/img/technology-typescript.svg" className="img-fluid" alt="typescript" />
+                                    <img src="/assets/img/technology-react-native.svg" className="img-fluid" alt="Native" />
+                                    <img src="/assets/img/php.svg" className="img-fluid" alt="Php" />
+                                    <img src="/assets/img/technology-angular-js.svg" className="img-fluid" alt="Angular" />
+                                    <img src="/assets/img/technology-vuejs.svg" className="img-fluid" alt="VueJS" />
+                                    {/* Repeat the icons to create a continuous scroll effect */}
+                                    <img src="/assets/img/java.svg" className="img-fluid" alt="java" />
+                                    <img src="/assets/img/phthon.svg" className="img-fluid" alt="python" />
+                                    <img src="/assets/img/technology-html.svg" className="img-fluid" alt="HTML" />
+                                    <img src="/assets/img/technology-typescript.svg" className="img-fluid" alt="typescript" />
+                                    <img src="/assets/img/technology-react-native.svg" className="img-fluid" alt="Native" />
+                                    <img src="/assets/img/php.svg" className="img-fluid" alt="Php" />
+                                    <img src="/assets/img/technology-angular-js.svg" className="img-fluid" alt="Angular" />
+                                    <img src="/assets/img/technology-vuejs.svg" className="img-fluid" alt="VueJS" />
+                                </div>
+                                <div className="icon-container flex gap-10 animate-infinite-scroll-reverse mt-5">
+                                    <img src="/assets/img/java.svg" className="img-fluid" alt="java" />
+                                    <img src="/assets/img/phthon.svg" className="img-fluid" alt="python" />
+                                    <img src="/assets/img/technology-html.svg" className="img-fluid" alt="HTML" />
+                                    <img src="/assets/img/technology-typescript.svg" className="img-fluid" alt="typescript" />
+                                    <img src="/assets/img/technology-react-native.svg" className="img-fluid" alt="Native" />
+                                    <img src="/assets/img/php.svg" className="img-fluid" alt="Php" />
+                                    <img src="/assets/img/technology-angular-js.svg" className="img-fluid" alt="Angular" />
+                                    <img src="/assets/img/technology-vuejs.svg" className="img-fluid" alt="VueJS" />
+                                    {/* Repeat the icons to create a continuous scroll effect */}
+                                    <img src="/assets/img/java.svg" className="img-fluid" alt="java" />
+                                    <img src="/assets/img/phthon.svg" className="img-fluid" alt="python" />
+                                    <img src="/assets/img/technology-html.svg" className="img-fluid" alt="HTML" />
+                                    <img src="/assets/img/technology-typescript.svg" className="img-fluid" alt="typescript" />
+                                    <img src="/assets/img/technology-react-native.svg" className="img-fluid" alt="Native" />
+                                    <img src="/assets/img/php.svg" className="img-fluid" alt="Php" />
+                                    <img src="/assets/img/technology-angular-js.svg" className="img-fluid" alt="Angular" />
+                                    <img src="/assets/img/technology-vuejs.svg" className="img-fluid" alt="VueJS" />
                                 </div>
                             </div>
+                            <hr />
                         </div>
                     </div>
                 </div>
             </section>
             <style jsx>{`
-                .icon-container {
-                    animation: moveIcons 400s linear infinite; 
-                }
-
-                @keyframes moveIcons {
-                    0% {
-                        transform: translateX(0);
-                    }
-                    100% {
-                        transform: translateX(-100%);
-                    }
-                }
-
                 .icon-container img {
-                    width: 100px; /* Adjust width as needed */
+                    width: 75px; /* Adjust width as needed */
+                    height: 75px; /* Ensure height is consistent */
+                    object-fit: contain; /* Maintain aspect ratio */
+                }
+
+                @keyframes infinite-scroll {
+                    from { transform: translateX(0); }
+                    to { transform: translateX(-100%); }
+                }
+
+                @keyframes infinite-scroll-reverse {
+                    from { transform: translateX(0); }
+                    to { transform: translateX(100%); }
+                }
+
+                .animate-infinite-scroll {
+                    animation: infinite-scroll 40s linear infinite;
+                }
+
+                .animate-infinite-scroll-reverse {
+                    animation: infinite-scroll-reverse 40s linear infinite;
                 }
             `}</style>
         </>

@@ -257,7 +257,12 @@ body {
 /* Service section start here */
 
 .ServiceSection {
-  padding: 70px 0px
+  width: 100%;
+  height: 100vh;
+  padding: 70px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ServiceSection img {

@@ -3,7 +3,7 @@ import React from 'react';
 
 const ServiceSection = () => {
     return (
-        <section className="ServiceSection">
+        <section className="ServiceSection -ml-[50px] md:-ml-0">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 mt-4">

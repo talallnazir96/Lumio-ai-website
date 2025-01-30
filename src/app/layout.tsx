@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
-// import {Poppins} from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import "bootstrap/dist/css/bootstrap.min.css"
 
 
-// const poppins = Poppins({
-//     weight: ["300", "400", "500", "600", "700"], subsets: ['latin'], display: 'swap'
-// })
+const poppins = Poppins({
+    weight: ["300", "400", "500", "600", "700"], subsets: ['latin'], display: 'swap'
+})
 
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (<html lang="en">
-        <body className={`antialiased`}>
+        <body className={`antialiased font-${poppins}`}>
             {children}
         </body>
     </html>);
