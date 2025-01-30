@@ -30,17 +30,22 @@ jobs:
       - name: Build Next.js project
         run: npm run build
 
-      # - name: Export static site
-      #   run: npm run export
-
-      - name: Debug - List output directory contents
-        run: ls -la out/
+      - name: Debug - Check if .next directory exists
+        run: |
+          if [ -d ".next" ]; then
+            echo "✅ .next directory exists"
+            ls -la .next/
+          else
+            echo "❌ ERROR: .next directory NOT found!"
+            exit 1
+          fi
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
         with:
           name: production-files
-          path: out/ # Upload the correct output directory
+          path: .next/
+          retention-days: 1
 
   deploy:
     name: Deploy to Netlify
@@ -48,17 +53,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
       - name: Download build artifact
         uses: actions/download-artifact@v3
         with:
           name: production-files
-          path: out/ # Use the correct output directory
+          path: production-files/
+
+      - name: Debug - Verify downloaded files
+        run: ls -la production-files/
 
       - name: Install Netlify CLI
         run: npm install -g netlify-cli
 
       - name: Deploy to Netlify
-        run: netlify deploy --prod --dir=out
+        run: netlify deploy --prod --dir=production-files/
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
