@@ -9,7 +9,24 @@ import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 import { Menu, ChevronDown, X } from "lucide-react";
 import Image from 'next/image';
 
-const MainNav = () => {
+interface NavLinkProps {
+    href: string;
+    children: React.ReactNode;
+    className?: string;
+    onClick?: () => void;
+}
+
+const NavLink: React.FC<NavLinkProps> = ({ href, children, className = "", onClick }) => (
+    <Link
+        href={href}
+        onClick={onClick}
+        className={`text-white no-underline transition-colors hover:text-gray-300 ${className}`}
+    >
+        {children}
+    </Link>
+);
+
+const MainNav: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -38,16 +55,6 @@ const MainNav = () => {
         { href: "/ClientDeveloperSignin/ClientSignin", label: "As a Client" },
         { href: "/ClientDeveloperSignin/DeveloperSignin", label: "As a Developer" }
     ];
-
-    const NavLink = ({ href, children, className = "", onClick }) => (
-        <Link
-            href={href}
-            onClick={onClick}
-            className={`text-white no-underline transition-colors hover:text-gray-300 ${className}`}
-        >
-            {children}
-        </Link>
-    );
 
     return (
         <nav className={`sticky top-0 z-50 w-full bg-black px-4 transition-all duration-300 ${isScrolled ? 'shadow-lg' : ''}`}>

@@ -1,6 +1,5 @@
-import type React from "react"
-import { useState, type ChangeEvent } from "react"
-import { FaUpload } from "react-icons/fa"
+import React, { useState, ChangeEvent } from "react";
+import { FaUpload } from "react-icons/fa";
 
 // Sample JSON data
 const countryCodes = [
@@ -15,6 +14,20 @@ const countryCodes = [
   { name: "China", code: "+86" },
   { name: "Brazil", code: "+55" },
   { name: "Pakistan", code: "+92" }
+];
+
+const countries = [
+  "United States",
+  "Canada",
+  "United Kingdom",
+  "Australia",
+  "India",
+  "Germany",
+  "France",
+  "Japan",
+  "China",
+  "Brazil",
+  "Pakistan"
 ];
 
 interface BasicFormProps {
@@ -118,13 +131,19 @@ const BasicForm: React.FC<BasicFormProps> = ({ formData, setFormData, onNext }) 
               <label htmlFor="country" className="block text-sm font-medium text-black">
                 Country of residence <span className="text-red-500">*</span>
               </label>
-              <input
+              <select
                 id="country"
-                type="text"
                 value={formValues.country}
                 onChange={handleChange}
                 className="w-full px-3 py-2 border rounded-md text-black"
-              />
+              >
+                <option value="">Select</option>
+                {countries.map((country) => (
+                  <option key={country} value={country}>
+                    {country}
+                  </option>
+                ))}
+              </select>
               {errors.country && <p className="text-red-500 text-sm">{errors.country}</p>}
             </div>
 
