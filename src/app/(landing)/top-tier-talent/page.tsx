@@ -1,10 +1,21 @@
-"use client"
+'use client'
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, FC } from "react"
 import Navbar from "@/features/landing/components/navbar"
 import Footer from "@/features/landing/components/footer"
 
-const TopTierTalent = () => {
+// Define the props for the ProcessItem component
+interface ProcessItemProps {
+    step: number
+    title: string
+    image: string
+    description: string
+}
+
+// Define the props for the TopTierTalent component
+interface TopTierTalentProps { }
+
+const TopTierTalent: FC<TopTierTalentProps> = () => {
     const [isMobile, setIsMobile] = useState(false)
 
     useEffect(() => {
@@ -20,7 +31,7 @@ const TopTierTalent = () => {
         }
     }, [])
 
-    const ProcessItem = ({ step, title, image, description }) => (
+    const ProcessItem: FC<ProcessItemProps> = ({ step, title, image, description }) => (
         <div className={`processItems${step} ${isMobile ? "mb-8" : ""}`}>
             {isMobile ? (
                 <div className="flex flex-col gap-4">
@@ -125,4 +136,3 @@ const TopTierTalent = () => {
 }
 
 export default TopTierTalent
-

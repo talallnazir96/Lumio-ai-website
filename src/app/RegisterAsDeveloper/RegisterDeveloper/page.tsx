@@ -21,6 +21,7 @@ interface FormData {
     country: string;
     discovery: string;
     rate: string;
+    phoneCode: string;
     phone: string;
     profilePicture: File | null;
     resume: File | null;
@@ -68,6 +69,7 @@ export default function RegisterDeveloper() {
       country: '',
       discovery: '',
       rate: '',
+      phoneCode: '', // Added phoneCode to formData structure
       phone: '',
       profilePicture: null,
       resume: null

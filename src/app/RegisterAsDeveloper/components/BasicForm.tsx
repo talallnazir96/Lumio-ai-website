@@ -37,6 +37,7 @@ interface BasicFormProps {
     country: string;
     discovery: string;
     rate: string;
+    phoneCode: string; // Added phoneCode to formData structure
     phone: string;
     profilePicture: File | null;
     resume: File | null;
