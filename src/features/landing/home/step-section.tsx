@@ -55,7 +55,7 @@ const StepSection: React.FC = () => {
                                 <h2 className="SectionHeading mb-0">
                                     Our AI handles the <br /> complex work for you
                                 </h2>
-                                <img src="/assets/ai-tab.png" alt="Matching icon" className="absolute right-20 h-20 w-20"/>
+                                <img src="/assets/ai-tab.png" alt="Matching icon" className="absolute right-20 h-20 w-20 hidden md:block" />
                             </div>
                         </motion.div>
                     </div>
@@ -78,30 +78,36 @@ const StepSection: React.FC = () => {
                                     </div>
                                     <img src="/assets/img/arrow.png" className="arrow" alt="arrow" />
                                 </div>
-                                <p className="paratext mt-4">
+                                <p className="paratext mt-4 text-center md:text-center lg:text-left">
                                     Source talent faster and more easily from our rich network
                                 </p>
                             </motion.div>
 
                             <motion.div
-                                className="col step"
+                                className="col step "
                                 custom={1}
                                 initial="hidden"
                                 whileInView="visible"
                                 viewport={{ once: true, amount: 0.5 }}
                                 variants={stepVariants}
                             >
-                                <div className="step-header">
-                                    <span className="number">2</span>
-                                    <div className="stepicon">
-                                        <img src="/assets/img/matching.svg" alt="Matching icon" />
-                                        <p className="title mb-0">Matching</p>
+                                <div className="flex items-center justify-center flex-col">
+                                    <div className="step-header">
+                                        <span className="number">3</span>
+                                        <div className="stepicon">
+                                            <img src="/assets/img/hiring.svg" alt="Hiring icon" />
+                                            <p className="title mb-0">Hiring</p>
+                                        </div>
+                                        <img src="/assets/img/arrow.png" className="arrow" alt="arrow" />
                                     </div>
-                                    <img src="/assets/img/arrow.png" className="arrow" alt="arrow" />
+                                    <div>
+                                    </div>
+                                    <div>
+                                        <p className="paratext mt-4 text-center md:text-center lg:text-left">
+                                            Hire world-class, deeply vetted developers—fast
+                                        </p>
+                                    </div>
                                 </div>
-                                <p className="paratext mt-4">
-                                    Get matched with the exact skills you need
-                                </p>
                             </motion.div>
 
                             <motion.div
@@ -119,7 +125,7 @@ const StepSection: React.FC = () => {
                                         <p className="title mb-0">Hiring</p>
                                     </div>
                                 </div>
-                                <p className="paratext mt-4">
+                                <p className="paratext mt-4 text-center md:text-center lg:text-left">
                                     Hire world-class, deeply vetted developers—fast
                                 </p>
                             </motion.div>

@@ -4,10 +4,9 @@ import Link from 'next/link';
 import { Button } from "@/components/ui/button";
 import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "@/components/ui/navigation-menu";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Dialog, DialogTrigger, DialogContent, DialogTitle } from '@radix-ui/react-dialog';
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
-import { Menu, ChevronDown } from "lucide-react";
+import { Menu, ChevronDown, X } from "lucide-react";
 import Image from 'next/image';
 
 const MainNav = () => {
@@ -40,11 +39,10 @@ const MainNav = () => {
         { href: "/ClientDeveloperSignin/DeveloperSignin", label: "As a Developer" }
     ];
 
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
-    const NavLink = ({ href, children, className = "" }) => (
+    const NavLink = ({ href, children, className = "", onClick }) => (
         <Link
             href={href}
+            onClick={onClick}
             className={`text-white no-underline transition-colors hover:text-gray-300 ${className}`}
         >
             {children}
@@ -52,10 +50,10 @@ const MainNav = () => {
     );
 
     return (
-        <nav className={`sticky top-0 z-50 w-full bg-black  px-4 transition-all duration-300 `}>
+        <nav className={`sticky top-0 z-50 w-full bg-black px-4 transition-all duration-300 ${isScrolled ? 'shadow-lg' : ''}`}>
             <div className="flex h-16 items-center justify-between">
                 {/* Logo */}
-                <div className={"flex items-center gap-5"}>
+                <div className="flex items-center gap-5">
                     <Link href="/" className="flex items-center space-x-2">
                         <Image
                             src={"/assets/logo.png"} alt="Logo"
@@ -63,12 +61,12 @@ const MainNav = () => {
                             height={20}
                         />
                     </Link>
-                    <div className="hidden md:flex md:items-center md:space-x-8">
-                        <NavigationMenu className="hidden md:flex">
+                    <div className="hidden lg:flex lg:items-center lg:space-x-8">
+                        <NavigationMenu className="hidden lg:flex">
                             <NavigationMenuList className="flex space-x-9 m-0">
                                 {navItems.map((item) => (
                                     <NavigationMenuItem key={item.href}>
-                                        <NavLink href={item.href}>
+                                        <NavLink href={item.href} onClick={() => (console.log(''))}>
                                             {item.label}
                                         </NavLink>
                                     </NavigationMenuItem>
@@ -83,7 +81,7 @@ const MainNav = () => {
                                                 key={item.href}
                                                 className="text-white hover:bg-gray-800 focus:bg-gray-800"
                                             >
-                                                <NavLink href={item.href}>
+                                                <NavLink href={item.href} onClick={() => (console.log(''))}>
                                                     {item.label}
                                                 </NavLink>
                                             </DropdownMenuItem>
@@ -95,7 +93,7 @@ const MainNav = () => {
                     </div>
                 </div>
 
-                <div className="hidden md:flex items-center space-x-4">
+                <div className="hidden lg:flex items-center space-x-4">
                     <Button
                         className="bg-primary text-white no-underline hover:bg-gray-200"
                         asChild
@@ -113,7 +111,7 @@ const MainNav = () => {
                                     key={index}
                                     className="text-white hover:bg-gray-800 focus:bg-gray-800"
                                 >
-                                    <NavLink href={item.href}>
+                                    <NavLink href={item.href} onClick={() => (console.log(''))}>
                                         {item.label}
                                     </NavLink>
                                 </DropdownMenuItem>
@@ -122,56 +120,81 @@ const MainNav = () => {
                     </DropdownMenu>
                 </div>
 
-                {/* Mobile Menu */}
+                {/* Mobile and Tablet Menu */}
                 <Dialog open={isOpen} onOpenChange={setIsOpen}>
-                    <DialogTrigger asChild className="md:hidden">
+                    <DialogTrigger asChild className="lg:hidden">
                         <Button variant="ghost" size="icon" className="text-white">
-                            <Menu />
+                            {isOpen ? (
+                                <X className="h-6 w-6" />
+                            ) : (
+                                <Menu className="h-6 w-6" />
+                            )}
                         </Button>
                     </DialogTrigger>
-                    <DialogContent className="fixed inset-0 flex items-end justify-end z-50 bg-black p-4">
+                    <DialogContent className="fixed inset-0 flex items-center justify-center z-50 bg-black p-4">
                         <VisuallyHidden>
                             <DialogTitle>Mobile Navigation</DialogTitle>
                         </VisuallyHidden>
-                        <div className="flex flex-col space-y-4">
+                        <div className="flex items-center justify-center flex-col space-y-4 w-full h-full text-center">
+                            {/* Close Button */}
+                            <div className="w-full flex justify-end">
+                                <Button
+                                    variant="ghost"
+                                    size="icon"
+                                    className="text-white hover:bg-gray-800"
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    <X className="h-6 w-6" />
+                                </Button>
+                            </div>
+
                             {navItems.map((item) => (
                                 <NavLink
                                     key={item.href}
                                     href={item.href}
-                                    className="p-2 hover:bg-gray-800 rounded-md"
+                                    className="text-lg hover:bg-gray-800 rounded-md px-4 py-2 w-full"
+                                    onClick={() => setIsOpen(false)}
                                 >
                                     {item.label}
                                 </NavLink>
                             ))}
 
-                            <div className="py-2">
-                                <p className="text-white mb-2">For Developers</p>
+                            <div className="border-t border-gray-800 pt-4 w-full">
+                                <p className="text-white mb-2 text-lg">For Developers:</p>
                                 {developerItems.map((item) => (
                                     <NavLink
                                         key={item.href}
                                         href={item.href}
-                                        className="block p-2 hover:bg-gray-800 rounded-md ml-2"
+                                        className="text-lg hover:bg-gray-800 rounded-md px-4 py-2 w-full block"
+                                        onClick={() => setIsOpen(false)}
                                     >
                                         {item.label}
                                     </NavLink>
                                 ))}
                             </div>
 
-                            <div className="pt-4 border-t border-gray-800">
+                            <div className="border-t border-gray-800 w-full pt-4">
                                 <Button
-                                    className="w-full bg-primary no-underline text-white hover:bg-gray-200 mb-4"
+                                    className="w-full bg-primary text-white hover:bg-gray-200 mb-4 py-6 text-lg"
                                     asChild
                                 >
-                                    <Link href="/register">Get Started</Link>
+                                    <Link
+                                        href="/ClientGetStarted/GetStarted"
+                                        onClick={() => setIsOpen(false)}
+                                        style={{ textDecoration: 'none' }}
+                                    >
+                                        Get Started
+                                    </Link>
                                 </Button>
 
                                 <div className="space-y-2">
-                                    <p className="text-white mb-2">Login as:</p>
+                                    <p className="text-white mb-2 text-lg">Login as:</p>
                                     {loginItems.map((item) => (
                                         <NavLink
                                             key={item.href}
                                             href={item.href}
-                                            className="block p-2 hover:bg-gray-800 rounded-md ml-2"
+                                            className="text-lg hover:bg-gray-800 rounded-md px-4 py-2 w-full block"
+                                            onClick={() => setIsOpen(false)}
                                         >
                                             {item.label}
                                         </NavLink>
@@ -182,6 +205,16 @@ const MainNav = () => {
                     </DialogContent>
                 </Dialog>
             </div>
+            <style jsx>{`
+                @media (max-width: 1023px) {
+                    .lg\\:hidden {
+                        display: none;
+                    }
+                    .lg\\:flex {
+                        display: flex;
+                    }
+                }
+            `}</style>
         </nav>
     );
 };

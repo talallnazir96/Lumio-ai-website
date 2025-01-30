@@ -128,9 +128,9 @@ export default function RegisterDeveloper() {
   return (
     <div className="min-h-screen bg-gray-200">
       <Navbar />
-      <div className="mx-36 my-10">
-        <h1 className="text-2xl font-semibold mb-4 text-black">My Profile</h1>
-        <p className="text-gray-600">
+      <div className="mx-36 my-10 flex items-center justify-center md:block flex-col">
+        <h1 className="text-2xl font-semibold mb-4 text-black w-[300px] md:w-[990px]">My Profile</h1>
+        <p className="text-gray-600 w-[300px] md:w-[990px] text-left">
           The information that you provide helps us gain a clear understanding of your profile, enabling us to connect you with the right opportunities and companies that match your expertise.
         </p>
       </div>

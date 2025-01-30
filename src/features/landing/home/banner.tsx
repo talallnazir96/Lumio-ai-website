@@ -65,13 +65,13 @@ const HomeBanner = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
-                            <div className="bannerheading">
-                                <h1 className="animate-from-top">
-                                    <span className="gradient-text">AI-powered</span> talent recruiter for <br/> hiring
+                            <div className="bannerheading mx-auto flex flex-col justify-center gap-10 relative z-10">
+                                <h1 className="animate-from-top lg:text-[60px]  sm:text-[30px] lg:w-full">
+                                    <span className="gradient-text">AI-powered</span> talent recruiter for <br /> hiring
                                     top-tier software engineers
                                 </h1>
                                 <h5 className="animate-from-top">
-                                    Hire deeply vetted developers globally, on-demand. <br/>
+                                    Hire deeply vetted developers globally, on-demand. <br />
                                     Scale your team and advance your software development.
                                 </h5>
                                 <h6 className="animate-from-top">Over 100 skilled developers available for immediate hire.</h6>
@@ -85,7 +85,7 @@ const HomeBanner = () => {
                         </div>
                     </div>
                 </div>
-                <img src="/assets/img/banner-shape.png" className="bannershape" alt="banner-shape"/>
+                <img src="/assets/img/banner-shape.png" className="bannershape" alt="banner-shape" />
             </section>
         </>
     );

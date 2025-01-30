@@ -1,101 +1,81 @@
-import Navbar from "@/features/landing/components/navbar"
-import Footer from "@/features/landing/components/footer"
+"use client";
+import Navbar from "@/features/landing/components/navbar";
+import Footer from "@/features/landing/components/footer";
 
 const HowItWorks = () => {
-    return <>
-    <Navbar />
-        <section className="bannersection innerbanner">
-            <div className="container">
+    return (
+        <>
+            <Navbar />
+            <section className="bannersection innerbanner py-16 md:py-24">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="bannerheading text-center">
+                                <h1 className="text-3xl md:text-4xl font-semibold">
+                                    How does LumioAI talent hiring work?
+                                </h1>
+                                <h5 className="text-lg md:text-xl mt-4">
+                                    We simplify sourcing and vetting of developers for you. <br />
+                                    Let us know your requirements, we’ll find the perfect fit.
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="stepsection py-16">
+                <div className="container">
+                    <div className="flex flex-wrap gap-8 justify-center">
+                        {[1, 2, 3, 4].map((step) => (
+                            <div key={step} className="steps text-center md:text-left">
+                                <span className="text-3xl font-semibold text-primary">{step}</span>
+                                <div className="icon mt-4 mb-4">
+                                    <img
+                                        src={`/assets/img/step${step}.svg`}
+                                        alt={`step${step}`}
+                                        className="mx-auto md:mx-0"
+                                    />
+                                </div>
+                                <a href="#" className="btnstyle2 greenish inline-block mt-4 px-6 py-2 text-sm md:text-base">
+                                    {`Step ${step} Action`}
+                                </a>
+                                <p className="paratext mb-0 text-sm md:text-base mt-4">
+                                    Description for step {step}. You can add more details here.
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            <section className="globesec py-16">
+                <div className="container">
+                    <div className="row flex flex-col md:flex-row items-center">
+                        <div className="col-12 md:col-4 mb-8 md:mb-0">
+                            <img src="/assets/img/world-map.png" className="img-fluid mx-auto" alt="worldmap" />
+                        </div>
+                        <div className="col-12 md:col-8 text-center md:text-left ps-5">
+                            <h4 className="SectionHeading text-xl md:text-2xl font-semibold">
+                                Many companies already trust LumioAI to hire developer teams on-demand
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div className="container getStart py-16">
                 <div className="row">
-                    <div className="col-lg-12">
-                        <div className="bannerheading">
-                            <h1>
-                                How does LumioAI talent hiring work?
-                            </h1>
-                            <h5>We simplify sourcing and vetting of developers for you. <br/>
-                                Let us know your requirements, we’ll find the perfect fit.</h5>
-                        </div>
+                    <div className="col-12 d-flex justify-center gap-4">
+                        <a href="#" className="btnstyle1 px-8 py-4 text-lg">
+                            Hire Developer
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
+            <Footer />
+        </>
+    );
+};
 
-
-        <section className="stepsection">
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-12">
-                        <div className="steps">
-                            <span>1</span>
-                            <div className="icon">
-                                <img src="/assets/img/step1.svg" alt="step1"/>
-                            </div>
-                            <a href="#" className="btnstyle2 greenish">Tell us what skills you need</a>
-                            <span className="dash"></span>
-                            <p className="paratext mb-0">With few <strong>simple steps</strong> you can let us know what
-                                exactly you’re looking for. You can also schedule a demo with one of our experts.</p>
-                        </div>
-                        <div className="steps">
-                            <span>2</span>
-                            <div className="icon">
-                                <img src="/assets/img/step2.svg" alt="step1"/>
-                            </div>
-                            <a href="#" className="btnstyle2 greenish">We’ll find you the perfect match</a>
-                            <span className="dash"></span>
-                            <p className="paratext mb-0">Our <strong>AI</strong> will evaluate your request, and we will
-                                find you candidates who perfectly match your requirements. You will receive an email
-                                from us.</p>
-                        </div>
-                        <div className="steps">
-                            <span>3</span>
-                            <div className="icon">
-                                <img src="/assets/img/step3.svg" alt="step1"/>
-                            </div>
-                            <a href="#" className="btnstyle2 greenish">Meet your developers</a>
-                            <span className="dash"></span>
-                            <p className="paratext mb-0">After you select developers, you can start right away or have
-                                a <strong>call</strong> with them to ensure they fit your business needs.</p>
-                        </div>
-                        <div className="steps">
-                            <span>4</span>
-                            <div className="icon">
-                                <img src="/assets/img/step4.svg" alt="step1"/>
-                            </div>
-                            <a href="#" className="btnstyle2 greenish">Start your 2 week no-risk trial</a>
-                            <span className="dash"></span>
-                            <p className="paratext mb-0">If you’re happy with the developer you can start your <strong>free
-                                trial</strong>. You can track the job progress on dedicated dashboard to easily monitor
-                                everything.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section className="globesec">
-            <div className="container">
-                <div className="row align-items-center">
-                    <div className="col-lg-4">
-                        <img src="/assets/img/world-map.png" className="img-fluid" alt="worldmap"/>
-                    </div>
-                    <div className="col-lg-8 ps-5">
-                        <h4 className="SectionHeading">
-                            Many companies already trust LumioAI to hire developer teams on-demand
-                        </h4>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div className="container getStart">
-            <div className="row">
-                <div className="col-lg-12 d-flex justify-content-center gap-4">
-                    <a href="#" className="btnstyle1">Hire Developer</a>
-                </div>
-            </div>
-        </div>
-        <Footer />
-    </>
-}
-
-export default HowItWorks
+export default HowItWorks;

@@ -16,14 +16,13 @@ const Sidebar: React.FC<SidebarProps> = ({ activeStep, formStatus }) => {
   ];
 
   return (
-    <div className="w-64 p-4 rounded-sm mt-6 bg-white max-h-fit">
+    <div className="w-64 p-4 rounded-sm mt-6 bg-white max-h-fit mx-auto md:mx-0">
       <nav className="space-y-2">
         {navItems.map((item) => (
           <div
             key={item.title}
-            className={`flex items-center gap-3 rounded-lg px-3 py-2 ${
-              item.step === activeStep ? 'bg-blue-50 text-blue-600' : 'text-gray-600 hover:bg-gray-50'
-            }`}
+            className={`flex items-center gap-3 rounded-lg px-3 py-2 ${item.step === activeStep ? 'bg-blue-50 text-blue-600' : 'text-gray-600 hover:bg-gray-50'
+              }`}
           >
             <item.icon className="h-5 w-5" />
             <span className="flex-1">{item.title}</span>
