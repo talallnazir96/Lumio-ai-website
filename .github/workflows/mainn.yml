@@ -38,6 +38,7 @@ jobs:
           else
             echo "❌ ERROR: .next directory NOT found!"
             exit 1
+          fi
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
