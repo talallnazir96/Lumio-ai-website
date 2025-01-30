@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { BookmarkIcon } from "lucide-react"; // Assuming you're using lucide-react library
 
 type BadgeProps = {
@@ -17,10 +16,10 @@ export function ProfileHeader() {
   return (
     <div className="bg-white text-black p-10">
       <div className="flex flex-col md:flex-row gap-6">
-        <div className="relative w-[240px] h-[240px] flex-shrink-0">
-          <Image src={"/assets/pic-2.png"} alt="Profile" className="rounded-lg" width={240} height={240} priority />
+        <div className="relative w-[240px] h-[240px] flex-shrink-0 flex md:block gap-4 md:gap-0">
+          <img src={"/assets/pic-2.png"} alt="Profile" className="rounded-lg w-[180px] h-[180px] md:w-[240px] md:h-[240px]" />
           <div className="mt-4 flex flex-col items-center gap-4">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1 md:gap-2">
               <span className="h-2 w-2 bg-green-500 rounded-full" />
               <span>Available for work</span>
             </div>

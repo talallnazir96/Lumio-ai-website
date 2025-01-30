@@ -30,17 +30,17 @@ const experiences = [
 
 export default function ExperienceTimeline() {
   return (
-    <div className="max-w-5xl mx-auto py-12 px-20 bg-white rounded-lg">
+    <div className="max-w-5xl mx-auto py-12 px-4 sm:px-6 lg:px-8 bg-white rounded-lg">
       <div className="relative">
         {/* Vertical line */}
-        <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-200" />
+        <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-200 hidden sm:block" />
 
         {/* Experience items */}
         {experiences.map((experience, index) => (
-          <div key={index} className="relative flex gap-6 pb-12 last:pb-0">
+          <div key={index} className="relative flex flex-col sm:flex-row gap-6 pb-12 last:pb-0">
             {/* Logo */}
-            <div className="relative z-10">
-              <div className="w-16 h-16  bg-white border-gray-200 overflow-hidden flex items-center justify-center">
+            <div className="relative z-10 flex-shrink-0 mx-auto sm:mx-0">
+              <div className="w-16 h-16 bg-white border border-gray-200 overflow-hidden flex items-center justify-center rounded-full">
                 <img
                   src={experience.logo || "/placeholder.svg"}
                   alt={`${experience.company} logo`}
@@ -49,26 +49,24 @@ export default function ExperienceTimeline() {
                   className="object-contain"
                 />
               </div>
-
             </div>
 
             {/* Content */}
             <div className="flex-1 pt-1.5">
-              <div className="flex items-center justify-between mb-1">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-1">
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900">{experience.company} <span className="text-sm text-gray-500 ml-2">{experience.period}</span></h3>
                   <p className="text-sm text-gray-500">{experience.role}</p>
                 </div>
-                <div className="flex items-center gap-2">
-                <span className="text-sm text-gray-500 ml-2">Skill Used:</span>
-
+                <div className="flex items-center gap-2 mt-2 sm:mt-0">
+                  <span className="text-sm text-gray-500">Skill Used:</span>
                   {experience.skills.map((skill, skillIndex) => (
                     <span
                       key={skillIndex}
                       className="inline-flex items-center justify-center w-6 h-6 bg-gray-100 rounded"
                     >
                       <img
-                        src={`/assets/python.png`}
+                        src={`/assets/${skill}.png`}
                         alt={skill}
                         width={16}
                         height={16}
@@ -86,4 +84,3 @@ export default function ExperienceTimeline() {
     </div>
   )
 }
-

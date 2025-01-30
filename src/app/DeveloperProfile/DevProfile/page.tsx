@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState } from "react";
 import ExperienceTimeline from "../components/ExperienceTimeline";
@@ -13,7 +13,7 @@ const DevProfile: React.FC = () => {
   const router = useRouter();
   const handleSkill = () => {
     router.push("/DeveloperProfile/VettingSystem");
-  }
+  };
 
   const renderVettingContent = (): JSX.Element => {
     if (!showVettingDetails) {
@@ -50,7 +50,7 @@ const DevProfile: React.FC = () => {
 
           {/* Python Section */}
           <div className="mb-8 bg-gray-200 p-4 rounded-lg">
-            <div className="flex items-center gap-8">
+            <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="flex flex-col items-center gap-2">
                 <div className="w-12 h-12 rounded-lg flex items-center justify-center">
                   <Image
@@ -63,7 +63,7 @@ const DevProfile: React.FC = () => {
                 </div>
                 <span className="font-medium">Python</span>
               </div>
-              <div className="flex items-center gap-14 flex-1">
+              <div className="flex flex-col md:flex-row items-center gap-4 md:gap-14 flex-1">
                 <div className="relative w-32 bg-gray-200 rounded-full h-2">
                   <div className="bg-green-500 h-2 rounded-full" style={{ width: "97%" }}></div>
                   <span className="absolute right-0 top-[-20px] text-green-600">97%</span>
@@ -80,7 +80,7 @@ const DevProfile: React.FC = () => {
 
           {/* JavaScript Section */}
           <div className="mb-8 bg-gray-200 p-4 rounded-lg">
-            <div className="flex items-center gap-8">
+            <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="flex flex-col items-center gap-2">
                 <div className="w-12 h-12 rounded-lg flex items-center justify-center">
                   <Image
@@ -93,7 +93,7 @@ const DevProfile: React.FC = () => {
                 </div>
                 <span className="font-medium">JavaScript</span>
               </div>
-              <div className="flex items-center gap-14 flex-1">
+              <div className="flex flex-col md:flex-row items-center gap-4 md:gap-14 flex-1">
                 <div className="relative w-32 bg-gray-200 rounded-full h-2">
                   <div className="bg-green-500 h-2 rounded-full" style={{ width: "94%" }}></div>
                   <span className="absolute right-0 top-[-20px] text-green-600">94%</span>
@@ -110,7 +110,7 @@ const DevProfile: React.FC = () => {
 
           {/* Angular */}
           <div className="mb-8 bg-gray-200 p-4 rounded-lg">
-            <div className="flex items-center justify-between mb-4">
+            <div className="flex flex-col md:flex-row items-center justify-between mb-4">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-lg flex items-center justify-center">
                   <Image
@@ -123,7 +123,7 @@ const DevProfile: React.FC = () => {
                 </div>
                 <span className="font-medium">Angular</span>
               </div>
-              <span className="font-medium text-red-500">Test not token</span>
+              <span className="font-medium text-red-500">Test not taken</span>
               <button className="rounded bg-gradient-to-r from-blue-800 to-purple-600 px-4 py-1 text-white hover:from-blue-900 hover:to-purple-700">
                 Take test
               </button>
@@ -131,9 +131,9 @@ const DevProfile: React.FC = () => {
           </div>
 
           {/* Bottom Metrics */}
-          <div className="flex justify-between items-center">
-            <div className=" w-110 flex items-center gap-2">
-              <div className="rounded-full overflow-hidden flex items-center justify-center">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="flex items-center gap-2">
+              <div className="rounded-full overflow-hidden flex items-center justify-center w-24 h-24">
                 <Image
                   src={"/assets/72.svg"}
                   alt="Coding Challenge Score"
@@ -141,15 +141,14 @@ const DevProfile: React.FC = () => {
                   width={300}
                   height={300}
                 />
-                <div>
-                  <div className="text-sm">Coding challenge score</div>
-                  <div className="font-medium text-green-600">90</div>
-                </div>
               </div>
-
+              <div>
+                <div className="text-sm">Coding challenge score</div>
+                <div className="font-medium text-green-600">90</div>
+              </div>
             </div>
             <div className="flex items-center gap-2">
-              <div className="  w-100 rounded-full overflow-hidden flex items-center justify-center">
+              <div className="rounded-full overflow-hidden flex items-center justify-center w-24 h-24">
                 <Image
                   src={"/assets/73.svg"}
                   alt="Soft Skills"
@@ -157,12 +156,11 @@ const DevProfile: React.FC = () => {
                   width={200}
                   height={200}
                 />
-                <div>
-                  <div className="text-sm">Soft Skills</div>
-                  <div className="text-green-600">optimal</div>
-                </div>
               </div>
-
+              <div>
+                <div className="text-sm">Soft Skills</div>
+                <div className="text-green-600">optimal</div>
+              </div>
             </div>
           </div>
         </div>
@@ -232,7 +230,7 @@ const DevProfile: React.FC = () => {
   return (
     <>
       <Navbar />
-      <div className="flex min-h-screen bg-gray-100 text-black">
+      <div className="flex flex-col md:flex-row min-h-screen bg-gray-100 text-black">
         <Sidebarr selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
         <div className="flex-1 p-8">
           <div className="mb-8">
@@ -240,7 +238,7 @@ const DevProfile: React.FC = () => {
           </div>
 
           {/* Profile Section */}
-          <div className="mb-8 flex items-start justify-between bg-white rounded-lg p-4">
+          <div className="mb-8 flex flex-col md:flex-row items-start justify-between bg-white rounded-lg p-4">
             <div className="flex items-center gap-4">
               <div className="h-24 w-24 overflow-hidden rounded-full">
                 <Image
@@ -279,21 +277,21 @@ const DevProfile: React.FC = () => {
           </div>
 
           {/* Tabs */}
-          <div className="mb-8 flex gap-4 overflow-x-auto">
+          <div className="mb-8 flex gap-3 overflow-x-auto">
             <button
-              className={`rounded px-4 py-2 ${selectedTab === "vetting" ? "bg-blue-100 text-blue-500" : "hover:bg-gray-300"}`}
+              className={`rounded px-2 py-2 bg-blue-100 ${selectedTab === "vetting" ? "bg-blue-100 text-blue-500" : "hover:bg-gray-300"}`}
               onClick={() => setSelectedTab("vetting")}
             >
               LumioAI Vetting Results
             </button>
             <button
-              className={`rounded px-4 py-2 ${selectedTab === "about" ? "bg-blue-100 text-blue-500" : "hover:bg-gray-300"}`}
+              className={`rounded px-4 py-2 bg-blue-100 ${selectedTab === "about" ? "bg-blue-100 text-blue-500" : "hover:bg-gray-300"}`}
               onClick={() => setSelectedTab("about")}
             >
               About John
             </button>
             <button
-              className={`rounded px-4 py-2 ${selectedTab === "experience" ? "bg-blue-100 text-blue-500" : "hover:bg-gray-300"}`}
+              className={`rounded px-4 py-2 bg-blue-100 ${selectedTab === "experience" ? "bg-blue-100 text-blue-500" : "hover:bg-gray-300"}`}
               onClick={() => setSelectedTab("experience")}
             >
               Work Experience

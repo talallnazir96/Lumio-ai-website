@@ -7,7 +7,7 @@ interface SidebarProps {
 
 const Sidebarr: React.FC<SidebarProps> = ({ selectedTab, setSelectedTab }) => {
   return (
-    <div className="hidden md:block w-64 border-r bg-white p-6">
+    <div className="hidden lg:block w-64 border-r bg-white p-6">
       <nav className="space-y-2">
         <div
           className={`flex items-center gap-3 rounded-lg px-3 py-2 ${selectedTab === "dashboard" ? "bg-blue-50 text-blue-600" : ""}`}

@@ -4,9 +4,14 @@ import Link from "next/link"
 import { useState } from "react"
 import { Eye, EyeOff } from "lucide-react"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 
 const ClientSignin: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false)
+    const router = useRouter()
+    const handleClick = ()=>{
+      router.push("/ClientDashboard/Dashboard")
+    }
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-white">
@@ -52,6 +57,7 @@ const ClientSignin: React.FC = () => {
                 <button
                   type="submit"
                   className="bg-blue-100 hover:bg-blue-200 text-blue-900 px-8 py-2 rounded-md transition-colors"
+                onClick={handleClick}
                 >
                   Sign in
                 </button>
@@ -63,7 +69,7 @@ const ClientSignin: React.FC = () => {
 
             <div className="mt-8 text-center text-sm text-black">
               Don&apos;t have an account?{" "}
-              <Link href="/signup" className="text-blue-600 hover:underline">
+              <Link href="/RegisterAsDeveloper/signup" className="text-blue-600 hover:underline">
                 Start here
               </Link>
             </div>
