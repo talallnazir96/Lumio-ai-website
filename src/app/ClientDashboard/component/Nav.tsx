@@ -7,11 +7,11 @@ const Nav: React.FC = () => {
     <nav className="border-b border-gray-100 bg-white px-6 py-2 m-1 rounded-lg">
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         <div className="flex items-center gap-2">
-          <span className="rounded-md bg-black px-2 py-1 text-sm font-semibold text-white">Dash</span>
-          <span className="font-semibold text-black">Board</span>
+          {/* <span className="rounded-md bg-black px-2 py-1 text-sm font-semibold text-white">Dash</span> */}
+          <span className="font-semibold text-black mt-5">Dashboard</span>
         </div>
 
-        <h1 className="text-base font-bold text-gray-900">Monitor and track the progress of your jobs</h1>
+        <h1 className="text-base font-bold text-gray-900 hidden md:block">Monitor and track the progress of your jobs</h1>
 
         <div className="flex items-center gap-4">
           <button className="rounded-full p-2 hover:bg-gray-100">

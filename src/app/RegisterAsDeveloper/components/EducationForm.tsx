@@ -2,15 +2,17 @@ import React, { useState, ChangeEvent } from 'react';
 
 interface EducationFormProps {
   formData: {
-    school: string;
-    degree: string;
-    country: string;
-    startDate: string;
-    startMonth: string;
-    endDate: string;
-    endMonth: string;
-    stillStudying: boolean;
-    about: string;
+    education: Array<{
+      school: string;
+      degree: string;
+      country: string;
+      startDate: string;
+      startMonth: string;
+      endDate: string;
+      endMonth: string;
+      stillStudying: boolean;
+      about: string;
+    }>;
   };
   setFormData: React.Dispatch<React.SetStateAction<any>>;
   onBack: () => void;
@@ -18,37 +20,83 @@ interface EducationFormProps {
 }
 
 const EducationForm: React.FC<EducationFormProps> = ({ formData, setFormData, onBack, onNext }) => {
-  const [formValues, setFormValues] = useState(formData);
-  const [errors, setErrors] = useState<Record<string, string>>({});
+  // Ensure formData.education is always an array
+  const [educationForms, setEducationForms] = useState(
+    formData.education ?? [
+      {
+        school: '',
+        degree: '',
+        country: '',
+        startDate: '',
+        startMonth: '',
+        endDate: '',
+        endMonth: '',
+        stillStudying: false,
+        about: '',
+      },
+    ]
+  );
+  const [errors, setErrors] = useState<Array<Record<string, string>>>([]);
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleChange = (index: number) => (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { id, value, type } = e.target;
+    const field = id.split('-')[0]; // Extract the field name (e.g., "school" from "school-0")
+    const updatedForms = [...educationForms];
     if (type === 'checkbox') {
       const { checked } = e.target as HTMLInputElement;
-      setFormValues({ ...formValues, [id]: checked });
+      updatedForms[index] = { ...updatedForms[index], [field]: checked };
     } else {
-      setFormValues({ ...formValues, [id]: value });
+      updatedForms[index] = { ...updatedForms[index], [field]: value };
     }
+    setEducationForms(updatedForms);
   };
 
   const validate = () => {
-    let newErrors: Record<string, string> = {};
-    if (!formValues.school) newErrors.school = 'School is required';
-    if (!formValues.degree) newErrors.degree = 'Degree is required';
-    if (!formValues.country) newErrors.country = 'Country is required';
-    if (!formValues.startDate) newErrors.startDate = 'Start year is required';
-    if (!formValues.startMonth) newErrors.startMonth = 'Start month is required';
-    if (!formValues.endDate && !formValues.stillStudying) newErrors.endDate = 'End year is required unless you are still studying';
-    if (!formValues.endMonth && !formValues.stillStudying) newErrors.endMonth = 'End month is required unless you are still studying';
+    const newErrors: Array<Record<string, string>> = [];
+    let isValid = true;
+
+    educationForms.forEach((form, index) => {
+      const formErrors: Record<string, string> = {};
+      if (!form.school) formErrors.school = 'School is required';
+      if (!form.degree) formErrors.degree = 'Degree is required';
+      if (!form.country) formErrors.country = 'Country is required';
+      if (!form.startDate) formErrors.startDate = 'Start year is required';
+      if (!form.startMonth) formErrors.startMonth = 'Start month is required';
+      if (!form.endDate && !form.stillStudying) formErrors.endDate = 'End year is required unless you are still studying';
+      if (!form.endMonth && !form.stillStudying) formErrors.endMonth = 'End month is required unless you are still studying';
+      newErrors[index] = formErrors;
+
+      if (Object.keys(formErrors).length > 0) {
+        isValid = false;
+      }
+    });
+
     setErrors(newErrors);
-    return !Object.keys(newErrors).length;
+    return isValid;
   };
 
   const handleNext = () => {
     if (validate()) {
-      setFormData((prev: any) => ({ ...prev, education: formValues }));
+      setFormData((prev: any) => ({ ...prev, education: educationForms }));
       onNext();
     }
+  };
+
+  const handleAddEducation = () => {
+    setEducationForms([
+      ...educationForms,
+      {
+        school: '',
+        degree: '',
+        country: '',
+        startDate: '',
+        startMonth: '',
+        endDate: '',
+        endMonth: '',
+        stillStudying: false,
+        about: '',
+      },
+    ]);
   };
 
   const currentYear = new Date().getFullYear();
@@ -70,32 +118,32 @@ const EducationForm: React.FC<EducationFormProps> = ({ formData, setFormData, on
 
   return (
     <div className="flex flex-col items-center">
-      <div className="flex-1 p-6 bg-white rounded-sm w-full max-w-3xl">
-        <form>
-          <div className="space-y-6">
+      <div className="flex-1 p-6 bg-white rounded-sm w-full max-w-3xl gap-4">
+        {educationForms.map((form, index) => (
+          <form key={index} className="space-y-6 mb-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label htmlFor="school" className="block text-sm font-medium text-black">
+                <label htmlFor={`school-${index}`} className="block text-sm font-medium text-black">
                   School or University <span className="text-red-500">*</span>
                 </label>
                 <input
-                  id="school"
+                  id={`school-${index}`}
                   type="text"
-                  value={formValues.school}
-                  onChange={handleChange}
+                  value={form.school}
+                  onChange={handleChange(index)}
                   placeholder="Type here.."
                   className="w-full px-3 py-2 bg-gray-100 border-none rounded-md text-black"
                 />
-                {errors.school && <p className="text-red-500 text-sm">{errors.school}</p>}
+                {errors[index]?.school && <p className="text-red-500 text-sm">{errors[index].school}</p>}
               </div>
               <div className="space-y-2">
-                <label htmlFor="degree" className="block text-sm font-medium text-black">
+                <label htmlFor={`degree-${index}`} className="block text-sm font-medium text-black">
                   Degree <span className="text-red-500">*</span>
                 </label>
                 <select
-                  id="degree"
-                  value={formValues.degree}
-                  onChange={handleChange}
+                  id={`degree-${index}`}
+                  value={form.degree}
+                  onChange={handleChange(index)}
                   className="w-full px-3 py-2 bg-gray-100 border-none rounded-md text-black"
                 >
                   <option value="">Select</option>
@@ -103,23 +151,23 @@ const EducationForm: React.FC<EducationFormProps> = ({ formData, setFormData, on
                   <option value="masters">Master's Degree</option>
                   <option value="phd">Ph.D.</option>
                 </select>
-                {errors.degree && <p className="text-red-500 text-sm">{errors.degree}</p>}
+                {errors[index]?.degree && <p className="text-red-500 text-sm">{errors[index].degree}</p>}
               </div>
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="country" className="block text-sm font-medium text-black">
+              <label htmlFor={`country-${index}`} className="block text-sm font-medium text-black">
                 Issuing Country <span className="text-red-500">*</span>
               </label>
               <input
-                id="country"
+                id={`country-${index}`}
                 type="text"
-                value={formValues.country}
-                onChange={handleChange}
+                value={form.country}
+                onChange={handleChange(index)}
                 placeholder="Type here.."
-                className=" px-3 py-2 bg-gray-100 border-none rounded-md text-black w-1/2"
+                className="w-1/2 px-3 py-2 bg-gray-100 border-none rounded-md text-black"
               />
-              {errors.country && <p className="text-red-500 text-sm">{errors.country}</p>}
+              {errors[index]?.country && <p className="text-red-500 text-sm">{errors[index].country}</p>}
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -129,9 +177,9 @@ const EducationForm: React.FC<EducationFormProps> = ({ formData, setFormData, on
                 </label>
                 <div className="grid grid-cols-2 gap-4">
                   <select
-                    id="startDate"
-                    value={formValues.startDate}
-                    onChange={handleChange}
+                    id={`startDate-${index}`}
+                    value={form.startDate}
+                    onChange={handleChange(index)}
                     className="px-4 py-2 bg-gray-100 rounded-md focus:outline-none text-black"
                   >
                     <option value="">Year</option>
@@ -142,9 +190,9 @@ const EducationForm: React.FC<EducationFormProps> = ({ formData, setFormData, on
                     ))}
                   </select>
                   <select
-                    id="startMonth"
-                    value={formValues.startMonth}
-                    onChange={handleChange}
+                    id={`startMonth-${index}`}
+                    value={form.startMonth}
+                    onChange={handleChange(index)}
                     className="px-4 py-2 bg-gray-100 rounded-md focus:outline-none text-black"
                   >
                     <option value="">Month</option>
@@ -155,8 +203,8 @@ const EducationForm: React.FC<EducationFormProps> = ({ formData, setFormData, on
                     ))}
                   </select>
                 </div>
-                {errors.startDate && <p className="text-red-500 text-sm">{errors.startDate}</p>}
-                {errors.startMonth && <p className="text-red-500 text-sm">{errors.startMonth}</p>}
+                {errors[index]?.startDate && <p className="text-red-500 text-sm">{errors[index].startDate}</p>}
+                {errors[index]?.startMonth && <p className="text-red-500 text-sm">{errors[index].startMonth}</p>}
               </div>
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-black">
@@ -164,11 +212,11 @@ const EducationForm: React.FC<EducationFormProps> = ({ formData, setFormData, on
                 </label>
                 <div className="grid grid-cols-2 gap-4">
                   <select
-                    id="endDate"
-                    value={formValues.endDate}
-                    onChange={handleChange}
+                    id={`endDate-${index}`}
+                    value={form.endDate}
+                    onChange={handleChange(index)}
                     className="px-4 py-2 bg-gray-100 rounded-md focus:outline-none text-black"
-                    disabled={formValues.stillStudying}
+                    disabled={form.stillStudying}
                   >
                     <option value="">Year</option>
                     {years.map((year) => (
@@ -178,11 +226,11 @@ const EducationForm: React.FC<EducationFormProps> = ({ formData, setFormData, on
                     ))}
                   </select>
                   <select
-                    id="endMonth"
-                    value={formValues.endMonth}
-                    onChange={handleChange}
+                    id={`endMonth-${index}`}
+                    value={form.endMonth}
+                    onChange={handleChange(index)}
                     className="px-4 py-2 bg-gray-100 rounded-md focus:outline-none text-black"
-                    disabled={formValues.stillStudying}
+                    disabled={form.stillStudying}
                   >
                     <option value="">Month</option>
                     {months.map((month) => (
@@ -192,45 +240,45 @@ const EducationForm: React.FC<EducationFormProps> = ({ formData, setFormData, on
                     ))}
                   </select>
                 </div>
-                {errors.endDate && <p className="text-red-500 text-sm">{errors.endDate}</p>}
-                {errors.endMonth && <p className="text-red-500 text-sm">{errors.endMonth}</p>}
+                {errors[index]?.endDate && <p className="text-red-500 text-sm">{errors[index].endDate}</p>}
+                {errors[index]?.endMonth && <p className="text-red-500 text-sm">{errors[index].endMonth}</p>}
               </div>
             </div>
 
             <div className="flex items-center">
               <input
                 type="checkbox"
-                id="stillStudying"
-                checked={formValues.stillStudying}
-                onChange={handleChange}
+                id={`stillStudying-${index}`}
+                checked={form.stillStudying}
+                onChange={handleChange(index)}
                 className="h-4 w-4 text-blue-600 rounded"
               />
-              <label htmlFor="stillStudying" className="ml-2 text-sm text-black">
+              <label htmlFor={`stillStudying-${index}`} className="ml-2 text-sm text-black">
                 Still studying
               </label>
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="about" className="block text-sm font-medium text-black">
+              <label htmlFor={`about-${index}`} className="block text-sm font-medium text-black">
                 About you (Let us know briefly about yourself)
               </label>
               <textarea
-                id="about"
+                id={`about-${index}`}
                 rows={6}
-                value={formValues.about}
-                onChange={handleChange}
+                value={form.about}
+                onChange={handleChange(index)}
                 placeholder="Type here.."
                 className="w-full px-3 py-2 bg-gray-100 border-none rounded-md resize-none text-black"
               />
             </div>
-          </div>
-        </form>
+          </form>
+        ))}
       </div>
-
       <div className="w-full max-w-3xl mt-4 bg-white rounded-sm p-3 flex justify-center">
         <button
           type="button"
           className="text-black hover:underline"
+          onClick={handleAddEducation}
         >
           + Add Education
         </button>

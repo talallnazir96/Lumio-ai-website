@@ -23,31 +23,33 @@ const AboutUs = () => {
 
             <section className="meetteam">
                 <div className="container">
-                    <h2 className="section-heading mb-5">Meet the team behind LumioAI</h2>
+                    <div className="flex items-center justify-center">
+                        <h2 className="bg-black py-2 px-5 mb-3 rounded-full text-white text-sm md:text-3xl">Meet the team behind LumioAI</h2>
+                    </div>
                     <div className="row">
                         <div className="col-lg-3 col-md-6 col-sm-6">
-                            <div className="teamimage">
+                            <div className="teamimage flex items-center justify-center flex-col">
                                 <img src="/assets/img/george-murusidze.png" className="mb-3" alt="george-murusidze" />
                                 <h3>George Murusidze</h3>
                                 <p className="paratext">Founder/CEO</p>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6 col-sm-6">
-                            <div className="teamimage">
+                            <div className="teamimage flex items-center justify-center flex-col">
                                 <img src="/assets/img/luis-anton.png" className="mb-3" alt="luis-anton" />
                                 <h3>Luis Anton Gollonet</h3>
                                 <p className="paratext">Founder/CEO</p>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6 col-sm-6">
-                            <div className="teamimage">
+                            <div className="teamimage flex items-center justify-center flex-col">
                                 <img src="/assets/img/rahul.png" className="mb-3" alt="rahul" />
                                 <h3>Rahul Kapoor</h3>
                                 <p className="paratext">Tech Lead/CTO</p>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6 col-sm-6">
-                            <div className="teamimage">
+                            <div className="teamimage flex items-center justify-center flex-col">
                                 <img src="/assets/img/george-murusidze.png" className="mb-3" alt="george-murusidze" />
                                 <h3>George Murusidze</h3>
                                 <p className="paratext">Founder/CEO</p>
@@ -65,7 +67,7 @@ const AboutUs = () => {
                                 <img src="/assets/img/abt-story.svg" width="100px" alt="abt-story" />
                                 <h2 className="section-heading">Our Story</h2>
                             </div>
-                            <p className="paratext">
+                            <p className="paratext  text-justify px-3 md:px-0">
                                 At LumioAI our journey begun with realization of the transformative potential of artificial
                                 intelligence. Coming from different backgrounds, the founding team members had a common
                                 vision - to <strong>help companies</strong> adopt AI easier. After the initial testing of
@@ -84,7 +86,7 @@ const AboutUs = () => {
                                 <img src="/assets/img/abt-mission.svg" width="100px" alt="abt-mission" />
                                 <h2 className="section-heading">Our Mission</h2>
                             </div>
-                            <p className="paratext">
+                            <p className="paratext text-justify px-3 md:px-0">
                                 Technology is changing rapidly, and it is transforming every industry. Those who cannot keep
                                 up with it may fall behind. With the latest developments in AI, it is crucial for businesses
                                 to integrate it and optimize their internal systems in order to stay competitive. We know
@@ -99,7 +101,7 @@ const AboutUs = () => {
                                 <img src="/assets/img/values.svg" width="100px" alt="value" />
                                 <h2 className="section-heading">Our Values</h2>
                             </div>
-                            <p className="paratext">
+                            <p className="paratext  text-justify px-3 md:px-0">
                                 At LumioAI we value the quality and customer experience the most. Every <strong>business is
                                     special</strong> and we are here to show it to the world.
                             </p>
@@ -115,7 +117,7 @@ const AboutUs = () => {
                 <div className="container text-center">
                     <h2 className="section-heading mb-5">Professional photo requirements</h2>
                     <div className="row">
-                        <div className="col-lg-6 contentsec text-start">
+                        <div className="text-start flex items-center justify-center flex-col col-lg-6 px-3 md:px-0">
                             <p className="paratext">We ensure to provide companies with the best talent and great hiring
                                 experience. </p>
                             <p className="paratext">Please check the requirements to provide a professional and up-to-date

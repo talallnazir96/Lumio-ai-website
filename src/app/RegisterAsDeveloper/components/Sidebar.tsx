@@ -1,6 +1,6 @@
 import React from 'react';
-import { FaUser, FaGraduationCap, FaTools, FaBriefcase, FaFileAlt, FaCheck, FaTimesCircle } from 'react-icons/fa';
-
+import { FaUser, FaGraduationCap, FaTools, FaBriefcase, FaFileAlt, FaCheck, FaTimesCircle, FaExclamationTriangle } from 'react-icons/fa';
+import { PiWarningCircle } from "react-icons/pi";
 interface SidebarProps {
   activeStep: string;
   formStatus: Record<string, { isCompleted: boolean; hasError: boolean }>;
@@ -28,6 +28,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeStep, formStatus }) => {
             <span className="flex-1">{item.title}</span>
             {formStatus[item.step]?.isCompleted && <FaCheck className="h-4 w-4 text-green-500" />}
             {formStatus[item.step]?.hasError && <FaTimesCircle className="h-4 w-4 text-red-500" />}
+            {!formStatus[item.step]?.isCompleted && !formStatus[item.step]?.hasError && <PiWarningCircle className="h-4 w-4" fill='red' />}
           </div>
         ))}
       </nav>

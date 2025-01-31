@@ -8,7 +8,7 @@ const AIAssistant: React.FC<AIAssistantProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-3 md:px-0">
       <div className="relative w-full max-w-lg rounded-xl bg-gradient-to-b from-purple-100 to-blue-100 p-6">
         <div className="mb-4 flex items-center gap-2">
           <span className="text-2xl">AI</span>

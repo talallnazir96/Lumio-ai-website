@@ -8,9 +8,10 @@ import Navbar from "@/app/RegisterAsDeveloper/components/Navbar";
 import Image from "next/image";
 
 const DevProfile: React.FC = () => {
-  const [selectedTab, setSelectedTab] = useState<string>("vetting");
+  const [selectedTab, setSelectedTab] = useState<string>("profile"); // Default to "profile"
   const [showVettingDetails, setShowVettingDetails] = useState<boolean>(false);
   const router = useRouter();
+
   const handleSkill = () => {
     router.push("/DeveloperProfile/VettingSystem");
   };
@@ -37,6 +38,7 @@ const DevProfile: React.FC = () => {
 
     return (
       <div className="bg-white p-8 rounded-lg">
+        {/* Vetting content */}
         <div className="text-left">
           <div className="mb-6">
             <div className="flex items-center justify-between mb-2">
@@ -233,11 +235,10 @@ const DevProfile: React.FC = () => {
       <div className="flex flex-col md:flex-row min-h-screen bg-gray-100 text-black">
         <Sidebarr selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
         <div className="flex-1 p-8">
+          {/* Profile Section */}
           <div className="mb-8">
             <h1 className="text-2xl font-bold">My Profile</h1>
           </div>
-
-          {/* Profile Section */}
           <div className="mb-8 flex flex-col md:flex-row items-start justify-between bg-white rounded-lg p-4">
             <div className="flex items-center gap-4">
               <div className="h-24 w-24 overflow-hidden rounded-full">

@@ -7,7 +7,7 @@ const Dashboard: React.FC = () => {
 
   return (
     <main className="container mx-auto p-4 bg-gray-100 text-black">
-      <div className="mb-8 flex items-start gap-6 bg-white p-4 rounded-lg">
+      <div className="mb-8 flex flex-col md:flex-row items-start gap-6 bg-white p-4 rounded-lg">
         <div className="h-32 w-32 overflow-hidden rounded-full">
           <Image
             src="/assets/profile.png" // Directly using profile.png
@@ -18,15 +18,15 @@ const Dashboard: React.FC = () => {
           />
         </div>
         <div className="flex flex-col gap-2 flex-grow">
-          <div className="flex justify-between items-center">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
             <h1 className="text-2xl font-bold text-black">John D. Rockefeller</h1>
-            <div className="text-xl font-semibold text-black">$7,500 mo.</div>
+            <div className="text-xl font-semibold text-black mt-2 md:mt-0">$7,500 mo.</div>
           </div>
           <div className="flex items-center gap-2">
             <code className="rounded bg-gray-100 px-2 py-1 text-black">&lt;/&gt;</code>
             <span className="text-gray-600">Senior AI Engineer</span>
           </div>
-          <div className="flex gap-2">
+          <div className="flex gap-2 flex-wrap">
             {["Java", "JavaScript", "Python"].map((skill) => (
               <span key={skill} className="rounded-full bg-white border border-gray-800 px-3 py-1 text-sm font-medium text-gray-800">
                 {skill}
@@ -38,7 +38,7 @@ const Dashboard: React.FC = () => {
       <div className="m-4">
         <DateInput />
       </div>
-      <div className=" h-40 mb-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4 text-center">
+      <div className="mb-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4 text-center">
         {["Job type", "Hours worked", "Salary", "Bonus"].map((item) => (
           <div key={item} className="rounded-lg border bg-white p-6 shadow-sm">
             <div className="text-sm font-medium text-gray-500">{item}</div>
@@ -46,7 +46,7 @@ const Dashboard: React.FC = () => {
         ))}
       </div>
 
-      <div className="mb-8 w-40">
+      <div className="mb-8 w-full md:w-1/2 lg:w-1/4">
         <div className="rounded-lg border bg-white p-4">
           <h2 className="mb-4 text-lg font-semibold text-gray-700">Payment history</h2>
           <div className="flex flex-col space-y-2 gap-1">
@@ -59,7 +59,7 @@ const Dashboard: React.FC = () => {
 
       <div>
         <div className="min-h-[200px] rounded-lg border bg-white p-6 shadow-sm">
-        <h2 className="mb-4 text-lg font-semibold text-gray-700">Your notes</h2>
+          <h2 className="mb-4 text-lg font-semibold text-gray-700">Your notes</h2>
           {/* Notes content would go here */}
         </div>
       </div>

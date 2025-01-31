@@ -1043,7 +1043,7 @@ footer hr {
   padding: 15px 200px 15px 40px;
   border-radius: 40px;
   font-size: 26px;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 .teamimage {

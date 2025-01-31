@@ -52,51 +52,45 @@ const ServiceSection = () => {
                     color: #555;
                 }
 
-               @media (max-width: 767px) {
+                @media (max-width: 767px) {
                     /* Mobile styles */
                     .container {
                         padding: 0 1rem;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
                     }
 
                     .row {
                         display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
+                        flex-wrap: wrap;
+                        gap: 1rem;
                     }
 
                     .col-lg-6 {
-                        flex: 0 0 100%;
-                        max-width: 100%;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        flex-direction: column;
+                        flex: 0 0 calc(50% - 0.5rem); /* Two columns with gap */
+                        max-width: calc(50% - 0.5rem); /* Two columns with gap */
+                        text-align: center; /* Center text on mobile */
                     }
 
                     .d-flex {
                         display: flex;
+                        flex-direction: column; /* Stack icon and text vertically */
                         align-items: center;
-                        justify-content: center;
-                        flex-direction: column;
-                    }
-
-                    .gap-4 {
-                        gap: 1rem;
+                        // gap: 0.5rem; /* Reduce gap between icon and text */
                     }
 
                     .title {
-                        font-size: 1.25rem;
-                    }
-
-                    .paratext {
-                        font-size: 0.875rem;
-                        text-align: center;
+                        font-size: 1rem;
+                        text-align: center; /* Center title text */
+                        width: 100px;
+                        }
+                        
+                        .paratext {
+                            font-size: 0.875rem;
+                            text-align: left; /* Center paragraph text */
+                            // margin-top: 0.5rem; /* Adjust spacing */
+                            width: 100px;
                     }
                 }
+
                 @media (min-width: 768px) {
                     /* Tablet and Desktop styles */
                     .col-lg-6 {

@@ -15,15 +15,15 @@ const StataticsSection = () => {
                 <div className="row">
                     <div className="col-lg-12">
                         <ul className="states ps-0 d-flex flex-column flex-md-row">
-                            <li className="mb-0 mb-md-0 text-center">
+                            <li className="mb-4 mb-md-0 text-center">
                                 <CountUp end={30} duration={3} style={counterStyle} className='bg-gray-200' /> <br /> clients connected
                             </li>
                             <span className="d-none d-md-block"></span>
-                            <li className="mb-0 mb-md-0 text-center">
+                            <li className="mb-4 mb-md-0 text-center">
                                 <CountUp end={90} duration={3} style={counterStyle} className='bg-gray-200' /> <br /> developers hired
                             </li>
                             <span className="d-none d-md-block"></span>
-                            <li className="mb-0 mb-md-0 text-center">
+                            <li className="mb-4 mb-md-0 text-center">
                                 <CountUp end={500} duration={3} style={counterStyle} className='bg-gray-200' /> <br /> hours of recruitment saved
                             </li>
                             <span className="d-none d-md-block"></span>
@@ -45,20 +45,23 @@ const StataticsSection = () => {
                 }
 
                 @media (max-width: 767px) {
+                    /* Mobile-specific styles */
                     .states {
-                        flex-direction: column;
-                        align-items: center;
-                        text-align: center;
+                        flex-direction: column; /* Stack items vertically */
+                        align-items: center; /* Center items horizontally */
+                        gap: 1.5rem; /* Add spacing between stacked items */
                     }
+
                     .states li {
-                        width: 100%;
+                        width: 100%; /* Ensure full width for mobile */
                         display: flex;
                         flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
+                        align-items: center; /* Center content horizontally */
+                        justify-content: center; /* Center content vertically */
                     }
+
                     .graph-img {
-                        display: none; /* Hide images on mobile */
+                        display: none; /* Hide the graph image on mobile */
                     }
                 }
             `}</style>
