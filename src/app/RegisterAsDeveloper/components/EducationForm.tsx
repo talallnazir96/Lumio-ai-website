@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent } from 'react';
+import React, { useState, ChangeEvent, useEffect } from 'react';
 
 interface EducationFormProps {
   formData: {
@@ -20,23 +20,12 @@ interface EducationFormProps {
 }
 
 const EducationForm: React.FC<EducationFormProps> = ({ formData, setFormData, onBack, onNext }) => {
-  // Ensure formData.education is always an array
-  const [educationForms, setEducationForms] = useState(
-    formData.education ?? [
-      {
-        school: '',
-        degree: '',
-        country: '',
-        startDate: '',
-        startMonth: '',
-        endDate: '',
-        endMonth: '',
-        stillStudying: false,
-        about: '',
-      },
-    ]
-  );
+  const [educationForms, setEducationForms] = useState(formData.education);
   const [errors, setErrors] = useState<Array<Record<string, string>>>([]);
+
+  useEffect(() => {
+    setEducationForms(formData.education);
+  }, [formData.education]);
 
   const handleChange = (index: number) => (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { id, value, type } = e.target;

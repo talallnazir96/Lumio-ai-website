@@ -26,7 +26,7 @@ interface FormData {
     profilePicture: File | null;
     resume: File | null;
   };
-  education: {
+  education: Array<{
     school: string;
     degree: string;
     country: string;
@@ -36,13 +36,13 @@ interface FormData {
     endMonth: string;
     stillStudying: boolean;
     about: string;
-  };
+  }>;
   technicalSkills: {
     role: string;
     experience: string;
     skills: string[];
   };
-  workExperience: {
+  workExperience: Array<{
     company: string;
     role: string;
     startDate: string;
@@ -51,7 +51,7 @@ interface FormData {
     endMonth: string;
     stillWorking: boolean;
     description: string;
-  };
+  }>;
 }
 
 export default function RegisterDeveloper() {
@@ -74,7 +74,7 @@ export default function RegisterDeveloper() {
       profilePicture: null,
       resume: null
     },
-    education: {
+    education: [{
       school: '',
       degree: '',
       country: '',
@@ -84,13 +84,13 @@ export default function RegisterDeveloper() {
       endMonth: '',
       stillStudying: false,
       about: ''
-    },
+    }],
     technicalSkills: {
       role: '',
       experience: '',
       skills: []
     },
-    workExperience: {
+    workExperience: [{
       company: '',
       role: '',
       startDate: '',
@@ -99,7 +99,7 @@ export default function RegisterDeveloper() {
       endMonth: '',
       stillWorking: false,
       description: ''
-    }
+    }]
   });
 
   const handleNext = (currentStep: string, nextStep: string) => {
@@ -140,7 +140,7 @@ export default function RegisterDeveloper() {
         <Sidebar activeStep={activeStep} formStatus={formStatus} />
         <div className="flex-1 p-6">
           {activeStep === 'basic' && <BasicForm formData={formData.basic} setFormData={setFormData} onNext={() => handleNext('basic', 'education')} />}
-          {activeStep === 'education' && <EducationForm formData={formData.education} setFormData={setFormData} onBack={() => handleBack('basic')} onNext={() => handleNext('education', 'technical-skills')} />}
+          {activeStep === 'education' && <EducationForm formData={formData} setFormData={setFormData} onBack={() => handleBack('basic')} onNext={() => handleNext('education', 'technical-skills')} />}
           {activeStep === 'technical-skills' && <TechnicalSkillForm formData={formData.technicalSkills} setFormData={setFormData} onBack={() => handleBack('education')} onNext={() => handleNext('technical-skills', 'work-experience')} />}
           {activeStep === 'work-experience' && <WorkExperienceForm formData={formData.workExperience} setFormData={setFormData} onBack={() => handleBack('technical-skills')} onNext={() => handleNext('work-experience', 'profile-preview')} />}
           {activeStep === 'profile-preview' && <ProfilePreview formData={formData} onEdit={handleEdit} />}

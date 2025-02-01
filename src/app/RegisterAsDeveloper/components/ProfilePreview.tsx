@@ -13,26 +13,32 @@ interface ProfilePreviewProps {
       profilePicture: File | null;
       resume: File | null;
     };
-    education: {
+    education: Array<{
       school: string;
       degree: string;
       country: string;
       startDate: string;
+      startMonth: string;
       endDate: string;
+      endMonth: string;
+      stillStudying: boolean;
       about: string;
-    };
+    }>;
     technicalSkills: {
       role: string;
       experience: string;
       skills: string[];
     };
-    workExperience: {
+    workExperience: Array<{
       company: string;
       role: string;
       startDate: string;
+      startMonth: string;
       endDate: string;
+      endMonth: string;
+      stillWorking: boolean;
       description: string;
-    };
+    }>;
   };
   onEdit: (section: string) => void;
 }
@@ -94,8 +100,8 @@ const ProfilePreview: React.FC<ProfilePreviewProps> = ({ formData, onEdit }) => 
             </div>
           </div>
         )}
-        {education && (
-          <div className="section p-4 bg-white rounded-sm">
+        {education && education.map((edu, index) => (
+          <div key={index} className="section p-4 bg-white rounded-sm">
             <div className="flex justify-between items-center mb-4">
               <div className="flex items-center gap-2">
                 <FaGraduationCap className="h-5 w-5 text-black" />
@@ -109,15 +115,15 @@ const ProfilePreview: React.FC<ProfilePreviewProps> = ({ formData, onEdit }) => 
               </button>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <p className="text-black">School: {education.school}</p>
-              <p className="text-black">Degree: {education.degree}</p>
-              <p className="text-black">Country: {education.country}</p>
-              <p className="text-black">Start Date: {education.startDate}</p>
-              <p className="text-black">End Date: {education.endDate}</p>
-              <p className="text-black">About: {education.about}</p>
+              <p className="text-black">School: {edu.school}</p>
+              <p className="text-black">Degree: {edu.degree}</p>
+              <p className="text-black">Country: {edu.country}</p>
+              <p className="text-black">Start Date: {edu.startMonth}/{edu.startDate}</p>
+              <p className="text-black">End Date: {edu.stillStudying ? "Present" : `${edu.endMonth}/${edu.endDate}`}</p>
+              <p className="text-black">About: {edu.about}</p>
             </div>
           </div>
-        )}
+        ))}
         {technicalSkills && (
           <div className="section p-4 bg-white rounded-sm">
             <div className="flex justify-between items-center mb-4">
@@ -139,8 +145,8 @@ const ProfilePreview: React.FC<ProfilePreviewProps> = ({ formData, onEdit }) => 
             </div>
           </div>
         )}
-        {workExperience && (
-          <div className="section p-4 bg-white rounded-sm">
+        {workExperience && workExperience.map((work, index) => (
+          <div key={index} className="section p-4 bg-white rounded-sm">
             <div className="flex justify-between items-center mb-4">
               <div className="flex items-center gap-2">
                 <FaBriefcase className="h-5 w-5 text-black" />
@@ -154,14 +160,14 @@ const ProfilePreview: React.FC<ProfilePreviewProps> = ({ formData, onEdit }) => 
               </button>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <p className="text-black">Company: {workExperience.company}</p>
-              <p className="text-black">Role: {workExperience.role}</p>
-              <p className="text-black">Start Date: {workExperience.startDate}</p>
-              <p className="text-black">End Date: {workExperience.endDate}</p>
-              <p className="text-black">Description: {workExperience.description}</p>
+              <p className="text-black">Company: {work.company}</p>
+              <p className="text-black">Role: {work.role}</p>
+              <p className="text-black">Start Date: {work.startMonth}/{work.startDate}</p>
+              <p className="text-black">End Date: {work.stillWorking ? "Present" : `${work.endMonth}/${work.endDate}`}</p>
+              <p className="text-black">Description: {work.description}</p>
             </div>
           </div>
-        )}
+        ))}
       </div>
       <div className="flex justify-between mt-4">
         <button className="px-4 py-2 bg-gray-300 text-black rounded-md hover:bg-gray-300" onClick={() => onEdit('work-experience')}>
