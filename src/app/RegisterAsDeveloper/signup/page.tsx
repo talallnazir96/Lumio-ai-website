@@ -14,7 +14,7 @@ export default function Signup() {
           <div className="flex justify-center">
             <div className="bg-blue-600 px-8 py-3 rounded-b-lg">
               <Image
-                src={"/assets/logo.png"}
+                src={"/logo.png"}
                 alt="LumioAI Logo"
                 width={60}
                 height={10}

@@ -26,9 +26,9 @@ const Sidebar: React.FC<SidebarProps> = ({ activeStep, formStatus }) => {
           >
             <item.icon className="h-5 w-5" />
             <span className="flex-1">{item.title}</span>
-            {formStatus[item.step]?.isCompleted && <FaCheck className="h-4 w-4 text-green-500" />}
+            {formStatus[item.step]?.isCompleted && <><img src="/tick.png" alt="tick" className='w-4 h-4' /></>}
             {formStatus[item.step]?.hasError && <FaTimesCircle className="h-4 w-4 text-red-500" />}
-            {!formStatus[item.step]?.isCompleted && !formStatus[item.step]?.hasError && <PiWarningCircle className="h-4 w-4" fill='red' />}
+            {!formStatus[item.step]?.isCompleted && !formStatus[item.step]?.hasError && <><img src="/warn.png" className='w-4 h-4' alt="warn" /></>}
           </div>
         ))}
       </nav>

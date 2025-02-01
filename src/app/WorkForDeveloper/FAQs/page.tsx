@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import AntiCheatingRules from "../AntiCheatingRules/page";
 
 interface FAQItemProps {
   question: string;
@@ -70,20 +71,23 @@ const FAQs: React.FC = () => {
   };
 
   return (
-    <div className="w-full mx-auto px-4 py-8 bg-white">
-      <h2 className="text-2xl font-bold mb-6 text-center text-black">Frequently Asked Questions</h2>
-      <div className="space-y-4">
-        {faqs.map((faq, index) => (
-          <FAQItem
-            key={index}
-            question={faq.question}
-            answer={faq.answer}
-            isOpen={openItem === index}
-            onClick={() => handleClick(index)}
-          />
-        ))}
+    <>
+      <div className="w-full mx-auto px-4 py-8 bg-white">
+        <h2 className="text-2xl font-bold mb-6 text-center text-black">Frequently Asked Questions</h2>
+        <div className="space-y-4">
+          {faqs.map((faq, index) => (
+            <FAQItem
+              key={index}
+              question={faq.question}
+              answer={faq.answer}
+              isOpen={openItem === index}
+              onClick={() => handleClick(index)}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+      <AntiCheatingRules />
+    </>
   );
 };
 

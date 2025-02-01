@@ -1,6 +1,7 @@
 import React from "react"
 import "./style.css"
 import Header from "../components/Header"
+import Link from "next/link"
 
 const SuccessScreen: React.FC = () => {
     return (
@@ -24,7 +25,9 @@ const SuccessScreen: React.FC = () => {
                     <p className="text-1xl font-medium mb-12 text-gray-800">Thanks for choosing LumioAI</p>
 
                     <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-9 rounded-md text-lg transition duration-300 ease-in-out">
-                        Close
+                        <Link href={"/"} className="no-underline text-white">
+                            Close
+                        </Link>
                     </button>
                 </div>
             </div>

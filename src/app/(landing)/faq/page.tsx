@@ -1,5 +1,6 @@
-import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
-import {ChevronDown} from "lucide-react";
+import AntiCheatingRules from "@/app/WorkForDeveloper/AntiCheatingRules/page";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { ChevronDown } from "lucide-react";
 
 const faqs = [
     {
@@ -69,7 +70,7 @@ const FaqPage = () => {
         <section className="faq">
             <div className="container text-center">
                 <div className="row">
-                    <div className="col-lg-10 m-auto">
+                    <div className="col-lg-10 ">
                         <Accordion type="single" collapsible className="accordion" id="accordionExample">
                             {faqs.map((faq, index) => (
                                 <AccordionItem key={faq.id} value={faq.id} className="accordion-item">
@@ -96,7 +97,9 @@ const FaqPage = () => {
                 </div>
             </div>
         </section>
-
+        <div className="flex items-center justify-center">
+            <AntiCheatingRules />
+        </div>
     </>
 }
 

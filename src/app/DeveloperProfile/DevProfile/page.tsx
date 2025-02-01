@@ -133,15 +133,15 @@ const DevProfile: React.FC = () => {
           </div>
 
           {/* Bottom Metrics */}
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col md:flex-row justify-around gap-4">
             <div className="flex items-center gap-2">
               <div className="rounded-full overflow-hidden flex items-center justify-center w-24 h-24">
-                <Image
-                  src={"/assets/72.svg"}
+                <img
+                  src={"/ang.png"}
                   alt="Coding Challenge Score"
                   className=""
-                  width={300}
-                  height={300}
+                  width={100}
+                  height={100}
                 />
               </div>
               <div>
@@ -150,9 +150,9 @@ const DevProfile: React.FC = () => {
               </div>
             </div>
             <div className="flex items-center gap-2">
-              <div className="rounded-full overflow-hidden flex items-center justify-center w-24 h-24">
+              <div className="overflow-hidden flex items-center justify-center w-24 h-24">
                 <Image
-                  src={"/assets/73.svg"}
+                  src={"/user-set.png"}
                   alt="Soft Skills"
                   className=""
                   width={200}

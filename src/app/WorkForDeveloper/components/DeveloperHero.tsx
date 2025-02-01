@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function DeveloperHero() {
@@ -32,9 +33,9 @@ export default function DeveloperHero() {
             developers keep what they earn.
           </p>
 
-          <button className="flex justify-center align-middle bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg rounded-lg">
+          <Link href={"/RegisterAsDeveloper/signup"} className="flex justify-center align-middle bg-blue-600 hover:bg-blue-700 text-white px-8 py-2 no-underline text-lg rounded-lg">
             Apply as Developer
-          </button>
+          </Link>
         </div>
       </div>
     </section>

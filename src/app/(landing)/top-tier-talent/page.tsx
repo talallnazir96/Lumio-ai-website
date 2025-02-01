@@ -18,7 +18,7 @@ const TopTierTalent: FC<TopTierTalentProps> = () => {
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth < 640)
+            setIsMobile(window.innerWidth < 1024) // Adjust breakpoint for tablet
         }
 
         handleResize()
@@ -29,43 +29,43 @@ const TopTierTalent: FC<TopTierTalentProps> = () => {
         }
     }, [])
 
-    const ProcessItem: FC<ProcessItemProps> = ({ step, title, image, description }) => (
-        <div className={`processItems${step} ${isMobile ? "mb-8" : ""}`}>
-            {isMobile ? (
-                <div className="flex flex-col gap-4">
-                    <div className="flex items-center gap-4">
-                        <div className="circle w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-semibold text-sm">
-                            Step {step}
-                        </div>
-                        <h6 className="mb-0 text-base font-semibold">{title}</h6>
-                    </div>
-                    <img
-                        src={image || "/placeholder.svg"}
-                        className="processimg w-full h-auto object-cover rounded-lg"
-                        alt={`step-${step}`}
-                    />
-                    <p className="paratext mb-0 w-full text-sm text-gray-600">{description}</p>
-                </div>
-            ) : (
-                <>
-                    <div className="flex items-center gap-4">
-                        <div className="circle">Step {step}</div>
-                        <h6 className="mb-0">{title}</h6>
-                    </div>
-                    <div className="flex items-center gap-4 ml-4">
-                        <img src="/assets/img/step-line.svg" className="step-line" alt="step-line" />
-                        <img src={image || "/placeholder.svg"} className="processimg" alt={`step-${step}`} />
-                        <p className="paratext mb-0 w-60 md:w-full">{description}</p>
-                    </div>
-                </>
-            )}
-        </div>
-    )
+    const processData = [
+        {
+            step: 1,
+            title: "Initial AI Vetting of Applicants",
+            image: "/assets/images/top-tier/ai.png",
+            description: "We receive a high volume of applications each month. Our AI evaluates them across various skills and prepares candidates for the next round of tests.",
+        },
+        {
+            step: 2,
+            title: "Language, Communication Skills and Personality",
+            image: "/assets/images/top-tier/language.png",
+            description: "Those who pass the initial evaluation will undergo assessments of English language proficiency and personality traits. This process includes both live screening and AI evaluation. We ensure that only passionate, committed, and professional candidates are onboarded.",
+        },
+        {
+            step: 3,
+            title: "Deep AI Vetting",
+            image: "/assets/images/top-tier/network.png",
+            description: "While some companies use AI simply as a filter, we developed more advanced and sophisticated engine to deeply vet developers. Our AI assesses problem solving skills on different levels, presents complex tasks and exercises and generates a detailed report.",
+        },
+        {
+            step: 4,
+            title: "Live Interview",
+            image: "/assets/images/top-tier/group.png",
+            description: "While some companies use AI simply as a filter, we have developed a more advanced and sophisticated engine to thoroughly vet developers. Our AI evaluates problem-solving skills at multiple levels, presents real-life scenarios and complex tasks, and generates a detailed report.",
+        },
+        {
+            step: 5,
+            title: "Monitoring and Performance Tracking",
+            image: "/assets/images/top-tier/perform.png",
+            description: "We support and take care of our developers, actively monitoring their performance with clients and providing training in the latest AI technologies to keep their skills sharp and up-to-date.",
+        },
+    ]
 
     return (
         <>
             <Navbar />
-            <section className="bannersection innerbanner py-8 sm:py-12">
+            <section className="bannersection innerbanner py-5 sm:py-12">
                 <div className="container mx-auto px-4">
                     <div className="bannerheading text-center">
                         <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold mb-4">The LumioAI vetting process</h1>
@@ -80,39 +80,44 @@ const TopTierTalent: FC<TopTierTalentProps> = () => {
                     </div>
                 </div>
             </section>
-            <section className="process py-2 sm:py-12">
+            <section className="process py-5 sm:py-12">
                 <div className="container mx-auto px-4">
                     <div className="max-w-3xl mx-auto">
-                        <ProcessItem
-                            step={1}
-                            title="Initial AI Vetting of Applicants"
-                            image="/assets/img/aplction.svg"
-                            description="We receive a high volume of applications each month. Our AI evaluates them across various skills and prepares candidates for the next round of tests."
-                        />
-                        <ProcessItem
-                            step={2}
-                            title="Language, Communication Skills and Personality"
-                            image="/assets/img/cmnction.svg"
-                            description="Those who pass the initial evaluation will undergo assessments of English language proficiency and personality traits. This process includes both live screening and AI evaluation. We ensure that only passionate, committed, and professional candidates are onboarded."
-                        />
-                        <ProcessItem
-                            step={3}
-                            title="Deep AI Vetting"
-                            image="/assets/img/ai_vetting_3.svg"
-                            description="While some companies use AI simply as a filter, we developed more advanced and sophisticated engine to deeply vet developers. Our AI assesses problem solving skills on different levels, presents complex tasks and exercises and generates a detailed report."
-                        />
-                        <ProcessItem
-                            step={4}
-                            title="Live Interview"
-                            image="/assets/img/interview.svg"
-                            description="While some companies use AI simply as a filter, we have developed a more advanced and sophisticated engine to thoroughly vet developers. Our AI evaluates problem-solving skills at multiple levels, presents real-life scenarios and complex tasks, and generates a detailed report."
-                        />
-                        <ProcessItem
-                            step={5}
-                            title="Monitoring and Performance Tracking"
-                            image="/assets/img/monitor.svg"
-                            description="We support and take care of our developers, actively monitoring their performance with clients and providing training in the latest AI technologies to keep their skills sharp and up-to-date."
-                        />
+                        {isMobile ? (
+                            // Mobile layout: Display as paragraphs
+                            <div className="flex flex-col gap-8">
+                                {processData.map((item) => (
+                                    <div key={item.step} className="flex flex-col gap-4">
+                                        <h6 className="text-base font-bold">{item.step} {") "} {item.title}</h6>
+                                        <div className="flex items-center justify-center">
+                                            <img
+                                                src={item.image || "/placeholder.svg"}
+                                                className="w-[200px] h-[200px] object-contain rounded-lg"
+                                                alt={`step-${item.step}`}
+                                            />
+                                        </div>
+                                        <p className="text-sm text-gray-600">{item.description}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        ) : (
+                            // Desktop layout: Display as step-by-step
+                            <>
+                                {processData.map((item) => (
+                                    <div key={item.step} className="processItems mb-8">
+                                        <div className="flex items-center gap-4">
+                                            <div className="circle">Step {item.step}</div>
+                                            <h6 className="mb-0">{item.title}</h6>
+                                        </div>
+                                        <div className="flex items-center gap-4 ml-4">
+                                            <img src="/assets/img/step-line.svg" className="step-line" alt="step-line" />
+                                            <img src={item.image || "/placeholder.svg"} className="processimg" alt={`step-${item.step}`} />
+                                            <p className="paratext mb-0 w-60 md:w-full">{item.description}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </>
+                        )}
                         <div className="flex flex-col items-center justify-center mt-8">
                             <div className="bottomarea text-center">
                                 <p className="mb-2 text-sm sm:text-base">
@@ -136,4 +141,3 @@ const TopTierTalent: FC<TopTierTalentProps> = () => {
 }
 
 export default TopTierTalent
-

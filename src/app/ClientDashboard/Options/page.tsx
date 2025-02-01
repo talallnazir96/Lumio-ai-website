@@ -46,7 +46,7 @@ export default function AccountSettings() {
             </div>
 
             <div className="flex gap-4">
-              <div className="h-24 bg-gray-100 rounded-lg overflow-hidden">
+              <div className="h-24 bg-gray-100 rounded-lg">
                 <Image
                   src={"/assets/z-image-3.svg"}
                   alt="Profile"

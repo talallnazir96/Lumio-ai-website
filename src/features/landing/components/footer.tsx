@@ -90,7 +90,7 @@ const Footer = () => {
                         <h4>Connect</h4>
                         <ul>
                             <li>
-                                <Link href="/contact-us/contact">Contact</Link>
+                                <Link href="/ContactUs/contact">Contact</Link>
                             </li>
                             <li>
                                 <a href="#">Help center</a>

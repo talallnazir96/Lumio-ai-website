@@ -20,7 +20,7 @@ const MonthlyPayroll: React.FC = () => {
         <p className="text-sm text-gray-500 text-center mb-4">
           Payroll management is on autopilot
         </p>
-        <div className="flex items-center justify-center gap-4 mb-8 bg-white p-4 rounded-lg shadow-md">
+        <div className="md:w-[50%] flex items-center justify-center gap-4 mb-8 bg-white p-4 rounded-lg mx-auto">
           <Image src="/assets/111.svg" alt="Payroll Icon" width={100} height={100} />
           <div className="text-center">
             <div className="text-lg text-gray-600">Monthly Payroll</div>

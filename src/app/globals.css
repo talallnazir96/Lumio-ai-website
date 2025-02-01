@@ -799,6 +799,7 @@ footer hr {
 .innerbanner {
   background: url(/assets/img/innerbanner-bg.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   padding: 150px 0px 70px;
 }

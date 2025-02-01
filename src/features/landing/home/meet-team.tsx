@@ -1,6 +1,7 @@
 "use client"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { motion } from "framer-motion"
+import Link from "next/link"
 // import './MeetTeamCustom.css'
 
 const teamMembers = [
@@ -86,7 +87,7 @@ const MeetTeam = () => {
         <div className="container">
           <div className="col-lg-12">
             <motion.div
-              className="topcard text-center ai-hover"
+              className="rounded-full text-center ai-hover"
               onMouseMove={(e) => {
                 const card = e.currentTarget
                 const rect = card.getBoundingClientRect()
@@ -104,7 +105,7 @@ const MeetTeam = () => {
                 card.style.background = "linear-gradient(90deg, #6a11cb, #8e9cf7)"
               }}
             >
-              <h2 className="mb-0 text-white">Meet our certified developers</h2>
+              <h2 className="mb-0 font-semibold text-2xl text-white">Meet our certified developers</h2>
             </motion.div>
           </div>
 
@@ -137,9 +138,9 @@ const MeetTeam = () => {
                                 ))}
                               </div>
                             </div>
-                            <a href="#" className="viewprofile">
+                            <Link href="/ClientSeeDeveloperProfile" className="viewprofile">
                               View full profile
-                            </a>
+                            </Link>
                           </div>
                         </div>
                       </CarouselItem>

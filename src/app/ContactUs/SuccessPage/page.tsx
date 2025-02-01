@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import Header from "@/app/ClientGetStarted/components/Header";
+import Link from "next/link";
 
 const SuccessPage: React.FC = () => {
   return (
@@ -32,7 +33,9 @@ const SuccessPage: React.FC = () => {
           </p>
 
           <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-9 rounded-md text-lg transition duration-300 ease-in-out">
-            Close
+            <Link href={"/"} className="no-underline text-white">
+              Close
+            </Link>
           </button>
         </div>
       </div>

@@ -1,7 +1,9 @@
 "use client";
+import { useRouter } from 'next/navigation';
 import React from 'react';
 
 const Skills = () => {
+
     return (
         <>
             <section className="skills flex items-center justify-center flex-col">
@@ -12,42 +14,38 @@ const Skills = () => {
                             <hr />
                             <div className="flex items-center justify-center flex-col overflow-hidden">
                                 <div className="icon-container flex gap-10 animate-infinite-scroll">
-                                    <img src="/assets/img/java.svg" className="img-fluid" alt="java" />
-                                    <img src="/assets/img/phthon.svg" className="img-fluid" alt="python" />
-                                    <img src="/assets/img/technology-html.svg" className="img-fluid" alt="HTML" />
-                                    <img src="/assets/img/technology-typescript.svg" className="img-fluid" alt="typescript" />
-                                    <img src="/assets/img/technology-react-native.svg" className="img-fluid" alt="Native" />
-                                    <img src="/assets/img/php.svg" className="img-fluid" alt="Php" />
-                                    <img src="/assets/img/technology-angular-js.svg" className="img-fluid" alt="Angular" />
-                                    <img src="/assets/img/technology-vuejs.svg" className="img-fluid" alt="VueJS" />
+                                    <img src="/assets/images/home/skill/java.png" className="img-fluid" alt="java" />
+                                    <img src="/assets/images/home/skill/python.png" className="img-fluid" alt="python" />
+                                    <img src="/assets/images/home/skill/html.png" className="img-fluid" alt="HTML" />
+                                    <img src="/assets/images/home/skill/ts.png" className="img-fluid" alt="typescript" />
+                                    <img src="/assets/images/home/skill/react.png" className="img-fluid" alt="Native" />
+                                    <img src="/assets/images/home/skill/php.png" className="img-fluid" alt="Php" />
+                                    <img src="/assets/images/home/skill/angular.png" className="img-fluid" alt="Angular" />
                                     {/* Repeat the icons to create a continuous scroll effect */}
-                                    <img src="/assets/img/java.svg" className="img-fluid" alt="java" />
-                                    <img src="/assets/img/phthon.svg" className="img-fluid" alt="python" />
-                                    <img src="/assets/img/technology-html.svg" className="img-fluid" alt="HTML" />
-                                    <img src="/assets/img/technology-typescript.svg" className="img-fluid" alt="typescript" />
-                                    <img src="/assets/img/technology-react-native.svg" className="img-fluid" alt="Native" />
-                                    <img src="/assets/img/php.svg" className="img-fluid" alt="Php" />
-                                    <img src="/assets/img/technology-angular-js.svg" className="img-fluid" alt="Angular" />
-                                    <img src="/assets/img/technology-vuejs.svg" className="img-fluid" alt="VueJS" />
+                                    <img src="/assets/images/home/skill/java.png" className="img-fluid" alt="java" />
+                                    <img src="/assets/images/home/skill/python.png" className="img-fluid" alt="python" />
+                                    <img src="/assets/images/home/skill/html.png" className="img-fluid" alt="HTML" />
+                                    <img src="/assets/images/home/skill/ts.png" className="img-fluid" alt="typescript" />
+                                    <img src="/assets/images/home/skill/react.png" className="img-fluid" alt="Native" />
+                                    <img src="/assets/images/home/skill/php.png" className="img-fluid" alt="Php" />
+                                    <img src="/assets/images/home/skill/angular.png" className="img-fluid" alt="Angular" />
                                 </div>
                                 <div className="icon-container flex gap-10 animate-infinite-scroll-reverse mt-5">
-                                    <img src="/assets/img/java.svg" className="img-fluid" alt="java" />
-                                    <img src="/assets/img/phthon.svg" className="img-fluid" alt="python" />
-                                    <img src="/assets/img/technology-html.svg" className="img-fluid" alt="HTML" />
-                                    <img src="/assets/img/technology-typescript.svg" className="img-fluid" alt="typescript" />
-                                    <img src="/assets/img/technology-react-native.svg" className="img-fluid" alt="Native" />
-                                    <img src="/assets/img/php.svg" className="img-fluid" alt="Php" />
-                                    <img src="/assets/img/technology-angular-js.svg" className="img-fluid" alt="Angular" />
-                                    <img src="/assets/img/technology-vuejs.svg" className="img-fluid" alt="VueJS" />
+                                    <img src="/assets/images/home/skill/java.png" className="img-fluid" alt="java" />
+                                    <img src="/assets/images/home/skill/python.png" className="img-fluid" alt="python" />
+                                    <img src="/assets/images/home/skill/html.png" className="img-fluid" alt="HTML" />
+                                    <img src="/assets/images/home/skill/ts.png" className="img-fluid" alt="typescript" />
+                                    <img src="/assets/images/home/skill/react.png" className="img-fluid" alt="Native" />
+                                    <img src="/assets/images/home/skill/php.png" className="img-fluid" alt="Php" />
+                                    <img src="/assets/images/home/skill/angular.png" className="img-fluid" alt="Angular" />
                                     {/* Repeat the icons to create a continuous scroll effect */}
-                                    <img src="/assets/img/java.svg" className="img-fluid" alt="java" />
-                                    <img src="/assets/img/phthon.svg" className="img-fluid" alt="python" />
-                                    <img src="/assets/img/technology-html.svg" className="img-fluid" alt="HTML" />
-                                    <img src="/assets/img/technology-typescript.svg" className="img-fluid" alt="typescript" />
-                                    <img src="/assets/img/technology-react-native.svg" className="img-fluid" alt="Native" />
-                                    <img src="/assets/img/php.svg" className="img-fluid" alt="Php" />
-                                    <img src="/assets/img/technology-angular-js.svg" className="img-fluid" alt="Angular" />
-                                    <img src="/assets/img/technology-vuejs.svg" className="img-fluid" alt="VueJS" />
+                                    <img src="/assets/images/home/skill/java.png" className="img-fluid" alt="java" />
+                                    <img src="/assets/images/home/skill/python.png" className="img-fluid" alt="python" />
+                                    <img src="/assets/images/home/skill/html.png" className="img-fluid" alt="HTML" />
+                                    <img src="/assets/images/home/skill/ts.png" className="img-fluid" alt="typescript" />
+                                    <img src="/assets/images/home/skill/react.png" className="img-fluid" alt="Native" />
+                                    <img src="/assets/images/home/skill/php.png" className="img-fluid" alt="Php" />
+                                    <img src="/assets/images/home/skill/angular.png" className="img-fluid" alt="Angular" />
                                 </div>
                             </div>
                             <hr />

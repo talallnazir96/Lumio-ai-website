@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const HireManager = () => {
@@ -16,7 +17,7 @@ const HireManager = () => {
                                 team. Our developers possess exceptional communication skills and strong teamwork
                                 abilities.
                             </p>
-                            <a href="#" className="btnstyle1 bg-blue-500 text-white py-2 w-36 mx-auto lg:mx-0 lg:ml-auto lg:mr-0 rounded-lg hover:bg-blue-600 transition duration-300">Get Started</a>
+                            <Link href="/RegisterAsDeveloper/signup" className="btnstyle1 bg-blue-500 text-white py-2 w-36 mx-auto lg:mx-0 lg:ml-auto lg:mr-0 rounded-lg hover:bg-blue-600 transition duration-300">Get Started</Link>
                         </div>
                     </div>
                 </div>

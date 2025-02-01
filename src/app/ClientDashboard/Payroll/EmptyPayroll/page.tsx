@@ -6,7 +6,7 @@ const EmptyPayroll: React.FC = () => {
   return (
     <div className="w-full max-w-6xl mx-auto py-6 bg-gray-100">
       <div className="bg-gray-100 rounded-lg py-6">
-        <div className="flex items-center justify-center gap-4 mb-8 bg-white p-4 rounded-lg shadow-md">
+        <div className="md:w-[50%] flex items-center justify-center gap-4 mb-8 bg-white p-4 rounded-lg mx-auto">
           <Image src="/assets/111.svg" alt="Payroll Icon" width={100} height={100} />
           <div className="text-center">
             <div className="text-lg text-gray-600">Monthly Payroll</div>

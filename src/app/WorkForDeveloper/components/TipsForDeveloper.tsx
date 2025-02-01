@@ -1,5 +1,6 @@
 import React from "react";
 import TipCard from "./TipCard";
+import Link from "next/link";
 
 const TipsForDeveloper: React.FC = () => {
   return (
@@ -86,9 +87,9 @@ const TipsForDeveloper: React.FC = () => {
           </div>
 
           <div className="flex justify-center">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 my-10 text-lg rounded-lg">
+            <Link href={"/RegisterAsDeveloper/signup"} className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-2 no-underline my-10 text-lg rounded-lg">
               Apply as Developer
-            </button>
+            </Link>
           </div>
         </div>
       </div>

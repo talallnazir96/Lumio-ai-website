@@ -66,7 +66,7 @@ export default function ExperienceTimeline() {
                       className="inline-flex items-center justify-center w-6 h-6 bg-gray-100 rounded"
                     >
                       <img
-                        src={`/assets/${skill}.png`}
+                        src={`/assets/java.png`}
                         alt={skill}
                         width={16}
                         height={16}

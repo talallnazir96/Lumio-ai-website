@@ -13,10 +13,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [sortBy, setSortBy] = useState<string>("newest");
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gray-100 flex flex-col lg:flex-row">
       <Sidebar />
-      <div className="pl-56">
-        <Nav3  />
+      <div className="flex-1 lg:pl-56">
+        <Nav3 />
         <div className="text-black p-4 rounded-lg shadow">{children}</div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 "use client"
 import { useEffect } from 'react';
 import './style.css'
+import Link from 'next/link';
 
 const MapView = () => {
     useEffect(() => {
@@ -81,11 +82,11 @@ const MapView = () => {
                         <div className="col-lg-8 col-md-10 col-sm-12 m-auto text-center">
                             <h5>
                                 Hire <strong>remotely</strong> from around the world. We make sure that your developers
-                                can work <span>according</span> to your <strong>time zone</strong>
+                                can work <span className='font-bold'>according</span> to your <strong>time zone</strong>
                             </h5>
-                            <a href="#" className="btnstyle1 mt-4 d-inline-block">
+                            <Link href="/ClientDeveloperSignin/ClientSignin" className="btnstyle1 mt-4 d-inline-block">
                                 Hire Developers
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

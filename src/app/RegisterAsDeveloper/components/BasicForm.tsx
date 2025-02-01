@@ -1,3 +1,5 @@
+import { Link } from "lucide-react";
+import { useRouter } from "next/navigation";
 import React, { useState, ChangeEvent } from "react";
 import { FaUpload } from "react-icons/fa";
 
@@ -51,7 +53,7 @@ const BasicForm: React.FC<BasicFormProps> = ({ formData, setFormData, onNext }) 
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [profilePicture, setProfilePicture] = useState<File | null>(formData.profilePicture || null);
   const [resume, setResume] = useState<File | null>(formData.resume || null);
-
+  const router = useRouter()
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { id, value } = e.target;
     setFormValues({ ...formValues, [id]: value });
@@ -87,7 +89,7 @@ const BasicForm: React.FC<BasicFormProps> = ({ formData, setFormData, onNext }) 
       <div className="flex-1 p-4 sm:p-6 bg-white rounded-sm w-full max-w-3xl">
         {/* Picture Upload Section */}
         <div className="flex justify-center mb-6 sm:mb-8">
-          <div className="flex flex-col items-center justify-center p-4 sm:p-8 border-2 border-dashed rounded-lg">
+          <div className="flex flex-col items-center justify-center p-4 sm:p-8  rounded-lg">
             <div className="w-32 h-32 bg-gray-100 rounded-full mb-4 flex items-center justify-center">
               {profilePicture ? (
                 <img
@@ -96,7 +98,7 @@ const BasicForm: React.FC<BasicFormProps> = ({ formData, setFormData, onNext }) 
                   className="h-32 w-32 rounded-full object-cover"
                 />
               ) : (
-                <FaUpload className="h-8 w-8 text-gray-400" />
+                <><img src="/profile.png" className="w-full h-full" alt="" /></>
               )}
             </div>
             <label className="text-blue-600 text-sm hover:underline cursor-pointer">
@@ -108,7 +110,7 @@ const BasicForm: React.FC<BasicFormProps> = ({ formData, setFormData, onNext }) 
                 onChange={(e) => handleFileChange(e, setProfilePicture)}
               />
             </label>
-            <span className="text-gray-500 text-sm">See guidelines</span>
+            <span className="text-gray-500 text-sm hover:underline cursor-pointer" onClick={() => router.push("/RegisterAsDeveloper/photo-guide")}>See guidelines</span>
           </div>
         </div>
 
@@ -228,7 +230,7 @@ const BasicForm: React.FC<BasicFormProps> = ({ formData, setFormData, onNext }) 
 
             <div className="space-y-2">
               <label className="block text-sm font-medium text-black">Upload your resume</label>
-              <div className="flex flex-col items-center justify-center p-4 sm:p-6 border-2 border-dashed rounded-lg bg-gray-50">
+              <div className="flex flex-col items-center justify-center p-4 sm:p-6 rounded-lg bg-gray-50">
                 <FaUpload className="h-6 w-6 text-gray-400 mb-2" />
                 <label className="text-blue-600 text-sm hover:underline cursor-pointer">
                   Upload your file

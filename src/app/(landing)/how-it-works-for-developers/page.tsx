@@ -1,9 +1,10 @@
 import Navbar from "@/features/landing/components/navbar"
 import Footer from "@/features/landing/components/footer"
+import Link from "next/link"
 
 const HowItWorksForDev = () => {
     return <>
-    <Navbar />
+        <Navbar />
         <section className="bannersection innerbanner pb-110">
             <div className="container">
                 <div className="row">
@@ -49,38 +50,38 @@ const HowItWorksForDev = () => {
                     </div>
                     <div className="col-lg-7">
                         <img src="/assets/img/devstepimg.jpg" className="devstepimg img-fluid"
-                             alt="devstepimg"/>
+                            alt="devstepimg" />
                     </div>
                 </div>
             </div>
         </section>
 
         <section className="benefitslumio text-center">
-            <h2 className="bgheading mb-5">Benefits of working with LumioAI</h2>
+            <h2 className="bg-[var(--blue-color)] inline-block py-[10px] px-[10px] text-white rounded-[56px] mb-5">Benefits of working with LumioAI</h2>
             <div className="container">
                 <div className="col-lg-10 m-auto">
                     <div className="row mt-5">
                         <div className="col-lg-6 mb-5 position-relative">
-                            <img src="/assets/img/earn.png" alt="earn"/>
+                            <img src="/assets/img/earn.png" alt="earn" />
                             <h3>Keep what you earn</h3>
                         </div>
                         <div className="col-lg-6 mb-5 position-relative">
-                            <img src="/assets/img/paid.png" alt="paid"/>
+                            <img src="/assets/img/paid.png" alt="paid" />
                             <h3>Get paid on time</h3>
                         </div>
                         <div className="col-lg-6 mb-5 position-relative">
-                            <img src="/assets/img/benefits.png" alt="benefits"/>
+                            <img src="/assets/img/benefits.png" alt="benefits" />
                             <h3>Get the benefits</h3>
                         </div>
                         <div className="col-lg-6 mb-5 position-relative">
-                            <img src="/assets/img/skill.png" alt="skill"/>
+                            <img src="/assets/img/skill.png" alt="skill" />
                             <h3>Upgrade your skills</h3>
                         </div>
                     </div>
                 </div>
                 <div className="col-lg-12">
                     <p className="mb-4 paratext">Ready to Elevate Your Career?</p>
-                    <a href="#" className="btnstyle1 d-inline-block">Apply as developer</a>
+                    <Link href="/RegisterAsDeveloper/signup" className="btnstyle1 d-inline-block">Apply as developer</Link>
                 </div>
             </div>
         </section>
@@ -95,7 +96,7 @@ const HowItWorksForDev = () => {
                             sure that their unique skills are matched accordingly.</p>
                         <p className="mb-5">At LumioAI developers can work with the best companies, upgrade their
                             resumes and build careers. With us, developers keep what they earn.</p>
-                        <a href="#" className="btnstyle1 d-inline-block">Apply as developer</a>
+                        <Link href="/RegisterAsDeveloper/signup" className="btnstyle1 d-inline-block">Apply as developer</Link>
                     </div>
                 </div>
             </div>
@@ -224,7 +225,7 @@ const HowItWorksForDev = () => {
                     </div>
 
                     <div className="col-lg-12 d-flex justify-content-center mt-5">
-                        <a href="#" className="btnstyle1 d-inline-block">Apply as developer</a>
+                        <Link href="/RegisterAsDeveloper/signup" className="btnstyle1 d-inline-block">Apply as developer</Link>
                     </div>
 
                 </div>

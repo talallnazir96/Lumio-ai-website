@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { LayoutDashboard, Search, Users, Wallet, Settings, Menu } from "lucide-react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 interface SidebarItem {
   title: string;
@@ -61,7 +62,7 @@ const Sidebar: React.FC = () => {
           <div className="flex flex-1 flex-col gap-2 p-4">
             <nav className="flex flex-1 flex-col gap-2">
               {sidebarItems.map((item) => (
-                <a
+                <Link
                   key={item.href}
                   href={item.href}
                   className={`flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium ${pathname === item.href ? "bg-gray-100 text-black" : "text-gray-600 hover:bg-gray-50 hover:text-black"
@@ -69,7 +70,7 @@ const Sidebar: React.FC = () => {
                 >
                   <item.icon className="h-4 w-4" />
                   {item.title}
-                </a>
+                </Link>
               ))}
             </nav>
             <div className="border-t pt-4">
@@ -77,7 +78,7 @@ const Sidebar: React.FC = () => {
                 <button className="w-full bg-green-400 rounded-full border border-gray-30 px-2 py-1 text-sm font-medium text-gray-700 hover:bg-green-500 no-underline">
                   Support
                 </button>
-                <button className="text-sm font-medium text-blue-600 no-underline">See FAQ</button>
+                <button className="text-sm font-medium text-blue-600 no-underline"><Link href={"/faq"}>See FAQ</Link></button>
               </div>
             </div>
           </div>

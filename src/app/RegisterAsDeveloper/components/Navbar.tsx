@@ -1,16 +1,19 @@
+import Link from "next/link";
 import React from "react";
 
 const Navbar: React.FC = () => {
   return (
     <nav className="bg-gray-800 px-4 py-2 flex justify-between items-center">
       <div className="flex items-center px-3">
-        <img
-          src={"/assets/logo.png"}
-          alt="LumioAI Logo"
-          width={140}
-          height={30}
-          className="h-8 w-auto"
-        />
+        <Link href={"/"}>
+          <img
+            src={"/assets/logo.png"}
+            alt="LumioAI Logo"
+            width={140}
+            height={30}
+            className="h-8 w-auto"
+          />
+        </Link>
       </div>
       <button className="text-white flex items-center gap-2 hover:text-gray-300">
         <img

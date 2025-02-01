@@ -7,7 +7,7 @@ const WhatExpected = () => {
                     <div className="row">
                         <div className="col-lg-9 m-auto text-center">
                             <h2 className="SectionHeading text-center mb-5"><span>What to</span> expect</h2>
-                            <div className="d-flex align-center justify-content-center flex-wrap gap-10 mt-4">
+                            <div className="d-flex align-center justify-content-center flex-wrap gap-16 mt-4">
                                 <div className="d-flex align-items-center expact">
                                     <img src="/assets/img/objective.svg" alt="objective" /> Objective and fair hiring
                                 </div>
@@ -51,24 +51,28 @@ const WhatExpected = () => {
                 .expact img {
                     margin-right: 0.5rem;
                 }
+
+                /* Mobile styles */
                 @media (max-width: 767px) {
-                    /* Mobile styles */
-                    .d-flex {
-                        flex-direction: column;
+                    .d-flex.flex-wrap {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+                        gap: 1rem;
+                        width: 100%;
                     }
                     .expact {
-                        justify-content: center;
+                        flex-direction: column;
                         text-align: center;
+                        margin: 0;
                     }
                     .expact img {
                         margin-right: 0;
                         margin-bottom: 0.5rem;
                     }
-                }
-                @media (min-width: 768px) {
-                    /* Tablet and Desktop styles */
-                    .d-flex {
-                        flex-direction: row;
+                    /* Center the 7th item */
+                    .d-flex.flex-wrap .expact:nth-child(7) {
+                        grid-column: span 2; /* Make it span 2 columns */
+                        justify-self: center; /* Center it horizontally */
                     }
                 }
             `}</style>

@@ -4,13 +4,13 @@ import { useRouter } from "next/navigation";
 import Header from "../components/Header"
 
 const ProjectDuration: React.FC = () => {
-    const router = useRouter();
-    const handleNot = ()=>{
-      router.push("/ClientGetStarted/JobTiming");
-    }
-    const handleBack = ()=>{
-      router.push("/ClientGetStarted/GetStarted");
-    }
+  const router = useRouter();
+  const handleNot = () => {
+    router.push("/ClientGetStarted/JobTiming");
+  }
+  const handleBack = () => {
+    router.push("/ClientGetStarted/GetStarted");
+  }
   return (
     <div className="min-h-screen bg-white text-black">
       <Header />
@@ -32,7 +32,7 @@ const ProjectDuration: React.FC = () => {
             </button>
           </div>
 
-          <div className="flex justify-between pt-4">
+          <div className="flex justify-between pt-4 gap-4 md:gap-0">
             <button className="px-8 py-2 text-gray-700 border border-gray-300 rounded-md hover:bg-gray-100" onClick={handleBack}>
               Back
             </button>

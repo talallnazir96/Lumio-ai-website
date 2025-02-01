@@ -95,8 +95,8 @@ const StepSection: React.FC = () => {
                                     <div className="step-header">
                                         <span className="number">3</span>
                                         <div className="stepicon">
-                                            <img src="/assets/img/hiring.svg" alt="Hiring icon" />
-                                            <p className="title mb-0">Hiring</p>
+                                            <img src="/assets/img/matching.svg" alt="Hiring icon" />
+                                            <p className="title mb-0">Matching</p>
                                         </div>
                                         <img src="/assets/img/arrow.png" className="arrow" alt="arrow" />
                                     </div>
@@ -104,7 +104,7 @@ const StepSection: React.FC = () => {
                                     </div>
                                     <div>
                                         <p className="paratext mt-4 text-center md:text-center lg:text-left">
-                                            Hire world-class, deeply vetted developers—fast
+                                            Get matched with the exact skills you need
                                         </p>
                                     </div>
                                 </div>
