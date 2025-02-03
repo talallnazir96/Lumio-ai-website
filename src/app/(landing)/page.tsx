@@ -18,24 +18,26 @@ import Footer from "@/features/landing/components/footer";
 import Navbar from "@/features/landing/components/navbar";
 
 export default function Home() {
-    return (<>
-        <Navbar />
-        <HomeBanner/>
-        <LumioSection/>
-        <ServiceSection/>
-        <StepSection/>
-        <StataticsSection/>
-        <HireManager/>
-        <MeetTeam/>
-        <MapView/>
-        <Skills/>
-        <BookDemo/>
-        <WeHire/>
-        <NetworkSection/>
-        <LumioAi/>
-        <WeValue/>
-        <WhatExpected/>
-        <GetStarted/>
-        <Footer />
-    </>);
+    return (
+        <>
+            <Navbar />
+            <HomeBanner />
+            <LumioSection />
+            <ServiceSection />
+            <StepSection />
+            <StataticsSection />
+            <HireManager />
+            <MeetTeam />
+            <MapView />
+            <Skills />
+            <BookDemo />
+            <WeHire />
+            <NetworkSection />
+            <LumioAi />
+            <WeValue />
+            <WhatExpected />
+            <GetStarted />
+            <Footer />
+        </>
+    );
 }

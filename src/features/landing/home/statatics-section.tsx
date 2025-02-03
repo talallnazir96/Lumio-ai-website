@@ -16,15 +16,15 @@ const StataticsSection = () => {
                     <div className="col-lg-12">
                         <ul className="states ps-0 d-flex flex-column flex-md-row">
                             <li className="mb-4 mb-md-0 text-center">
-                                <CountUp end={30} duration={3} style={counterStyle} className='bg-gray-200' /> <br /> clients connected
+                                <CountUp end={30} duration={3} style={counterStyle} className='bg-gray-200 font-bold md:font-normal' /> <br /> clients connected
                             </li>
                             <span className="d-none d-md-block"></span>
                             <li className="mb-4 mb-md-0 text-center">
-                                <CountUp end={90} duration={3} style={counterStyle} className='bg-gray-200' /> <br /> developers hired
+                                <CountUp end={90} duration={3} style={counterStyle} className='bg-gray-200 font-bold md:font-normal' /> <br /> developers hired
                             </li>
                             <span className="d-none d-md-block"></span>
                             <li className="mb-4 mb-md-0 text-center">
-                                <CountUp end={500} duration={3} style={counterStyle} className='bg-gray-200' /> <br /> hours of recruitment saved
+                                <CountUp end={500} duration={3} style={counterStyle} className='bg-gray-200 font-bold md:font-normal' /> <br /> hours of recruitment saved
                             </li>
                             <span className="d-none d-md-block"></span>
                             <li className="d-flex align-items-center gap-4 text-center">

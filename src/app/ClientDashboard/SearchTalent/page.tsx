@@ -12,12 +12,13 @@ const SearchTalent: React.FC = () => {
       <div className="flex w-full md:max-w-[90%] max-w-md flex-col items-center space-y-4 text-center">
         <h1 className="text-lg sm:text-xl font-semibold tracking-tight">You have not hired developers yet</h1>
 
-        <div className="relative h-48 w-48 sm:h-64 sm:w-64">
-          <Image
-            src="/assets/z-image-1.svg"
+        <div className="relative h-48 w-48 sm:h-64 sm:w-64 flex items-center justify-center">
+          <img
+            src="/z-image-1.png"
             alt="Illustration of person working"
-            className="object-contain h-48 w-48"
-            layout="fill"
+            className="object-contain h-auto"
+            height={700}
+            width={700}
           />
         </div>
 

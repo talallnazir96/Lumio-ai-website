@@ -8,10 +8,10 @@ import { useRouter } from "next/navigation"
 
 const ClientSignin: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false)
-    const router = useRouter()
-    const handleClick = ()=>{
-      router.push("/ClientDashboard/Dashboard")
-    }
+  const router = useRouter()
+  const handleClick = () => {
+    router.push("/ClientDashboard/Dashboard")
+  }
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-white">
@@ -57,7 +57,7 @@ const ClientSignin: React.FC = () => {
                 <button
                   type="submit"
                   className="bg-blue-100 hover:bg-blue-200 text-blue-900 px-8 py-2 rounded-md transition-colors"
-                onClick={handleClick}
+                  onClick={handleClick}
                 >
                   Sign in
                 </button>
@@ -78,8 +78,8 @@ const ClientSignin: React.FC = () => {
 
         {/* Illustration */}
         <div className="hidden lg:block w-full max-w-xl">
-          <Image
-            src={"/assets/signin.png"}  
+          <img
+            src={"/assets/signin.png"}
             alt="People collaborating on a dashboard"
             width={500}
             height={450}

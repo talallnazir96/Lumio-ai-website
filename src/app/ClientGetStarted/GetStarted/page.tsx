@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Header from '../components/Header';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 // Define a type for the technology objects
 interface Technology {
   name: string;
@@ -10,7 +11,7 @@ interface Technology {
 
 export default function GetStarted() {
   const router = useRouter();
-  const handleNext = ()=>{
+  const handleNext = () => {
     router.push("/ClientGetStarted/ProjectDuration");
   }
   // Define the array of technologies with the Technology type
@@ -65,7 +66,7 @@ export default function GetStarted() {
               {allTechnologies.map((tech, index) => (
                 <div
                   key={index}
-                  className="p-4 flex items-center justify-center hover:shadow-md transition-all"
+                  className="p-4 flex items-center justify-center hover:shadow-md transition-all cursor-pointer"
                 >
                   <div className="w-12 h-12 mx-auto text-2xl">{tech.icon}</div>
                 </div>
@@ -85,16 +86,17 @@ export default function GetStarted() {
           {/* Actions */}
           <div className="space-y-4">
             <div className="flex items-center justify-center gap-4 mb-20">
-              <span className="text-gray-600">Not sure?</span>
-              <button className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">Schedule a demo</button>
+              <span className="text-gray-600 cursor-pointer">Not sure?</span>
+              <button className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 btnstyle1">Schedule a demo</button>
+            </div>
+            <div className='flex items-center justify-center'>
+              <button className="btnstyle1 w-48 max-w-md bg-blue-600 text-white py-2.5 rounded-md hover:bg-blue-700" onClick={handleNext}>NEXT</button>
             </div>
 
-            <button className="w-48 max-w-md bg-blue-600 text-white py-2.5 rounded-md hover:bg-blue-700" onClick={handleNext}>NEXT</button>
-
             <div>
-              <a href="#" className="text-black underline">
+              <Link href="#" className="text-black underline">
                 Skip for now
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -27,13 +27,11 @@ const Nav2: React.FC<Nav2Props> = ({ sortBy, setSortBy }) => {
       <div className="mb-1 bg-white text-black p-4 rounded-lg shadow m-1">
         <div className="flex justify-between items-center mb-4">
           <h1 className="text-2xl font-bold">Discover top-tier talent</h1>
-          <div className=" rounded-full overflow-hidden">
-            <Image
+          <div className="rounded-full overflow-hidden">
+            <img
               src="/assets/profile.png" // Ensure you have the profile-image.png in your public/assets directory
               alt="Profile"
-              width={36}
-              height={36}
-              className="object-cover"
+              className="object-cover h-10 w-10"
             />
           </div>
         </div>
@@ -72,7 +70,7 @@ const Nav2: React.FC<Nav2Props> = ({ sortBy, setSortBy }) => {
             onClick={() => setShowFilter(true)}
             className="px-4 py-2 bg-blue-600 text-white rounded-md flex items-center gap-2"
           >
-            <svg
+            {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
@@ -90,9 +88,9 @@ const Nav2: React.FC<Nav2Props> = ({ sortBy, setSortBy }) => {
               <line x1="20" x2="20" y1="21" y2="16" />
               <line x1="20" x2="20" y1="12" y2="3" />
               <line x1="2" x2="6" y1="14" y2="14" />
-              <line x1="10" x2="14" y1="8" y2="8" />
-              <line x1="18" x2="22" y1="16" y2="16" />
-            </svg>
+              <line x1="10" x2="14" y1="8" y2="8" /> */}
+            {/* <line x1="18" x2="22" y1="16" y2="16" /> */}
+            {/* </svg> */}
             Filter requirements
           </button>
           <div className="relative">
@@ -100,8 +98,8 @@ const Nav2: React.FC<Nav2Props> = ({ sortBy, setSortBy }) => {
               className="px-3 py-2 border border-gray-300 rounded-md flex items-center gap-2"
               onClick={() => setShowSortMenu(!showSortMenu)}
             >
-              <SortAsc className="text-purple-600" />
-              
+              <img src="/filter.png" className="w-10 h-10" alt="" />
+
             </button>
             {showSortMenu && (
               <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-md shadow-lg">
@@ -122,7 +120,7 @@ const Nav2: React.FC<Nav2Props> = ({ sortBy, setSortBy }) => {
             )}
           </div>
         </div>
-      </div>
+      </div >
       <AIAssistant isOpen={showAI} onClose={() => setShowAI(false)} />
       <FilterMenu isOpen={showFilter} onClose={() => setShowFilter(false)} />
     </>

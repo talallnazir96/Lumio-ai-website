@@ -13,7 +13,7 @@ export default function Signup() {
         <div className="space-y-6">
           <div className="flex justify-center">
             <div className="bg-blue-600 px-8 py-3 rounded-b-lg">
-              <Image
+              <img
                 src={"/logo.png"}
                 alt="LumioAI Logo"
                 width={60}
@@ -36,7 +36,7 @@ export default function Signup() {
 
         <div className="space-y-4">
           {/* LinkedIn Sign Up Button */}
-          <button className="w-full bg-[#0077B5] text-white py-2 px-4 rounded-md hover:bg-[#006497] transition-colors text-sm md:text-base">
+          <button className="btnstyle1 w-full bg-[#0077B5] text-white py-2 px-4 rounded-md hover:bg-[#006497] transition-colors text-sm md:text-base">
             Sign Up with LinkedIn
           </button>
 
@@ -89,7 +89,7 @@ export default function Signup() {
             {/* Join LumioAI Button */}
             <button
               type="submit"
-              className="w-full bg-[#4F46E5] text-white py-2 px-4 rounded-md hover:bg-[#4338CA] transition-colors text-sm md:text-base"
+              className="btnstyle1 w-full bg-[#4F46E5] text-white py-2 px-4 rounded-md hover:bg-[#4338CA] transition-colors text-sm md:text-base"
             >
               Join LumioAI
             </button>

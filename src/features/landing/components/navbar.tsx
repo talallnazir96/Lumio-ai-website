@@ -32,9 +32,21 @@ const MainNav: React.FC = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 0);
+            // Check if the user has scrolled past the first section (100vh)
+            const firstSectionHeight = 60; // Height of the first section
+            const scrollPosition = window.scrollY;
+
+            if (scrollPosition > firstSectionHeight) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
         };
+
+        // Add scroll event listener
         window.addEventListener('scroll', handleScroll);
+
+        // Cleanup the event listener on component unmount
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
@@ -57,12 +69,15 @@ const MainNav: React.FC = () => {
     ];
 
     return (
-        <nav className={`sticky top-0 z-50 w-full bg-black px-4 transition-all duration-300 ${isScrolled ? 'shadow-lg' : ''}`}>
+        <nav
+            style={{ backgroundColor: 'transparent' }}
+            className={`sticky top-0 z-50 w-full px-4 transition-all duration-300 ${isScrolled ? 'bg-black shadow-lg' : 'bg-transparent'}`}
+        >
             <div className="flex h-16 items-center justify-between">
                 {/* Logo */}
                 <div className="flex items-center gap-5">
                     <Link href="/" className="flex items-center space-x-2">
-                        <Image
+                        <img
                             src={"/assets/logo.png"} alt="Logo"
                             width={130}
                             height={20}
@@ -105,7 +120,7 @@ const MainNav: React.FC = () => {
                         className="bg-primary text-white no-underline hover:bg-gray-200"
                         asChild
                     >
-                        <Link href="/ClientGetStarted/GetStarted">Get Started</Link>
+                        <Link href="/ClientGetStarted/GetStarted" className="btnstyle1 py-2">Get Started</Link>
                     </Button>
 
                     <DropdownMenu>
@@ -182,7 +197,7 @@ const MainNav: React.FC = () => {
 
                             <div className="border-t border-gray-800 w-full pt-4">
                                 <Button
-                                    className="w-full bg-primary text-white hover:bg-gray-200 mb-4 py-6 text-lg"
+                                    className="w-full bg-primary btnstyle1 mb-4 py-6 text-lg"
                                     asChild
                                 >
                                     <Link
@@ -220,6 +235,19 @@ const MainNav: React.FC = () => {
                     .lg\\:flex {
                         display: flex;
                     }
+                }
+
+                /* Fade animation */
+                nav {
+                    transition: background-color 0.5s ease, opacity 0.5s ease;
+                }
+
+                nav.bg-black {
+                    opacity: 1;
+                }
+
+                nav.bg-transparent {
+                    opacity: 0.9; /* Slightly transparent to blend with the background */
                 }
             `}</style>
         </nav>

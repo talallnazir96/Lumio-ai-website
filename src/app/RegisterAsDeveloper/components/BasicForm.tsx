@@ -231,7 +231,7 @@ const BasicForm: React.FC<BasicFormProps> = ({ formData, setFormData, onNext }) 
             <div className="space-y-2">
               <label className="block text-sm font-medium text-black">Upload your resume</label>
               <div className="flex flex-col items-center justify-center p-4 sm:p-6 rounded-lg bg-gray-50">
-                <FaUpload className="h-6 w-6 text-gray-400 mb-2" />
+                <img src="/upload.png" className="mx-auto h-6 w-6 text-gray-400" />
                 <label className="text-blue-600 text-sm hover:underline cursor-pointer">
                   Upload your file
                   <input

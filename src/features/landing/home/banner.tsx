@@ -1,8 +1,9 @@
 import Link from "next/link";
+import MainNav from "../components/navbar";
 
 const HomeBanner = () => {
     return (
-        <>
+        <div className="w-full h-screen">
             <style>
                 {`
                     /* Apply animation to all elements with .animate-from-top class */
@@ -62,9 +63,11 @@ const HomeBanner = () => {
                     }
                 `}
             </style>
-
-            <section className="bannersection">
-                <div className="container">
+            {/* <div className="">
+                <MainNav />
+            </div> */}
+            <section className="bannersection -mt-[4rem]">
+                <div className="container mt-10">
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="bannerheading mx-auto flex flex-col justify-center gap-5 md:gap-10 relative z-10">
@@ -86,10 +89,10 @@ const HomeBanner = () => {
                             </div>
                         </div>
                     </div>
+                    <img src="/assets/img/banner-shape.png" className="bannershape" alt="banner-shape" />
                 </div>
-                <img src="/assets/img/banner-shape.png" className="bannershape" alt="banner-shape" />
             </section>
-        </>
+        </div>
     );
 }
 

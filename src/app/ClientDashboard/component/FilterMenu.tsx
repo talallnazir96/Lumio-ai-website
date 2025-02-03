@@ -1,6 +1,7 @@
 "use client"
 
 import React from 'react';
+import { FaLocationDot } from "react-icons/fa6";
 
 interface FilterMenuProps {
   isOpen: boolean;
@@ -15,7 +16,6 @@ const FilterMenu: React.FC<FilterMenuProps> = ({ isOpen, onClose }) => {
       <div className="p-6">
         <div className="mb-6 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span>🎯</span>
             <span className="font-medium">Filters</span>
           </div>
         </div>
@@ -23,7 +23,7 @@ const FilterMenu: React.FC<FilterMenuProps> = ({ isOpen, onClose }) => {
         <div className="space-y-6">
           <div>
             <div className="mb-2 flex items-center gap-2">
-              <span>🎓</span>
+              <img src="/skills.png" className='w-5 h-5' alt="" />
               <span className="font-medium">Skills</span>
             </div>
             <input
@@ -35,7 +35,7 @@ const FilterMenu: React.FC<FilterMenuProps> = ({ isOpen, onClose }) => {
 
           <div>
             <div className="mb-2 flex items-center gap-2">
-              <span>👨‍💼</span>
+              <img src="/exp.png" className='w-5 h-5' alt="" />
               <span className="font-medium">Experience</span>
             </div>
             <input
@@ -47,7 +47,7 @@ const FilterMenu: React.FC<FilterMenuProps> = ({ isOpen, onClose }) => {
 
           <div>
             <div className="mb-2 flex items-center gap-2">
-              <span>📍</span>
+              <FaLocationDot className='w-5 h-5' color='gray' />
               <span className="font-medium">Location</span>
             </div>
             <input

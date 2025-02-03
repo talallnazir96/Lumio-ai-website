@@ -42,7 +42,7 @@ export default function PhotoGuide() {
 
                 {/* Right Column - Image */}
                 <div className="flex flex-col items-center md:items-end">
-                    <Image
+                    <img
                         src="/assets/pic-1.png"
                         alt="Professional photo example"
                         className="w-full max-w-md rounded-lg"

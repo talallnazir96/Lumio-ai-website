@@ -96,7 +96,7 @@ const MeetTeam = () => {
 
                 // Apply the smog effect with the same gradient colors
                 card.style.background = `
-                radial-gradient(circle at ${x}px ${y}px, rgba(0, 0, 0, 0.2), transparent 60%), 
+                radial-gradient(circle at ${x}px ${y}px, rgba(0, 0, 0, 0.2), transparent 70%), 
                 linear-gradient(90deg, #6a11cb, #8e9cf7)`
               }}
               onMouseLeave={(e) => {
@@ -138,7 +138,7 @@ const MeetTeam = () => {
                                 ))}
                               </div>
                             </div>
-                            <Link href="/ClientSeeDeveloperProfile" className="viewprofile">
+                            <Link href="/ClientSeeDeveloperProfile" className=" btnstyle1">
                               View full profile
                             </Link>
                           </div>

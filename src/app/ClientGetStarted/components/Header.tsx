@@ -3,6 +3,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 
 const Header: React.FC = () => {
@@ -15,19 +16,21 @@ const Header: React.FC = () => {
         { href: "/ClientDeveloperSignin/ClientSignin", label: "As a Client" },
         { href: "/ClientDeveloperSignin/DeveloperSignin", label: "As a Developer" }
     ];
+    const router = useRouter()
     return (
         <header className="bg-[#2D2D2D] text-white px-6 py-4">
             <div className="max-w-7xl mx-auto flex items-center justify-between">
                 {/* Logo */}
                 <div className="flex items-center">
-                    <Link href="/" className="flex items-center space-x-2">
-                        <Image
-                            src={"/assets/logo.png"}
-                            alt="LumioAI"
-                            className="h-8"
-                            width={130}
-                            height={40}
-                        />
+                    <Link href="/" className="flex items-center space-x-2 no-underline text-white">
+                        <div className='flex items-center justify-center'>
+                            <img
+                                src={"/logo.png"}
+                                alt="LumioAI"
+                                className="h-12 w-12"
+                            />
+                            <h1 className='text-2xl'>LumioAi</h1>
+                        </div>
                     </Link>
                 </div>
 
@@ -70,7 +73,7 @@ const Header: React.FC = () => {
 
                 {/* Auth Buttons for large screens */}
                 <div className="hidden lg:flex items-center space-x-4">
-                    <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">Get started</button>
+                    <button onClick={() => router.push("/ClientGetStarted/GetStarted")} className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 btnstyle1">Get started</button>
                     <div className="relative group">
                         <DropdownMenu>
                             <DropdownMenuTrigger className="text-white hover:text-gray-300 flex items-center">

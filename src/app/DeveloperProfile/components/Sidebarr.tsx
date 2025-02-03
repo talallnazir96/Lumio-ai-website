@@ -13,21 +13,21 @@ const Sidebarr: React.FC<SidebarProps> = ({ selectedTab, setSelectedTab }) => {
           className={`flex items-center gap-3 rounded-lg px-3 py-2 ${selectedTab === "dashboard" ? "bg-blue-50 text-blue-600" : ""}`}
           onClick={() => setSelectedTab("dashboard")}
         >
-          <span>📊</span>
+          <img src="/dashboard.png" className="w-4 h-4" alt="" />
           <span>Dashboard</span>
         </div>
         <div
           className={`flex items-center gap-3 rounded-lg px-3 py-2 ${selectedTab === "profile" ? "bg-blue-50 text-blue-600" : ""}`}
           onClick={() => setSelectedTab("profile")}
         >
-          <span>🏠</span>
+          <img src="/home.png" className="w-4 h-4" alt="" />
           <span>My Profile</span>
         </div>
         <div
           className={`flex items-center gap-3 rounded-lg px-3 py-2 ${selectedTab === "payments" ? "bg-blue-50 text-blue-600" : ""}`}
           onClick={() => setSelectedTab("payments")}
         >
-          <span>📈</span>
+          <img src="/pay.png" className="w-4 h-4" alt="" />
           <span>Payments & Reports</span>
         </div>
         {/* Support Button */}

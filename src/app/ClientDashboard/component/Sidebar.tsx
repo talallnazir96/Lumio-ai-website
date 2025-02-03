@@ -1,13 +1,13 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { LayoutDashboard, Search, Users, Wallet, Settings, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 interface SidebarItem {
   title: string;
-  icon: React.ComponentType<{ className?: string }>;
+  icon: string;
   href: string;
 }
 
@@ -15,27 +15,27 @@ interface SidebarItem {
 const sidebarItems: SidebarItem[] = [
   {
     title: "Dashboard",
-    icon: LayoutDashboard,
+    icon: '/dashboard.png',
     href: "/ClientDashboard/Dashboard",
   },
   {
     title: "Search talent",
-    icon: Search,
+    icon: '/search.png',
     href: "/ClientDashboard/SearchTalent",
   },
   {
     title: "My hires",
-    icon: Users,
+    icon: '/hire.png',
     href: "/ClientDashboard/MyHire",
   },
   {
     title: "Payroll",
-    icon: Wallet,
+    icon: '/payRoll.png',
     href: "/ClientDashboard/Payroll/MonthlyPayroll",
   },
   {
     title: "Options",
-    icon: Settings,
+    icon: '/opt.png',
     href: "/ClientDashboard/Options",
   },
 ];
@@ -55,9 +55,12 @@ const Sidebar: React.FC = () => {
       <aside className={`fixed left-0 top-0 z-30 h-full w-56 border-r bg-white transform ${sidebarOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0 transition-transform duration-300`}>
         <div className="flex h-full flex-col">
           <div className="flex h-14 items-center justify-center border-b px-4 ">
-            <a href="/ClientDashboard/Dashboard" className="flex items-center gap-2">
-              <Image src="/assets/logolight.svg" alt="LumioAI Logo" width={130} height={40} />
-            </a>
+            <Link href="/ClientDashboard/Dashboard" className="flex items-center gap-2 no-underline text-black">
+              <div className="flex items-center justify-center">
+                <Image src="/logo.svg" alt="LumioAI Logo" width={64} height={64} />
+                <h1 className="text-3xl">Lumio</h1>
+              </div>
+            </Link>
           </div>
           <div className="flex flex-1 flex-col gap-2 p-4">
             <nav className="flex flex-1 flex-col gap-2">
@@ -68,7 +71,7 @@ const Sidebar: React.FC = () => {
                   className={`flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium ${pathname === item.href ? "bg-gray-100 text-black" : "text-gray-600 hover:bg-gray-50 hover:text-black"
                     } no-underline`}
                 >
-                  <item.icon className="h-4 w-4" />
+                  <Image src={item.icon} alt={item.title} width={24} height={24} />
                   {item.title}
                 </Link>
               ))}
